@@ -55,7 +55,7 @@ app.use(express.static('./dist/app-spin/'));
 app.use('/callback', express.static('./dist/app-spin/'));
 
 //RUTAS NODE
-app.use('/pruebas', route_pruebas.generateFile);
+//app.use('/pruebas', route_pruebas.generateFile);
 
 
 // Start the app by listening on the default Heroku port
