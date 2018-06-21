@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import * as auth0 from 'auth0-js';
 import { UserProfile } from './../componentes/auth0/perfil/perfil.model';
 
-//import { AUTH_CONFIG } from './auth0-variables'
+import { AUTH_CONFIG } from './auth0-variables'
 
 (window as any).global = window;
 
@@ -13,12 +13,12 @@ import { UserProfile } from './../componentes/auth0/perfil/perfil.model';
 export class Auth0Service {
 
   private _Auth0 = new auth0.WebAuth({
-    //clientID: AUTH_CONFIG.CLIENT_ID,
-    //domain: AUTH_CONFIG.CLIENT_DOMAIN,
-    //responseType: AUTH_CONFIG.RESPONSE_TYPE,
-    //redirectUri: AUTH_CONFIG.REDIRECT,
-    //audience: AUTH_CONFIG.AUDIENCE,
-    //scope: ""
+    clientID: AUTH_CONFIG.CLIENT_ID,
+    domain: AUTH_CONFIG.CLIENT_DOMAIN,
+    responseType: AUTH_CONFIG.RESPONSE_TYPE,
+    redirectUri: AUTH_CONFIG.REDIRECT,
+    audience: AUTH_CONFIG.AUDIENCE,
+    scope: ""
   });
   userProfile: UserProfile;
   accessToken: string;
@@ -75,8 +75,8 @@ export class Auth0Service {
     // Make sure you have the returnTo URL in your Auth0
     // Dashboard Application settings in Allowed Logout URLs
     this._Auth0.logout({
-      //returnTo: AUTH_CONFIG.RETURN_URL,
-      //clientID: AUTH_CONFIG.CLIENT_ID
+      returnTo: AUTH_CONFIG.RETURN_URL,
+      clientID: AUTH_CONFIG.CLIENT_ID
     });
   }
 
