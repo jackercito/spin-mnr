@@ -1,0 +1,44 @@
+//Install express server
+const express = require('express');
+const path = require('path');
+const http = require('http');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+require('dotenv').config()
+
+const app = express();
+
+//const api = require('/server/routes/api');
+const port = process.env.PORT || 8080;
+
+const forceSSL = function () {
+  return function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      console.log(['https://', req.get('Host'), req.url].join(''));
+      return res.redirect(
+        ['https://', req.get('Host'), req.url].join('')
+      );
+    }
+    next();
+  }
+}
+
+// Serve only the static files form the dist directory
+if(port != 8080)
+  app.use(forceSSL());
+
+//--- Set up app
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+
+app.use(express.static('./dist/app-spin/'));
+
+//RUTAS
+app.use('/callback', express.static('./dist/app-spin/'));
+
+
+// Start the app by listening on the default Heroku port
+app.set('port', port);
+app.listen(port, () => { console.log("Ejecutandose") });
