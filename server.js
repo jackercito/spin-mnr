@@ -4,8 +4,8 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const jwt = require('express-jwt');
-const jwks = require('jwks-rsa');
+//const jwt = require('express-jwt');
+//const jwks = require('jwks-rsa');
 
 require('dotenv').config()
 
@@ -28,7 +28,7 @@ const forceSSL = function () {
   }
 }
 
-const jwtCheck = jwt({
+/*const jwtCheck = jwt({
   secret: jwks.expressJwtSecret({
     cache: true,
     rateLimit: true,
@@ -38,7 +38,7 @@ const jwtCheck = jwt({
   audience: process.env.AUTH0_AUDIENCE,
   issuer: `https://${process.env.CLIENT_DOMAIN}/`,
   algorithm: 'RS256'
-});
+});*/
 
 // Serve only the static files form the dist directory
 if(port != 8080)
@@ -55,7 +55,7 @@ app.use(express.static('./dist/app-spin/'));
 app.use('/callback', express.static('./dist/app-spin/'));
 
 //RUTAS NODE
-//app.use('/pruebas', route_pruebas.generateFile);
+app.use('/pruebas', route_pruebas.generateFile);
 
 
 // Start the app by listening on the default Heroku port
