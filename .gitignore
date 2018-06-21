@@ -40,4 +40,3 @@ Thumbs.db
 
 package-lock.json
 .env
-/src/app/services/auth0-variables.ts
