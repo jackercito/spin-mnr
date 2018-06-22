@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { PerfilComponent } from './componentes/auth0/perfil/perfil.component'
     BrowserModule,
     AppRoutingModule,
     MenuModule,
+    HttpClientModule,
   ],
   providers: [
     ApiService,

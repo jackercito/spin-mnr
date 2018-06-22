@@ -7,11 +7,12 @@ const cors = require('cors');
 //const jwt = require('express-jwt');
 //const jwks = require('jwks-rsa');
 
+//require('dotenv').config()
+
 require('dotenv').config()
 
 const app = express();
 
-const route_pruebas = require('./src/server/crear_enviroment')
 
 //const api = require('/server/routes/api');
 const port = process.env.PORT || 8080;
@@ -55,7 +56,6 @@ app.use(express.static('./dist/app-spin/'));
 app.use('/callback', express.static('./dist/app-spin/'));
 
 //RUTAS NODE
-app.use('/pruebas', route_pruebas.generateFile);
 
 
 // Start the app by listening on the default Heroku port

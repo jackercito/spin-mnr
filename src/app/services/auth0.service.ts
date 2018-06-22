@@ -11,7 +11,6 @@ import { AUTH_CONFIG } from './auth0-variables'
   providedIn: 'root'
 })
 export class Auth0Service {
-
   private _Auth0 = new auth0.WebAuth({
     clientID: AUTH_CONFIG.CLIENT_ID,
     domain: AUTH_CONFIG.CLIENT_DOMAIN,
@@ -28,7 +27,7 @@ export class Auth0Service {
   loggedIn: boolean;
   loggedIn$ = new BehaviorSubject<boolean>(this.loggedIn);
 
-  constructor() { }
+  constructor() {  }
 
   private _setLoggedIn(value: boolean) {
     // Update login status subject
