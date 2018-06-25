@@ -3,8 +3,6 @@ var ExperimentoController = require('./../services/experimento.service');
 _this = this
 
 exports.getExperimentos = async function (req, res, next) {
-  console.log(req)
-
   var page = req.query.page ? req.query.page : 1
   var limit = req.query.limit ? req.query.limit : 1000000;
 

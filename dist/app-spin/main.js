@@ -809,9 +809,9 @@ var Auth0Service = /** @class */ (function () {
             clientID: _auth0_variables__WEBPACK_IMPORTED_MODULE_3__["AUTH_CONFIG"].CLIENT_ID,
             domain: _auth0_variables__WEBPACK_IMPORTED_MODULE_3__["AUTH_CONFIG"].CLIENT_DOMAIN,
             responseType: _auth0_variables__WEBPACK_IMPORTED_MODULE_3__["AUTH_CONFIG"].RESPONSE_TYPE,
-            redirectUri: _auth0_variables__WEBPACK_IMPORTED_MODULE_3__["AUTH_CONFIG"].REDIRECT,
             audience: _auth0_variables__WEBPACK_IMPORTED_MODULE_3__["AUTH_CONFIG"].AUDIENCE,
-            scope: ""
+            redirectUri: _auth0_variables__WEBPACK_IMPORTED_MODULE_3__["AUTH_CONFIG"].REDIRECT,
+            scope: 'openid'
         });
         this.loggedIn$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](this.loggedIn);
     }
@@ -857,10 +857,10 @@ var Auth0Service = /** @class */ (function () {
         // This does a refresh and redirects back to homepage
         // Make sure you have the returnTo URL in your Auth0
         // Dashboard Application settings in Allowed Logout URLs
-        this._Auth0.logout({
-            returnTo: _auth0_variables__WEBPACK_IMPORTED_MODULE_3__["AUTH_CONFIG"].RETURN_URL,
-            clientID: _auth0_variables__WEBPACK_IMPORTED_MODULE_3__["AUTH_CONFIG"].CLIENT_ID
-        });
+        /*this._Auth0.logout({
+          returnTo: AUTH_CONFIG.RETURN_URL,
+          clientID: AUTH_CONFIG.CLIENT_ID
+        });*/
     };
     Object.defineProperty(Auth0Service.prototype, "authenticated", {
         get: function () {
@@ -900,7 +900,7 @@ var environment = {
     CLIENT_ID: "UAN7a6NXyx2VQcWgzRw1uHW9UPPSA8FS",
     CLIENT_DOMAIN: "jackercito.eu.auth0.com",
     RESPONSE_TYPE: "token id_token",
-    AUDIENCE: "https://jackercito.eu.auth0.com/userinfo",
+    AUDIENCE: "https://api.spin.jackercito/",
     REDIRECT: "http://localhost:8080/callback",
 };
 

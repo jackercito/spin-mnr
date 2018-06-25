@@ -15,9 +15,9 @@ export class Auth0Service {
     clientID: AUTH_CONFIG.CLIENT_ID,
     domain: AUTH_CONFIG.CLIENT_DOMAIN,
     responseType: AUTH_CONFIG.RESPONSE_TYPE,
-    redirectUri: AUTH_CONFIG.REDIRECT,
     audience: AUTH_CONFIG.AUDIENCE,
-    scope: ""
+    redirectUri: AUTH_CONFIG.REDIRECT,
+    scope: 'openid'
   });
   userProfile: UserProfile;
   accessToken: string;
@@ -73,10 +73,10 @@ export class Auth0Service {
     // This does a refresh and redirects back to homepage
     // Make sure you have the returnTo URL in your Auth0
     // Dashboard Application settings in Allowed Logout URLs
-    this._Auth0.logout({
+    /*this._Auth0.logout({
       returnTo: AUTH_CONFIG.RETURN_URL,
       clientID: AUTH_CONFIG.CLIENT_ID
-    });
+    });*/
   }
 
   get authenticated(): boolean {
