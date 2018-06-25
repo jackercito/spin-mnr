@@ -34,8 +34,15 @@
       </li>
 
       <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="auth.authenticated">
-        <a routerLink="/experimentos">
+        <a routerLink="/experimentos/listar">
           Experimentos
+          <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+        </a>
+      </li>
+
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="auth.authenticated">
+        <a routerLink="/experimentos/nuevo">
+          Nuevo Experimento
           <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
         </a>
       </li>

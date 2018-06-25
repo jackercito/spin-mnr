@@ -17,14 +17,14 @@ export class MenuComponent implements OnInit {
     // Subscribe to login status subject
     // If authenticated, subscribe to dragons data observable
     // If not authenticated, unsubscribe from dragons data
-    this.authSubscription = this.auth.loggedIn$
+    /*this.authSubscription = this.auth.loggedIn$
       .subscribe(loggedIn => {
         if (loggedIn) {
           console.log("Logueado");
         } else {
           console.log("NO Logueado");
         }
-      });
+      });*/
   }
 
   ngOnDestroy() {

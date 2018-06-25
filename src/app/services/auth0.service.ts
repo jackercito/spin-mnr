@@ -73,10 +73,10 @@ export class Auth0Service {
     // This does a refresh and redirects back to homepage
     // Make sure you have the returnTo URL in your Auth0
     // Dashboard Application settings in Allowed Logout URLs
-    /*this._Auth0.logout({
+    this._Auth0.logout({
       returnTo: AUTH_CONFIG.RETURN_URL,
       clientID: AUTH_CONFIG.CLIENT_ID
-    });*/
+    });
   }
 
   get authenticated(): boolean {

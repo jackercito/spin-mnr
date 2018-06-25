@@ -8,11 +8,19 @@ import { CallbackComponent } from './componentes/auth0/callback/callback.compone
 import { PerfilComponent } from './componentes/auth0/perfil/perfil.component'
 
 import { ListarExperimentosComponent } from './modulo-experimentos/componentes/listar-experimentos/listar-experimentos.component';
+import { CrearExperimentoComponent } from './modulo-experimentos/componentes/crear-experimento/crear-experimento.component';
 
 const appRoutes: Routes = [
   {
-    path: 'experimentos',
+    path: 'experimentos/listar',
     component: ListarExperimentosComponent,
+    canActivate: [
+      AuthGuard
+    ]
+  },
+  {
+    path: 'experimentos/nuevo',
+    component: CrearExperimentoComponent,
     canActivate: [
       AuthGuard
     ]

@@ -40,3 +40,4 @@ Thumbs.db
 
 package-lock.json
 .env
+/src/environments/environment.dev.ts
