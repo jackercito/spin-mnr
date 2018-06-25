@@ -7,10 +7,12 @@ import { AuthGuard } from './services/auth0.guard';
 import { CallbackComponent } from './componentes/auth0/callback/callback.component'
 import { PerfilComponent } from './componentes/auth0/perfil/perfil.component'
 
+import { ListarExperimentosComponent } from './modulo-experimentos/componentes/listar-experimentos/listar-experimentos.component';
+
 const appRoutes: Routes = [
   {
-    path: 'profile',
-    component: PerfilComponent,
+    path: 'experimentos',
+    component: ListarExperimentosComponent,
     canActivate: [
       AuthGuard
     ]

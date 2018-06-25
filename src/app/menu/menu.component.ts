@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Auth0Service } from './../services/auth0.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { Auth0Service } from './../services/auth0.service';
 export class MenuComponent implements OnInit {
   authSubscription: Subscription;
 
-  constructor(public auth: Auth0Service) { }
+  constructor(public auth: Auth0Service, private router: Router, private activatedRouter: ActivatedRoute) { }
 
   ngOnInit() {
     // Subscribe to login status subject
