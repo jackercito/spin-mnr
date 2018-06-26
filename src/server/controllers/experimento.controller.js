@@ -23,6 +23,5 @@ exports.getExperimentos = async function (req, res, next) {
 }
 
 exports.postExperimento = async function (req, res, next) {
-  console.log(req.body);
-  return res.status(200);
+  return res.status(200).json({ status: 200, message: "OK"})
 }

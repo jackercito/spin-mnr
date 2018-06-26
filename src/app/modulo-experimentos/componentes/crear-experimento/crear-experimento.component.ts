@@ -52,7 +52,7 @@ export class CrearExperimentoComponent implements OnInit {
   private _savedExperimento() {
     this.experimentosSubscription = this.apiExperimento.setExperimentos$(this.experimento)
       .subscribe(
-        res => { console.log("--> " + res); },
+        res => console.log(res),
         err => console.warn(err),
         () => console.log('Request complete')
       );
