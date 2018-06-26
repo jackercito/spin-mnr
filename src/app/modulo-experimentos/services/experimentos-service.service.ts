@@ -19,7 +19,7 @@ export class ExperimentosServiceService {
 
   setExperimentos$(experimento: any): Observable<any> {
     return this.http
-      .post<any>("/experimento", experimento, { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) });
+      .post<any>("/experimento", experimento, { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) })
       .pipe(catchError(this._handleError));
   }
 
