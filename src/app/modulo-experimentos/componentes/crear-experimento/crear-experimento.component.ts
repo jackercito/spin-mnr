@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ExperimentosServiceService } from './../../services/experimentos-service.service';
+import { Auth0Service } from '../../../services/auth0.service';
+import { Subscription } from 'rxjs';
 
 const ESPECTROMETROS = ['ESPECTROMETRO VARIAN MERCURY AS400', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras Líquidas)', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras sólidas)'];
 const SONDA_A = ['4NUC (5mm)', 'ATB (5mm)','BB (10mm)']
@@ -18,8 +21,12 @@ export class CrearExperimentoComponent implements OnInit {
 
   startDate = new Date();
   finDate: any;
+  finDate2: any;
 
-  constructor() { }
+  authSubscription: Subscription;
+  experimentosSubscription: Subscription;
+
+  constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service) { }
 
   ngOnInit() {
   }
@@ -38,4 +45,16 @@ export class CrearExperimentoComponent implements OnInit {
     }
   }
 
+  savedExperimento() {
+    this._savedExperimento();
+  }
+
+  private _savedExperimento() {
+    this.experimentosSubscription = this.apiExperimento.setExperimentos$(this.experimento)
+      .subscribe(
+        res => { console.log("--> " + res); },
+        err => console.warn(err),
+        () => console.log('Request complete')
+      );
+  }
 }

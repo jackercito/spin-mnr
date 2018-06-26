@@ -17,6 +17,12 @@ export class ExperimentosServiceService {
       .pipe(catchError(this._handleError));
   }
 
+  setExperimentos$(experimento: any): Observable<any> {
+    return this.http
+      .post<any>("/experimento", experimento, { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) });
+      .pipe(catchError(this._handleError));
+  }
+
   private _handleError(err: HttpErrorResponse | any) {
     const errorMsg = err.message || 'Unable to retrieve data';
     return throwError(errorMsg);
