@@ -24,6 +24,8 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "ag-grid": "^18.0.1",
+    "ag-grid-angular": "^18.0.1",
     "auth0-js": "^9.6.1",
     "body-parser": "^1.18.3",
     "core-js": "^2.5.4",

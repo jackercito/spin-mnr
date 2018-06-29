@@ -34,7 +34,7 @@ import { PerfilComponent } from './componentes/auth0/perfil/perfil.component';
     MenuModule,
     ModuloExperimentosModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [
     Auth0Service

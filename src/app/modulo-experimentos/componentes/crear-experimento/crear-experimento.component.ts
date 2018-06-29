@@ -29,6 +29,9 @@ export class CrearExperimentoComponent implements OnInit {
   constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service) { }
 
   ngOnInit() {
+    this.finDate = this.startDate;
+    this.finDate2 = this.startDate;
+    this.experimento['finalizado'] = false;
   }
 
   onSelectEspectrometro(event) {
@@ -46,6 +49,8 @@ export class CrearExperimentoComponent implements OnInit {
   }
 
   savedExperimento() {
+    this.experimento['fecha_entrada'] = this.finDate;
+    this.experimento['fecha_salida'] = this.finDate2;
     this._savedExperimento();
   }
 

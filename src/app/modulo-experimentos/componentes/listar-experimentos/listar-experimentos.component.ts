@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { GridOptions } from "ag-grid/main";
 import { Subscription } from 'rxjs';
 import { ExperimentosServiceService } from './../../services/experimentos-service.service';
 import { Auth0Service } from '../../../services/auth0.service';
@@ -13,7 +14,54 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
   authSubscription: Subscription;
   experimentosSubscription: Subscription;
 
-  constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service) { }
+  gridOptions: GridOptions;
+  columnDefs: any[]
+  sizePage: number = 25;
+  rowData: any[];
+
+  private gridApi;
+  private gridColumnApi;
+  private getRowHeight;
+
+  paginationPageSize;
+  frameworkComponents;
+  context;
+
+  constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service) {
+    this._getExperimentos();
+
+    this.columnDefs = [
+      {
+        headerName: "ID",
+        field: "_id",
+        suppressMenu: true,
+        filterParams: {
+          caseSensitive: true
+        },
+        minWidth: 135
+      },
+      {
+        headerName: "ID",
+        field: "espectrometro",
+        suppressMenu: true,
+        filterParams: {
+          caseSensitive: true
+        },
+        minWidth: 135
+      }
+    ];
+
+    this.context = { componentParent: this };
+  }
+
+  onGridReady(params) {
+    this.gridApi = params.api;
+    this.gridColumnApi = params.columnApi;
+  }
+
+  onPageSizeChanged(newPageSize) {
+    this.gridApi.paginationSetPageSize(this.sizePage);
+  }
 
   ngOnInit() {
     this.authSubscription = this.auth.loggedIn$
@@ -38,7 +86,7 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
     this.experimentosSubscription = this.apiExperimento.getExperimentos$()
       .subscribe(
       data => {
-        this.experimentos = data;
+        this.rowData = data;
         },
         err => console.warn(err),
         () => console.log('Request complete')

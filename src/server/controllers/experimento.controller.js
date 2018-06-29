@@ -1,4 +1,4 @@
-var ExperimentoController = require('./../services/experimento.service');
+var ExperimentoService = require('./../services/experimento.service');
 
 _this = this
 
@@ -12,16 +12,30 @@ exports.getExperimentos = async function (req, res, next) {
   }
 
   try {
-    var experimentos = await ExperimentoController.getExperimentos({}, options)
-    console.log(experimentos);
+    var experimentos = await ExperimentoService.getExperimentos({}, options)
     res.json(experimentos.docs);
   } catch (e) {
-    //Return an Error Response Message with Code and the Error Message.
     return res.status(400).json({ status: 400, message: e.message });
-
   }
 }
 
 exports.postExperimento = async function (req, res, next) {
-  return res.status(200).json({ status: 200, message: "OK"})
+  var experimento = ({
+    espectrometro: req.body.espectrometro,
+    fecha_entrada: req.body.fecha_entrada,
+    fecha_salida: req.body.fecha_salida,
+    usuario_entrada: req.body.usuario_entrada,
+    usuario_salida: req.body.usuario_salida,
+    muestra: req.body.muestra,
+    solicitud: req.body.id_solicitud,
+    sonda: req.body.sonda,
+    completo: req.body.finalizado,
+  });
+
+  try {
+    var _experimentoGuardado = await ExperimentoService.createExperimento(experimento);
+    res.json(_experimentoGuardado);
+  } catch (e) {
+    return res.status(400).json({ status: 400, message: e });
+  }
 }
