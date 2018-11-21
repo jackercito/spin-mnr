@@ -1,5 +1,5 @@
 import { Component, ElementRef } from "@angular/core";
-import { IHeaderParams } from "ag-grid/main";
+import { IHeaderParams } from "ag-grid-community";
 import { IHeaderAngularComp } from "ag-grid-angular/main";
 
 interface MyParams extends IHeaderParams {
@@ -12,6 +12,7 @@ interface MyParams extends IHeaderParams {
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements IHeaderAngularComp {
   public params: MyParams;
   public sorted: string;
