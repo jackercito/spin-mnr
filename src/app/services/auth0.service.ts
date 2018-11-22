@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
+import { BehaviorSubject, Subscription, of, timer, Observable } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
 import * as auth0 from 'auth0-js';
-import { UserProfile } from './../componentes/auth0/perfil/perfil.model';
 
 import { AUTH_CONFIG } from './auth0-variables'
 
@@ -19,15 +20,25 @@ export class Auth0Service {
     redirectUri: AUTH_CONFIG.REDIRECT,
     scope: 'openid'
   });
-  userProfile: UserProfile;
+
+  userProfile: any;
   accessToken: string;
   expiresAt: number;
+  scopes: string;
 
   // Create a stream of logged in status to communicate throughout app
   loggedIn: boolean;
+  loggingIn: boolean;
   loggedIn$ = new BehaviorSubject<boolean>(this.loggedIn);
 
-  constructor() {  }
+  refreshSub: Subscription;
+
+  constructor(private router: Router) {
+    // If app auth token is not expired, request new token
+    if (JSON.parse(localStorage.getItem('expires_at')) > Date.now()) {
+      this.renewToken();
+    }
+  }
 
   private _setLoggedIn(value: boolean) {
     // Update login status subject
@@ -53,6 +64,7 @@ export class Auth0Service {
   }
 
   getUserInfo(authResult) {
+    this.loggingIn = true;
     // Use access token to retrieve user's profile and set session
     this._Auth0.client.userInfo(authResult.accessToken, (err, profile) => {
       this._setSession(authResult, profile);
@@ -62,12 +74,30 @@ export class Auth0Service {
   private _setSession(authResult, profile) {
     // Save session data and update login status subject
     this.expiresAt = authResult.expiresIn * 1000 + Date.now();
+    // Store expiration in local storage to access in constructor
+    localStorage.setItem('expires_at', JSON.stringify(this.expiresAt));
+
     this.accessToken = authResult.accessToken;
-    this.userProfile = profile;
+
+    if (profile) {
+      this.userProfile = profile;
+    }
+
+    this.scopes = authResult.scope;
     this._setLoggedIn(true);
+    this.loggingIn = false;
+    // Schedule access token renewal
+    this.scheduleRenewal();
+  }
+
+  private _clearExpiration() {
+    // Remove token expiration from localStorage
+    localStorage.removeItem('expires_at');
   }
 
   logout() {
+    // Remove data from localStorage
+    this._clearExpiration();
     // Remove token and profile, update login status subject,
     // and log out of Auth0 authentication session
     // This does a refresh and redirects back to homepage
@@ -79,9 +109,67 @@ export class Auth0Service {
     });
   }
 
+  get tokenValid(): boolean {
+    // Check if current time is past access token's expiration
+    return Date.now() < JSON.parse(localStorage.getItem('expires_at'));
+  }
+
+  renewToken() {
+    // Check for valid Auth0 session
+    this._Auth0.checkSession({}, (err, authResult) => {
+      if (authResult && authResult.accessToken) {
+        this.getUserInfo(authResult);
+      } else {
+        this._clearExpiration();
+      }
+    });
+  }
+
   get authenticated(): boolean {
     // Check if current date is greater than
     // expiration and user is currently logged in
     return (Date.now() < this.expiresAt) && this.loggedIn;
+  }
+
+  checkScopes(listaScopes: Array<string>): boolean {
+    if (this.scopes != null) {
+      const grantedScopes = (this.scopes).split(' ');
+      if (grantedScopes.includes('all:administrador'))
+        return true;
+      return listaScopes.every(scope => grantedScopes.includes(scope));
+    }
+    return;
+  }
+
+  scheduleRenewal() {
+    // If last token is expired, do nothing
+    if (!this.tokenValid) { return; }
+    // Unsubscribe from previous expiration observable
+    this.unscheduleRenewal();
+    // Create and subscribe to expiration observable
+    const expiresIn$ = of(this.expiresAt).pipe(
+      mergeMap(
+        expires => {
+          const now = Date.now();
+          // Use timer to track delay until expiration
+          // to run the refresh at the proper time
+          return timer(Math.max(1, expires - now));
+        }
+      )
+    );
+
+    this.refreshSub = expiresIn$
+      .subscribe(
+        () => {
+          this.renewToken();
+          this.scheduleRenewal();
+        }
+      );
+  }
+
+  unscheduleRenewal() {
+    if (this.refreshSub) {
+      this.refreshSub.unsubscribe();
+    }
   }
 }

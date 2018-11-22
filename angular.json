@@ -150,5 +150,12 @@
       }
     }
   },
-  "defaultProject": "app-spin"
+  "defaultProject": "app-spin",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "spec": false
+      }
+    }
+  }
 }

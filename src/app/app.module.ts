@@ -19,11 +19,18 @@ import { ModuloExperimentosModule } from './modulo-experimentos/modulo-experimen
 import { Auth0Service } from './services/auth0.service';
 import { PerfilComponent } from './componentes/auth0/perfil/perfil.component';
 
+//ag-grid
+import { AgGridModule } from 'ag-grid-angular/main';
+import { HeaderGroupComponent } from './componentes/ag-grid/header-group/header-group.component';
+import { HeaderComponent } from './componentes/ag-grid/header/header.component';
+import { BotonVerExperimentoComponent } from './componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CallbackComponent,
     PerfilComponent,
+    BotonVerExperimentoComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +42,11 @@ import { PerfilComponent } from './componentes/auth0/perfil/perfil.component';
     ModuloExperimentosModule,
     HttpClientModule,
     RouterModule,
+    AgGridModule.withComponents([
+      HeaderComponent,
+      HeaderGroupComponent,
+      BotonVerExperimentoComponent
+    ])
   ],
   providers: [
     Auth0Service

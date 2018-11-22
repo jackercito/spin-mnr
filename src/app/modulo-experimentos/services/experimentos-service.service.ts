@@ -4,6 +4,8 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { catchError } from 'rxjs/operators';
 import { Auth0Service } from '../../services/auth0.service';
 
+import { Experimento } from '../modelo/experimento.model'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,15 +13,21 @@ export class ExperimentosServiceService {
 
   constructor(private http: HttpClient, private auth: Auth0Service) { }
 
-  getExperimentos$(): Observable<any[]> {
+  getExperimentos$(): Observable<Experimento[]> {
     return this.http
-      .get<any[]>("/experimento", { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) })
+      .get<Experimento[]>("/experimento", { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) })
       .pipe(catchError(this._handleError));
   }
 
-  setExperimentos$(experimento: any): Observable<any> {
+  getOneExperimento$(id: string): Observable<Experimento> {
     return this.http
-      .post<any>("/experimento", experimento, { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) })
+      .get<Experimento>("/experimento/:id", { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) })
+      .pipe(catchError(this._handleError));
+  }
+
+  setExperimentos$(experimento: Experimento): Observable<any> {
+    return this.http
+      .post<Experimento>("/experimento", experimento, { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) })
       .pipe(catchError(this._handleError));
   }
 

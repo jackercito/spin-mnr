@@ -9,6 +9,8 @@ import { HeaderGroupComponent } from './../componentes/ag-grid/header-group/head
 
 import { ListarExperimentosComponent } from './componentes/listar-experimentos/listar-experimentos.component';
 import { CrearExperimentoComponent } from './componentes/crear-experimento/crear-experimento.component';
+import { VerExperimentoComponent } from './componentes/ver-experimento/ver-experimento.component';
+import { EditarExperimentoComponent } from './componentes/editar-experimento/editar-experimento.component';
 
 @NgModule({
   imports: [
@@ -25,6 +27,8 @@ import { CrearExperimentoComponent } from './componentes/crear-experimento/crear
     CrearExperimentoComponent,
     HeaderComponent,
     HeaderGroupComponent,
+    VerExperimentoComponent,
+    EditarExperimentoComponent,
   ],
   exports: [
     ListarExperimentosComponent,

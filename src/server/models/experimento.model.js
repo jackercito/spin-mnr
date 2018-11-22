@@ -3,8 +3,8 @@ var Schema = mongoose.Schema;
 
 var ExperimentoSchema = new Schema({
   espectrometro: { type: String },
-  fecha_entrada: { type: Date },
-  fecha_salida: { type: Date, required: true },
+  fecha_entrada: { type: Date, required: true },
+  fecha_salida: { type: Date },
   usuario_entrada: { type: String, required: true },
   usuario_salida: { type: String },
   muestra: { type: String, required: true },

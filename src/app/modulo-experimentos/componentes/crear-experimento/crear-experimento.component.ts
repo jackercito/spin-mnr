@@ -3,6 +3,8 @@ import { ExperimentosServiceService } from './../../services/experimentos-servic
 import { Auth0Service } from '../../../services/auth0.service';
 import { Subscription } from 'rxjs';
 
+import { Experimento } from '../../modelo/experimento.model'
+
 const ESPECTROMETROS = ['ESPECTROMETRO VARIAN MERCURY AS400', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras Líquidas)', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras sólidas)'];
 const SONDA_A = ['4NUC (5mm)', 'ATB (5mm)','BB (10mm)']
 const SONDA_B = ['PABBI (5mm)', 'PASEX (10mm)']
@@ -17,11 +19,14 @@ export class CrearExperimentoComponent implements OnInit {
   espectrometros: string[] = ESPECTROMETROS;
   sondas: string[];
 
-  experimento: any = {}
+  experimento: Experimento = new Experimento();
 
   startDate = new Date();
-  finDate: any;
-  finDate2: any;
+  finDate: Date = new Date();
+  finDate2: Date = new Date();
+
+  espectrometroSeleccionado: string;
+  sondaSeleccionada: string;
 
   authSubscription: Subscription;
   experimentosSubscription: Subscription;
@@ -29,12 +34,10 @@ export class CrearExperimentoComponent implements OnInit {
   constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service) { }
 
   ngOnInit() {
-    this.finDate = this.startDate;
-    this.finDate2 = this.startDate;
-    this.experimento['finalizado'] = false;
   }
 
   onSelectEspectrometro(event) {
+    console.log(event);
     switch (event) {
       case ESPECTROMETROS[0]:
         this.sondas = SONDA_A;
@@ -49,8 +52,10 @@ export class CrearExperimentoComponent implements OnInit {
   }
 
   savedExperimento() {
-    this.experimento['fecha_entrada'] = this.finDate;
-    this.experimento['fecha_salida'] = this.finDate2;
+    this.experimento.espectrometro = this.espectrometroSeleccionado;
+    this.experimento.sonda = this.sondaSeleccionada;
+    this.experimento.fecha_entrada = this.finDate;
+    this.experimento.fecha_salida = this.finDate2;
     this._savedExperimento();
   }
 

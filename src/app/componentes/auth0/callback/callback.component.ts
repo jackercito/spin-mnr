@@ -12,17 +12,11 @@ export class CallbackComponent implements OnInit {
   loggedInSub: Subscription;
 
   constructor(private auth: Auth0Service, private router: Router) {
+    // Check for authentication and handle if hash present
     auth.handleLoginCallback();
+    this.router.navigate(['home'])
   }
 
   ngOnInit() {
-    this.loggedInSub = this.auth.loggedIn$.subscribe(
-      loggedIn => loggedIn ? this.router.navigate(['/']) : null
-    )
   }
-
-  ngOnDestroy() {
-    this.loggedInSub.unsubscribe();
-  }
-
 }

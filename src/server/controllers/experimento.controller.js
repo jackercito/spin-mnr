@@ -32,10 +32,13 @@ exports.postExperimento = async function (req, res, next) {
     completo: req.body.finalizado,
   });
 
+  console.log(experimento);
+
   try {
     var _experimentoGuardado = await ExperimentoService.createExperimento(experimento);
     res.json(_experimentoGuardado);
   } catch (e) {
+    console.log(e);
     return res.status(400).json({ status: 400, message: e });
   }
 }
