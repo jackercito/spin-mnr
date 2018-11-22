@@ -14,6 +14,7 @@ import { CallbackComponent } from './componentes/auth0/callback/callback.compone
 //Modulos
 import { MenuModule } from './menu/menu.module';
 import { ModuloExperimentosModule } from './modulo-experimentos/modulo-experimentos.module'
+import { GuardScopesService } from './services/auth0.guards-scopes';
 
 //Services
 import { Auth0Service } from './services/auth0.service';
@@ -24,6 +25,9 @@ import { AgGridModule } from 'ag-grid-angular/main';
 import { HeaderGroupComponent } from './componentes/ag-grid/header-group/header-group.component';
 import { HeaderComponent } from './componentes/ag-grid/header/header.component';
 import { BotonVerExperimentoComponent } from './componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component';
+
+//Tostadas
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 
 @NgModule({
   declarations: [
@@ -46,10 +50,14 @@ import { BotonVerExperimentoComponent } from './componentes/ag-grid/boton-ver-ex
       HeaderComponent,
       HeaderGroupComponent,
       BotonVerExperimentoComponent
-    ])
+    ]),
+    SnotifyModule,
   ],
   providers: [
-    Auth0Service
+    GuardScopesService,
+    Auth0Service,
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults },
+    SnotifyService,
   ],
   bootstrap: [AppComponent]
 })

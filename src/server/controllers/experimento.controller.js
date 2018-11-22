@@ -19,6 +19,17 @@ exports.getExperimentos = async function (req, res, next) {
   }
 }
 
+exports.getOneExperimento = async function (req, res, next) {
+  var id = req.params.id;
+
+  try {
+    var experimentos = await ExperimentoService.getOneExperimento(id)
+    res.json(experimentos);
+  } catch (e) {
+    return res.status(400).json({ status: 400, message: e.message });
+  }
+}
+
 exports.postExperimento = async function (req, res, next) {
   var experimento = ({
     espectrometro: req.body.espectrometro,
@@ -27,12 +38,10 @@ exports.postExperimento = async function (req, res, next) {
     usuario_entrada: req.body.usuario_entrada,
     usuario_salida: req.body.usuario_salida,
     muestra: req.body.muestra,
-    solicitud: req.body.id_solicitud,
+    solicitud: req.body.solicitud,
     sonda: req.body.sonda,
     completo: req.body.finalizado,
   });
-
-  console.log(experimento);
 
   try {
     var _experimentoGuardado = await ExperimentoService.createExperimento(experimento);
@@ -40,5 +49,16 @@ exports.postExperimento = async function (req, res, next) {
   } catch (e) {
     console.log(e);
     return res.status(400).json({ status: 400, message: e });
+  }
+}
+
+exports.deleteExperimento = async (req, res, next) => {
+  var id = req.params.id;
+
+  try {
+    var experimentos = await ExperimentoService.deleteExperimento(id)
+    res.json(experimentos);
+  } catch (e) {
+    return res.status(400).json({ status: 400, message: e.message });
   }
 }

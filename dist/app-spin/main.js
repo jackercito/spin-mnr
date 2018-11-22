@@ -131,7 +131,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-2 col-sm-1\">\r\n  <app-menu></app-menu>\r\n</div>\r\n\r\n<div class=\"col-md-10 col-sm-9\">\r\n  <br />\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<div class=\"col-md-2 col-sm-1\">\r\n  <app-menu></app-menu>\r\n</div>\r\n\r\n<div class=\"col-md-10 col-sm-9\">\r\n  <br />\r\n  <router-outlet></router-outlet>\r\n</div>\r\n\r\n<ng-snotify></ng-snotify>\r\n"
 
 /***/ }),
 
@@ -146,23 +146,35 @@ module.exports = "<div class=\"col-md-2 col-sm-1\">\r\n  <app-menu></app-menu>\r
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/auth0.service */ "./src/app/services/auth0.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(http, auth) {
+        this.http = http;
+        this.auth = auth;
         this.title = 'app';
+        auth.handleLoginCallback();
     }
+    AppComponent.prototype.ngOnInit = function () { };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _services_auth0_service__WEBPACK_IMPORTED_MODULE_2__["Auth0Service"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -192,13 +204,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _componentes_auth0_callback_callback_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./componentes/auth0/callback/callback.component */ "./src/app/componentes/auth0/callback/callback.component.ts");
 /* harmony import */ var _menu_menu_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./menu/menu.module */ "./src/app/menu/menu.module.ts");
 /* harmony import */ var _modulo_experimentos_modulo_experimentos_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modulo-experimentos/modulo-experimentos.module */ "./src/app/modulo-experimentos/modulo-experimentos.module.ts");
-/* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/auth0.service */ "./src/app/services/auth0.service.ts");
-/* harmony import */ var _componentes_auth0_perfil_perfil_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./componentes/auth0/perfil/perfil.component */ "./src/app/componentes/auth0/perfil/perfil.component.ts");
-/* harmony import */ var ag_grid_angular_main__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ag-grid-angular/main */ "./node_modules/ag-grid-angular/main.js");
-/* harmony import */ var ag_grid_angular_main__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(ag_grid_angular_main__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _componentes_ag_grid_header_group_header_group_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./componentes/ag-grid/header-group/header-group.component */ "./src/app/componentes/ag-grid/header-group/header-group.component.ts");
-/* harmony import */ var _componentes_ag_grid_header_header_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./componentes/ag-grid/header/header.component */ "./src/app/componentes/ag-grid/header/header.component.ts");
-/* harmony import */ var _componentes_ag_grid_boton_ver_experimento_boton_ver_experimento_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component */ "./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.ts");
+/* harmony import */ var _services_auth0_guards_scopes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/auth0.guards-scopes */ "./src/app/services/auth0.guards-scopes.ts");
+/* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/auth0.service */ "./src/app/services/auth0.service.ts");
+/* harmony import */ var _componentes_auth0_perfil_perfil_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./componentes/auth0/perfil/perfil.component */ "./src/app/componentes/auth0/perfil/perfil.component.ts");
+/* harmony import */ var ag_grid_angular_main__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ag-grid-angular/main */ "./node_modules/ag-grid-angular/main.js");
+/* harmony import */ var ag_grid_angular_main__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(ag_grid_angular_main__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _componentes_ag_grid_header_group_header_group_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./componentes/ag-grid/header-group/header-group.component */ "./src/app/componentes/ag-grid/header-group/header-group.component.ts");
+/* harmony import */ var _componentes_ag_grid_header_header_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./componentes/ag-grid/header/header.component */ "./src/app/componentes/ag-grid/header/header.component.ts");
+/* harmony import */ var _componentes_ag_grid_boton_ver_experimento_boton_ver_experimento_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component */ "./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.ts");
+/* harmony import */ var ng_snotify__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ng-snotify */ "./node_modules/ng-snotify/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -217,6 +231,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 //Modulos
 
 
+
 //Services
 
 
@@ -224,6 +239,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+//Tostadas
 
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -233,8 +250,8 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
                 _componentes_auth0_callback_callback_component__WEBPACK_IMPORTED_MODULE_8__["CallbackComponent"],
-                _componentes_auth0_perfil_perfil_component__WEBPACK_IMPORTED_MODULE_12__["PerfilComponent"],
-                _componentes_ag_grid_boton_ver_experimento_boton_ver_experimento_component__WEBPACK_IMPORTED_MODULE_16__["BotonVerExperimentoComponent"],
+                _componentes_auth0_perfil_perfil_component__WEBPACK_IMPORTED_MODULE_13__["PerfilComponent"],
+                _componentes_ag_grid_boton_ver_experimento_boton_ver_experimento_component__WEBPACK_IMPORTED_MODULE_17__["BotonVerExperimentoComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"],
@@ -246,14 +263,18 @@ var AppModule = /** @class */ (function () {
                 _modulo_experimentos_modulo_experimentos_module__WEBPACK_IMPORTED_MODULE_10__["ModuloExperimentosModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClientModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"],
-                ag_grid_angular_main__WEBPACK_IMPORTED_MODULE_13__["AgGridModule"].withComponents([
-                    _componentes_ag_grid_header_header_component__WEBPACK_IMPORTED_MODULE_15__["HeaderComponent"],
-                    _componentes_ag_grid_header_group_header_group_component__WEBPACK_IMPORTED_MODULE_14__["HeaderGroupComponent"],
-                    _componentes_ag_grid_boton_ver_experimento_boton_ver_experimento_component__WEBPACK_IMPORTED_MODULE_16__["BotonVerExperimentoComponent"]
-                ])
+                ag_grid_angular_main__WEBPACK_IMPORTED_MODULE_14__["AgGridModule"].withComponents([
+                    _componentes_ag_grid_header_header_component__WEBPACK_IMPORTED_MODULE_16__["HeaderComponent"],
+                    _componentes_ag_grid_header_group_header_group_component__WEBPACK_IMPORTED_MODULE_15__["HeaderGroupComponent"],
+                    _componentes_ag_grid_boton_ver_experimento_boton_ver_experimento_component__WEBPACK_IMPORTED_MODULE_17__["BotonVerExperimentoComponent"]
+                ]),
+                ng_snotify__WEBPACK_IMPORTED_MODULE_18__["SnotifyModule"],
             ],
             providers: [
-                _services_auth0_service__WEBPACK_IMPORTED_MODULE_11__["Auth0Service"]
+                _services_auth0_guards_scopes__WEBPACK_IMPORTED_MODULE_11__["GuardScopesService"],
+                _services_auth0_service__WEBPACK_IMPORTED_MODULE_12__["Auth0Service"],
+                { provide: 'SnotifyToastConfig', useValue: ng_snotify__WEBPACK_IMPORTED_MODULE_18__["ToastDefaults"] },
+                ng_snotify__WEBPACK_IMPORTED_MODULE_18__["SnotifyService"],
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
@@ -803,9 +824,11 @@ module.exports = "<div class=\"row\">\r\n  <form (ngSubmit)=\"savedExperimento()
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CrearExperimentoComponent", function() { return CrearExperimentoComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../services/experimentos-service.service */ "./src/app/modulo-experimentos/services/experimentos-service.service.ts");
-/* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/auth0.service */ "./src/app/services/auth0.service.ts");
-/* harmony import */ var _modelo_experimento_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../modelo/experimento.model */ "./src/app/modulo-experimentos/modelo/experimento.model.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../services/experimentos-service.service */ "./src/app/modulo-experimentos/services/experimentos-service.service.ts");
+/* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/auth0.service */ "./src/app/services/auth0.service.ts");
+/* harmony import */ var _modelo_experimento_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../modelo/experimento.model */ "./src/app/modulo-experimentos/modelo/experimento.model.ts");
+/* harmony import */ var ng_snotify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng-snotify */ "./node_modules/ng-snotify/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -819,19 +842,25 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var ESPECTROMETROS = ['ESPECTROMETRO VARIAN MERCURY AS400', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras Líquidas)', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras sólidas)'];
 var SONDA_A = ['4NUC (5mm)', 'ATB (5mm)', 'BB (10mm)'];
 var SONDA_B = ['PABBI (5mm)', 'PASEX (10mm)'];
 var SONDA_C = ['SPRB400172_7164 (7,5mm)', 'SPRB400172_7423 (7,5mm)'];
 var CrearExperimentoComponent = /** @class */ (function () {
-    function CrearExperimentoComponent(apiExperimento, auth) {
+    function CrearExperimentoComponent(apiExperimento, auth, route, router, snotifyService) {
         this.apiExperimento = apiExperimento;
         this.auth = auth;
+        this.route = route;
+        this.router = router;
+        this.snotifyService = snotifyService;
         this.espectrometros = ESPECTROMETROS;
-        this.experimento = new _modelo_experimento_model__WEBPACK_IMPORTED_MODULE_3__["Experimento"]();
+        this.experimento = new _modelo_experimento_model__WEBPACK_IMPORTED_MODULE_4__["Experimento"]();
         this.startDate = new Date();
         this.finDate = new Date();
         this.finDate2 = new Date();
+        auth.handleLoginCallback();
     }
     CrearExperimentoComponent.prototype.ngOnInit = function () {
     };
@@ -856,9 +885,18 @@ var CrearExperimentoComponent = /** @class */ (function () {
         this.experimento.fecha_salida = this.finDate2;
         this._savedExperimento();
     };
+    CrearExperimentoComponent.prototype.onSuccess = function (msg) {
+        this.snotifyService.success(msg, { showProgressBar: false, timeout: 5000, position: ng_snotify__WEBPACK_IMPORTED_MODULE_5__["SnotifyPosition"].rightTop });
+    };
+    CrearExperimentoComponent.prototype.onError = function (err, titulo) {
+        this.snotifyService.error(err, titulo, { showProgressBar: false, timeout: 5000, position: ng_snotify__WEBPACK_IMPORTED_MODULE_5__["SnotifyPosition"].rightTop });
+    };
     CrearExperimentoComponent.prototype._savedExperimento = function () {
-        this.experimentosSubscription = this.apiExperimento.setExperimentos$(this.experimento)
-            .subscribe(function (res) { return console.log(res); }, function (err) { return console.warn(err); }, function () { return console.log('Request complete'); });
+        var _this = this;
+        this.experimentosSubscription = this.apiExperimento.setExperimentos$(this.experimento).subscribe(function (data) {
+            _this.onSuccess('Experimento creado con exito');
+            _this.router.navigate(['/experimentos/mostrar/' + data['_id']]);
+        }, function (err) { return _this.onError(err, 'Error al crear el experimento'); });
     };
     CrearExperimentoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -866,7 +904,7 @@ var CrearExperimentoComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./crear-experimento.component.html */ "./src/app/modulo-experimentos/componentes/crear-experimento/crear-experimento.component.html"),
             styles: [__webpack_require__(/*! ./crear-experimento.component.css */ "./src/app/modulo-experimentos/componentes/crear-experimento/crear-experimento.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_1__["ExperimentosServiceService"], _services_auth0_service__WEBPACK_IMPORTED_MODULE_2__["Auth0Service"]])
+        __metadata("design:paramtypes", [_services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_2__["ExperimentosServiceService"], _services_auth0_service__WEBPACK_IMPORTED_MODULE_3__["Auth0Service"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], ng_snotify__WEBPACK_IMPORTED_MODULE_5__["SnotifyService"]])
     ], CrearExperimentoComponent);
     return CrearExperimentoComponent;
 }());
@@ -1170,7 +1208,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  ver-experimento works!\n</p>\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"espectrometros\" name=\"espectrometros\" [ngModel]=\"experimento.espectrometro\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"sonda\" name=\"sonda\" [ngModel]=\"experimento.sonda\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [ngModel]=\"experimento.usuario_entrada\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [ngModel]=\"experimento.muestra\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [ngModel]=\"experimento.solicitud\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [ngModel]=\"experimento.finalizado\" name=\"finalizado\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.finalizado\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.finalizado\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de salida: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [ngModel]=\"experimento.usuario_salida\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <a routerLink=\"['/experimentos/editar/', experimento._id]\" class=\"btn btn-warning\">\r\n      Editar\r\n      <span class=\"glyphicon glyphicon-edit\"></span>\r\n    </a>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteExperimento()\">\r\n      Eliminar\r\n      <span class=\"glyphicon glyphicon-remove\"></span>\r\n    </button>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1185,6 +1223,11 @@ module.exports = "<p>\n  ver-experimento works!\n</p>\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerExperimentoComponent", function() { return VerExperimentoComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/auth0.service */ "./src/app/services/auth0.service.ts");
+/* harmony import */ var ng_snotify__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ng-snotify */ "./node_modules/ng-snotify/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _modelo_experimento_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../modelo/experimento.model */ "./src/app/modulo-experimentos/modelo/experimento.model.ts");
+/* harmony import */ var _services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../services/experimentos-service.service */ "./src/app/modulo-experimentos/services/experimentos-service.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1195,10 +1238,55 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+
+
 var VerExperimentoComponent = /** @class */ (function () {
-    function VerExperimentoComponent() {
+    function VerExperimentoComponent(apiExperimento, auth, route, router, snotifyService) {
+        this.apiExperimento = apiExperimento;
+        this.auth = auth;
+        this.route = route;
+        this.router = router;
+        this.snotifyService = snotifyService;
+        this.experimento = new _modelo_experimento_model__WEBPACK_IMPORTED_MODULE_4__["Experimento"]();
+        auth.handleLoginCallback();
     }
     VerExperimentoComponent.prototype.ngOnInit = function () {
+        this._getExperimento();
+    };
+    VerExperimentoComponent.prototype.ngOnDestroy = function () {
+        if (this.authSubscription)
+            this.authSubscription.unsubscribe();
+        this._destroyExperimentoSubscription();
+    };
+    VerExperimentoComponent.prototype.deleteExperimento = function () {
+        this._deleteExperimento();
+    };
+    VerExperimentoComponent.prototype.onSuccess = function (msg) {
+        this.snotifyService.success(msg, { showProgressBar: false, timeout: 5000, position: ng_snotify__WEBPACK_IMPORTED_MODULE_2__["SnotifyPosition"].rightTop });
+    };
+    VerExperimentoComponent.prototype.onError = function (err, titulo) {
+        this.snotifyService.error(err, titulo, { showProgressBar: false, timeout: 5000, position: ng_snotify__WEBPACK_IMPORTED_MODULE_2__["SnotifyPosition"].rightTop });
+    };
+    VerExperimentoComponent.prototype._getExperimento = function () {
+        var _this = this;
+        this.experimentosSubscription = this.apiExperimento.getOneExperimento$(this.route.snapshot.params['id']).subscribe(function (data) { return _this.experimento = data; }, function (err) {
+            _this.onError(err, 'Error al cargar el experimento');
+            _this.router.navigate(['/experimentos/listar/']);
+        });
+    };
+    VerExperimentoComponent.prototype._deleteExperimento = function () {
+        var _this = this;
+        this.experimentosSubscription = this.apiExperimento.deleteExperimento$(this.experimento._id).subscribe(function (data) {
+            _this.onSuccess('Experimento eliminado');
+            _this.router.navigate(['/experimentos/listar']);
+        }, function (err) { return _this.onError(err, 'Error al elimina el experimento'); });
+    };
+    VerExperimentoComponent.prototype._destroyExperimentoSubscription = function () {
+        if (this.experimentosSubscription)
+            this.experimentosSubscription.unsubscribe();
     };
     VerExperimentoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1206,7 +1294,7 @@ var VerExperimentoComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./ver-experimento.component.html */ "./src/app/modulo-experimentos/componentes/ver-experimento/ver-experimento.component.html"),
             styles: [__webpack_require__(/*! ./ver-experimento.component.css */ "./src/app/modulo-experimentos/componentes/ver-experimento/ver-experimento.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_5__["ExperimentosServiceService"], _services_auth0_service__WEBPACK_IMPORTED_MODULE_1__["Auth0Service"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], ng_snotify__WEBPACK_IMPORTED_MODULE_2__["SnotifyService"]])
     ], VerExperimentoComponent);
     return VerExperimentoComponent;
 }());
@@ -1343,20 +1431,28 @@ var ExperimentosServiceService = /** @class */ (function () {
     function ExperimentosServiceService(http, auth) {
         this.http = http;
         this.auth = auth;
+        this.option = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', "Bearer " + this.auth.accessToken)
+        };
     }
     ExperimentosServiceService.prototype.getExperimentos$ = function () {
         return this.http
-            .get("/experimento", { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', "Bearer " + this.auth.accessToken) })
+            .get("/experimento", this.option)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this._handleError));
     };
     ExperimentosServiceService.prototype.getOneExperimento$ = function (id) {
         return this.http
-            .get("/experimento/:id", { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', "Bearer " + this.auth.accessToken) })
+            .get("/experimento/" + id, this.option)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this._handleError));
     };
     ExperimentosServiceService.prototype.setExperimentos$ = function (experimento) {
         return this.http
             .post("/experimento", experimento, { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', "Bearer " + this.auth.accessToken) })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this._handleError));
+    };
+    ExperimentosServiceService.prototype.deleteExperimento$ = function (id) {
+        return this.http
+            .delete("/experimento/" + id, this.option)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this._handleError));
     };
     ExperimentosServiceService.prototype._handleError = function (err) {
@@ -1444,6 +1540,55 @@ var AuthGuard = /** @class */ (function () {
         __metadata("design:paramtypes", [_auth0_service__WEBPACK_IMPORTED_MODULE_1__["Auth0Service"]])
     ], AuthGuard);
     return AuthGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/auth0.guards-scopes.ts":
+/*!*************************************************!*\
+  !*** ./src/app/services/auth0.guards-scopes.ts ***!
+  \*************************************************/
+/*! exports provided: GuardScopesService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GuardScopesService", function() { return GuardScopesService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/auth0.service */ "./src/app/services/auth0.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var GuardScopesService = /** @class */ (function () {
+    function GuardScopesService(authService, router) {
+        this.authService = authService;
+        this.router = router;
+    }
+    GuardScopesService.prototype.canActivate = function (route) {
+        var scopes = route.data.expectedScopes;
+        if (!this.authService.authenticated || (!this.authService.checkScopes(['all:administrador']) && !this.authService.checkScopes(scopes))) {
+            this.router.navigate(['/inicio']);
+            return false;
+        }
+        return true;
+    };
+    GuardScopesService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_services_auth0_service__WEBPACK_IMPORTED_MODULE_1__["Auth0Service"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], GuardScopesService);
+    return GuardScopesService;
 }());
 
 

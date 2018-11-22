@@ -12,7 +12,7 @@ exports.getExperimentos = async function(query, option) {
   }
 }
 
-exports.getOneExperimento = async function (query, option) {
+exports.getOneExperimento = async function (id) {
   try {
     var experimentos = await Experimento.findById(id);
     return experimentos;
@@ -39,5 +39,14 @@ exports.createExperimento = async function (experimento) {
     return _savedExperimento;
   } catch (e) {
     throw Error("Error al crear el experimento. Err(EXP03): " + e);
+  }
+}
+
+exports.deleteExperimento = async (id) => {
+  try {
+    var deleted = await Experimento.deleteOne({ _id: id })
+    return deleted;
+  } catch (err) {
+    throw Error("Ocurrio un error mientras se eliminaba el experimento. Err.: " + err)
   }
 }

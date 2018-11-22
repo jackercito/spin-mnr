@@ -6,4 +6,8 @@ router.route("/")
   .get(ExperimentoController.getExperimentos)
   .post(ExperimentoController.postExperimento)
 
+router.route("/:id")
+  .get(ExperimentoController.getOneExperimento)
+  .delete(ExperimentoController.deleteExperimento)
+
 module.exports = router;
