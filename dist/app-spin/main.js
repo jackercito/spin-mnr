@@ -1783,6 +1783,29 @@ var Auth0Service = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/environments/environment.base.ts":
+/*!**********************************************!*\
+  !*** ./src/environments/environment.base.ts ***!
+  \**********************************************/
+/*! exports provided: _environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_environment", function() { return _environment; });
+var _environment = {
+    production: false,
+    RETURN_URL: "http://localhost:8080",
+    CLIENT_ID: "UAN7a6NXyx2VQcWgzRw1uHW9UPPSA8FS",
+    CLIENT_DOMAIN: "jackercito.eu.auth0.com",
+    RESPONSE_TYPE: "token id_token",
+    AUDIENCE: "https://api.spin.jackercito/",
+    REDIRECT: "http://localhost:8080/callback",
+};
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -1793,14 +1816,16 @@ var Auth0Service = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+/* harmony import */ var _environment_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./environment.base */ "./src/environments/environment.base.ts");
+
 var environment = {
-    production: false,
-    RETURN_URL: "http://localhost:8080",
-    CLIENT_ID: "UAN7a6NXyx2VQcWgzRw1uHW9UPPSA8FS",
-    CLIENT_DOMAIN: "jackercito.eu.auth0.com",
-    RESPONSE_TYPE: "token id_token",
-    AUDIENCE: "https://api.spin.jackercito/",
-    REDIRECT: "http://localhost:8080/callback",
+    production: _environment_base__WEBPACK_IMPORTED_MODULE_0__["_environment"].production,
+    RETURN_URL: _environment_base__WEBPACK_IMPORTED_MODULE_0__["_environment"].RETURN_URL,
+    CLIENT_ID: _environment_base__WEBPACK_IMPORTED_MODULE_0__["_environment"].CLIENT_ID,
+    CLIENT_DOMAIN: _environment_base__WEBPACK_IMPORTED_MODULE_0__["_environment"].CLIENT_DOMAIN,
+    RESPONSE_TYPE: _environment_base__WEBPACK_IMPORTED_MODULE_0__["_environment"].RESPONSE_TYPE,
+    AUDIENCE: _environment_base__WEBPACK_IMPORTED_MODULE_0__["_environment"].AUDIENCE,
+    REDIRECT: _environment_base__WEBPACK_IMPORTED_MODULE_0__["_environment"].REDIRECT
 };
 
 

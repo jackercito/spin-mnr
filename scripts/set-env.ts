@@ -11,11 +11,12 @@ require('dotenv').config();
 const environment = argv.environment;
 const isProd = environment === 'prod';
 
-const environment_file = (isProd) ? ".prod" : ""
+//const environment_file = (isProd) ? ".prod" : ".dev"
 
-const targetPath = './src/environments/environment' + environment_file +'.ts';
+//const targetPath = './src/environments/environment' + environment_file +'.ts';
+const targetPath = './src/environments/environment.base.ts';
 const envConfigFile = `
-export const environment = {
+export const _environment = {
   production: ${isProd},
   RETURN_URL: "${process.env.RETURN_URL}",
   CLIENT_ID: "${process.env.CLIENT_ID}",
