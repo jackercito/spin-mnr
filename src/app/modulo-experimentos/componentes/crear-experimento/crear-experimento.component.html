@@ -42,7 +42,7 @@
     <div class="col-md-7">
       <div class="form-group">
         <label>ID Solicitud: </label>
-        <input type="text" class="form-control" name="id_solicitud" [(ngModel)]="experimento.id_solicitud" required>
+        <input type="text" class="form-control" name="id_solicitud" [(ngModel)]="experimento.solicitud" required>
       </div>
     </div>
 
@@ -66,7 +66,7 @@
       </div>
     </div>
 
-    <div class="col-md-7" *ngIf="experimento.estado">
+    <div class="col-md-7" *ngIf="experimento.finalizado">
       <div class="form-group">
         <label>Usuario de salida: </label>
         <input type="text" class="form-control" name="usuario_salida" [(ngModel)]="experimento.usuario_salida">

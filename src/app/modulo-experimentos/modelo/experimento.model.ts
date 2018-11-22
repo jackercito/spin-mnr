@@ -3,6 +3,7 @@ export class Experimento {
   public espectrometro: string;
   public sonda: string;
   public muestra: string;
+  public solicitud: string;
   public usuario_entrada: string;
   public usuario_salida: string;
   public fecha_entrada: Date;
