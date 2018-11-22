@@ -190,5 +190,8 @@ function compararFechas(filterLocalDateAtMidnight, cellValue) {
 
 function dateFormat(params) {
   var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-  return new Date(params.value).toLocaleDateString('es-ES', options);
+  if (params.value !== undefined || params.value != null)
+    return new Date(params.value).toLocaleDateString('es-ES', options);
+  else
+    return '';
 }

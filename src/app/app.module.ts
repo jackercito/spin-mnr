@@ -37,6 +37,7 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
     BotonVerExperimentoComponent,
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
@@ -45,7 +46,6 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
     MenuModule,
     ModuloExperimentosModule,
     HttpClientModule,
-    RouterModule,
     AgGridModule.withComponents([
       HeaderComponent,
       HeaderGroupComponent,

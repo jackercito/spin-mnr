@@ -254,6 +254,7 @@ var AppModule = /** @class */ (function () {
                 _componentes_ag_grid_boton_ver_experimento_boton_ver_experimento_component__WEBPACK_IMPORTED_MODULE_17__["BotonVerExperimentoComponent"],
             ],
             imports: [
+                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ReactiveFormsModule"],
@@ -262,7 +263,6 @@ var AppModule = /** @class */ (function () {
                 _menu_menu_module__WEBPACK_IMPORTED_MODULE_9__["MenuModule"],
                 _modulo_experimentos_modulo_experimentos_module__WEBPACK_IMPORTED_MODULE_10__["ModuloExperimentosModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClientModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"],
                 ag_grid_angular_main__WEBPACK_IMPORTED_MODULE_14__["AgGridModule"].withComponents([
                     _componentes_ag_grid_header_header_component__WEBPACK_IMPORTED_MODULE_16__["HeaderComponent"],
                     _componentes_ag_grid_header_group_header_group_component__WEBPACK_IMPORTED_MODULE_15__["HeaderGroupComponent"],
@@ -809,7 +809,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <form (ngSubmit)=\"savedExperimento()\" #experimentoForm=\"ngForm\">\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Espectrometro: </label>\r\n        <select [(ngModel)]=\"espectrometroSeleccionado\" class=\"form-control\" name=\"espectrometro\" id=\"espectrometro\" (change)=\"onSelectEspectrometro($event.target.value)\" required>\r\n          <option *ngFor=\"let espect of espectrometros\" [value]=\"espect\">{{espect}}</option>\r\n        </select>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Sondas: </label>\r\n        <select [(ngModel)]=\"sondaSeleccionada\" class=\"form-control\" name=\"sonda\" id=\"sonda\" required>\r\n          <option *ngFor=\"let sond of sondas\" [value]=\"sond\">{{sond}}</option>\r\n        </select>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Fecha de entrada: </label>\r\n        <input type=\"date\" class=\"form-control\" [ngModel]=\"startDate | date:'yyyy-MM-dd'\" (ngModelChange)=\"finDate = $event\" name=\"fecha_entrada\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de entrada: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [(ngModel)]=\"experimento.usuario_entrada\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Muestra: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"muestra\" [(ngModel)]=\"experimento.muestra\" required>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>ID Solicitud: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [(ngModel)]=\"experimento.solicitud\" required>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <label for=\"finalizado\"> Finalizado </label>\r\n      <div class=\"form-group input-group\">\r\n        <label for=\"finalizado\" class=\"checkbox-inline\">\r\n          <input type=\"checkbox\" class=\"form-control\" [(ngModel)]=\"experimento.finalizado\" name=\"finalizado\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n        </label>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <br />\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.finalizado\">\r\n      <div class=\"form-group\">\r\n        <label>Fecha de salida: </label>\r\n        <input type=\"date\" class=\"form-control\" [ngModel]=\"startDate | date:'yyyy-MM-dd'\" (ngModelChange)=\"finDate2 = $event\" name=\"fecha_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.finalizado\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de salida: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [(ngModel)]=\"experimento.usuario_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!experimentoForm.form.valid\">Guardar Experimento</button>\r\n      </div>\r\n    </div>\r\n  </form>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <form (ngSubmit)=\"savedExperimento()\" #experimentoForm=\"ngForm\">\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Espectrometro: </label>\r\n        <select [(ngModel)]=\"espectrometroSeleccionado\" class=\"form-control\" name=\"espectrometro\" id=\"espectrometro\" (change)=\"onSelectEspectrometro($event.target.value)\" required>\r\n          <option *ngFor=\"let espect of espectrometros\" [value]=\"espect\">{{espect}}</option>\r\n        </select>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Sondas: </label>\r\n        <select [(ngModel)]=\"sondaSeleccionada\" class=\"form-control\" name=\"sonda\" id=\"sonda\" required>\r\n          <option *ngFor=\"let sond of sondas\" [value]=\"sond\">{{sond}}</option>\r\n        </select>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Fecha de entrada: </label>\r\n        <input type=\"date\" class=\"form-control\" [ngModel]=\"startDate | date:'yyyy-MM-dd'\" (ngModelChange)=\"finDate = $event\" name=\"fecha_entrada\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de entrada: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [(ngModel)]=\"experimento.usuario_entrada\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Muestra: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"muestra\" [(ngModel)]=\"experimento.muestra\" required>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>ID Solicitud: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [(ngModel)]=\"experimento.solicitud\" required>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <label for=\"finalizado\"> Finalizado </label>\r\n      <div class=\"form-group input-group\">\r\n        <label for=\"finalizado\" class=\"checkbox-inline\">\r\n          <input type=\"checkbox\" class=\"form-control\" [(ngModel)]=\"experimento.completo\" name=\"finalizado\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n        </label>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <br />\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n      <div class=\"form-group\">\r\n        <label>Fecha de salida: </label>\r\n        <input type=\"date\" class=\"form-control\" [ngModel]=\"startDate | date:'yyyy-MM-dd'\" (ngModelChange)=\"finDate2 = $event\" name=\"fecha_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de salida: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [(ngModel)]=\"experimento.usuario_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!experimentoForm.form.valid\">Guardar Experimento</button>\r\n      </div>\r\n    </div>\r\n  </form>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -931,7 +931,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  editar-experimento works!\n</p>\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"espectrometros\" name=\"espectrometros\" [ngModel]=\"experimento.espectrometro\" />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"sonda\" name=\"sonda\" [ngModel]=\"experimento.sonda\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [ngModel]=\"experimento.usuario_entrada\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [ngModel]=\"experimento.muestra\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [ngModel]=\"experimento.solicitud\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [ngModel]=\"experimento.completo\" name=\"finalizado\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de salida: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [ngModel]=\"experimento.usuario_salida\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button (click)=\"editarExperimento()\" class=\"btn btn-warning\">\r\n      Guardar\r\n      <span class=\"glyphicon glyphicon-save\"></span>\r\n    </button>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button class=\"btn btn-info\" type=\"button\" (click)=\"goBack()\">\r\n      Volver\r\n      <span class=\"glyphicon glyphicon-share-alt\"></span>\r\n    </button>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -946,6 +946,12 @@ module.exports = "<p>\n  editar-experimento works!\n</p>\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditarExperimentoComponent", function() { return EditarExperimentoComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/auth0.service */ "./src/app/services/auth0.service.ts");
+/* harmony import */ var ng_snotify__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ng-snotify */ "./node_modules/ng-snotify/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _modelo_experimento_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modelo/experimento.model */ "./src/app/modulo-experimentos/modelo/experimento.model.ts");
+/* harmony import */ var _services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../services/experimentos-service.service */ "./src/app/modulo-experimentos/services/experimentos-service.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -956,10 +962,54 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+
+
+
 var EditarExperimentoComponent = /** @class */ (function () {
-    function EditarExperimentoComponent() {
+    function EditarExperimentoComponent(apiExperimento, auth, route, router, snotifyService, _location) {
+        this.apiExperimento = apiExperimento;
+        this.auth = auth;
+        this.route = route;
+        this.router = router;
+        this.snotifyService = snotifyService;
+        this._location = _location;
+        this.experimento = new _modelo_experimento_model__WEBPACK_IMPORTED_MODULE_5__["Experimento"]();
+        auth.handleLoginCallback();
     }
     EditarExperimentoComponent.prototype.ngOnInit = function () {
+        this._getExperimento();
+    };
+    EditarExperimentoComponent.prototype.ngOnDestroy = function () {
+        if (this.authSubscription)
+            this.authSubscription.unsubscribe();
+        this._destroyExperimentoSubscription();
+    };
+    EditarExperimentoComponent.prototype.editarExperimento = function () {
+    };
+    EditarExperimentoComponent.prototype.onSuccess = function (msg) {
+        this.snotifyService.success(msg, { showProgressBar: false, timeout: 5000, position: ng_snotify__WEBPACK_IMPORTED_MODULE_2__["SnotifyPosition"].rightTop });
+    };
+    EditarExperimentoComponent.prototype.onError = function (err, titulo) {
+        this.snotifyService.error(err, titulo, { showProgressBar: false, timeout: 5000, position: ng_snotify__WEBPACK_IMPORTED_MODULE_2__["SnotifyPosition"].rightTop });
+    };
+    EditarExperimentoComponent.prototype.goBack = function () {
+        this._location.back();
+    };
+    EditarExperimentoComponent.prototype._getExperimento = function () {
+        var _this = this;
+        this.experimentosSubscription = this.apiExperimento.getOneExperimento$(this.route.snapshot.params['id']).subscribe(function (data) {
+            _this.experimento = data;
+        }, function (err) {
+            _this.onError(err, 'Error al cargar el experimento');
+            _this.router.navigate(['/experimentos/listar/']);
+        });
+    };
+    EditarExperimentoComponent.prototype._destroyExperimentoSubscription = function () {
+        if (this.experimentosSubscription)
+            this.experimentosSubscription.unsubscribe();
     };
     EditarExperimentoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -967,7 +1017,12 @@ var EditarExperimentoComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./editar-experimento.component.html */ "./src/app/modulo-experimentos/componentes/editar-experimento/editar-experimento.component.html"),
             styles: [__webpack_require__(/*! ./editar-experimento.component.css */ "./src/app/modulo-experimentos/componentes/editar-experimento/editar-experimento.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_6__["ExperimentosServiceService"],
+            _services_auth0_service__WEBPACK_IMPORTED_MODULE_1__["Auth0Service"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            ng_snotify__WEBPACK_IMPORTED_MODULE_2__["SnotifyService"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"]])
     ], EditarExperimentoComponent);
     return EditarExperimentoComponent;
 }());
@@ -1184,7 +1239,10 @@ function compararFechas(filterLocalDateAtMidnight, cellValue) {
 }
 function dateFormat(params) {
     var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-    return new Date(params.value).toLocaleDateString('es-ES', options);
+    if (params.value !== undefined || params.value != null)
+        return new Date(params.value).toLocaleDateString('es-ES', options);
+    else
+        return '';
 }
 
 
@@ -1208,7 +1266,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"espectrometros\" name=\"espectrometros\" [ngModel]=\"experimento.espectrometro\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"sonda\" name=\"sonda\" [ngModel]=\"experimento.sonda\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [ngModel]=\"experimento.usuario_entrada\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [ngModel]=\"experimento.muestra\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [ngModel]=\"experimento.solicitud\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [ngModel]=\"experimento.finalizado\" name=\"finalizado\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.finalizado\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.finalizado\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de salida: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [ngModel]=\"experimento.usuario_salida\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <a routerLink=\"['/experimentos/editar/', experimento._id]\" class=\"btn btn-warning\">\r\n      Editar\r\n      <span class=\"glyphicon glyphicon-edit\"></span>\r\n    </a>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteExperimento()\">\r\n      Eliminar\r\n      <span class=\"glyphicon glyphicon-remove\"></span>\r\n    </button>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"espectrometros\" name=\"espectrometros\" [ngModel]=\"experimento.espectrometro\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"sonda\" name=\"sonda\" [ngModel]=\"experimento.sonda\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [ngModel]=\"experimento.usuario_entrada\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [ngModel]=\"experimento.muestra\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [ngModel]=\"experimento.solicitud\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [ngModel]=\"experimento.completo\" name=\"finalizado\" disabled> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de salida: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [ngModel]=\"experimento.usuario_salida\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button (click)=\"editarExperimento()\" class=\"btn btn-warning\" >\r\n      Editar\r\n      <span class=\"glyphicon glyphicon-edit\"></span>\r\n    </button>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteExperimento()\">\r\n      Eliminar\r\n      <span class=\"glyphicon glyphicon-remove\"></span>\r\n    </button>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1264,6 +1322,9 @@ var VerExperimentoComponent = /** @class */ (function () {
     VerExperimentoComponent.prototype.deleteExperimento = function () {
         this._deleteExperimento();
     };
+    VerExperimentoComponent.prototype.editarExperimento = function () {
+        this.router.navigate(['/experimentos/editar/' + this.experimento._id]);
+    };
     VerExperimentoComponent.prototype.onSuccess = function (msg) {
         this.snotifyService.success(msg, { showProgressBar: false, timeout: 5000, position: ng_snotify__WEBPACK_IMPORTED_MODULE_2__["SnotifyPosition"].rightTop });
     };
@@ -1272,7 +1333,9 @@ var VerExperimentoComponent = /** @class */ (function () {
     };
     VerExperimentoComponent.prototype._getExperimento = function () {
         var _this = this;
-        this.experimentosSubscription = this.apiExperimento.getOneExperimento$(this.route.snapshot.params['id']).subscribe(function (data) { return _this.experimento = data; }, function (err) {
+        this.experimentosSubscription = this.apiExperimento.getOneExperimento$(this.route.snapshot.params['id']).subscribe(function (data) {
+            _this.experimento = data;
+        }, function (err) {
             _this.onError(err, 'Error al cargar el experimento');
             _this.router.navigate(['/experimentos/listar/']);
         });
@@ -1317,7 +1380,7 @@ var Experimento = /** @class */ (function () {
     function Experimento() {
         this.fecha_entrada = new Date();
         this.fecha_salida = new Date();
-        this.finalizado = false;
+        this.completo = false;
     }
     return Experimento;
 }());

@@ -10,7 +10,7 @@ var ExperimentoSchema = new Schema({
   muestra: { type: String, required: true },
   solicitud: { type: String, required: true },
   sonda: { type: String },
-  completo: { type: String }
+  completo: { type: Boolean }
 });
 
 module.exports = mongoose.model("Experimento", ExperimentoSchema);

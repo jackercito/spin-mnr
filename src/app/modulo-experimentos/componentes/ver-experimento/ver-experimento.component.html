@@ -16,7 +16,7 @@
   <div class="col-md-7">
     <div class="form-group">
       <label>Fecha de entrada: </label>
-      <input type="date" class="form-control" [ngModel]="experimento.fecha_entrada | date:'yyyy-MM-dd'" name="fecha_entrada">
+      <input type="date" class="form-control" [ngModel]="experimento.fecha_entrada | date:'yyyy-MM-dd'" name="fecha_entrada" disabled>
     </div>
   </div>
 
@@ -45,7 +45,7 @@
     <label for="finalizado"> Finalizado </label>
     <div class="form-group input-group">
       <label for="finalizado" class="checkbox-inline">
-        <input type="checkbox" class="form-control" [ngModel]="experimento.finalizado" name="finalizado"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" class="form-control" [ngModel]="experimento.completo" name="finalizado" disabled> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </label>
     </div>
   </div>
@@ -54,25 +54,25 @@
     <br />
   </div>
 
-  <div class="col-md-7" *ngIf="experimento.finalizado">
+  <div class="col-md-7" *ngIf="experimento.completo">
     <div class="form-group">
       <label>Fecha de salida: </label>
-      <input type="date" class="form-control" [ngModel]="experimento.fecha_salida | date:'yyyy-MM-dd'" name="fecha_salida">
+      <input type="date" class="form-control" [ngModel]="experimento.fecha_salida | date:'yyyy-MM-dd'" name="fecha_salida" disabled>
     </div>
   </div>
 
-  <div class="col-md-7" *ngIf="experimento.finalizado">
+  <div class="col-md-7" *ngIf="experimento.completo">
     <div class="form-group">
       <label>Usuario de salida: </label>
-      <input type="text" class="form-control" name="usuario_salida" [ngModel]="experimento.usuario_salida">
+      <input type="text" class="form-control" name="usuario_salida" [ngModel]="experimento.usuario_salida" disabled>
     </div>
   </div>
 
   <div class="col-md-6 form-group">
-    <a routerLink="['/experimentos/editar/', experimento._id]" class="btn btn-warning">
+    <button (click)="editarExperimento()" class="btn btn-warning" >
       Editar
       <span class="glyphicon glyphicon-edit"></span>
-    </a>
+    </button>
   </div>
 
   <div class="col-md-6 form-group">

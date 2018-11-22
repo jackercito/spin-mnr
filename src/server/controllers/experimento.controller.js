@@ -34,14 +34,16 @@ exports.postExperimento = async function (req, res, next) {
   var experimento = ({
     espectrometro: req.body.espectrometro,
     fecha_entrada: req.body.fecha_entrada,
-    fecha_salida: req.body.fecha_salida,
+    fecha_salida: req.body.completo ? req.body.fecha_salida : null,
     usuario_entrada: req.body.usuario_entrada,
-    usuario_salida: req.body.usuario_salida,
+    usuario_salida: req.body.completo ? req.body.usuario_salida : '',
     muestra: req.body.muestra,
     solicitud: req.body.solicitud,
     sonda: req.body.sonda,
-    completo: req.body.finalizado,
+    completo: req.body.completo,
   });
+
+  console.log(experimento);
 
   try {
     var _experimentoGuardado = await ExperimentoService.createExperimento(experimento);

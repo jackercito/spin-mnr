@@ -8,11 +8,11 @@ export class Experimento {
   public usuario_salida: string;
   public fecha_entrada: Date;
   public fecha_salida: Date;
-  public finalizado: boolean;
+  public completo: boolean;
 
   constructor() {
     this.fecha_entrada = new Date();
     this.fecha_salida = new Date();
-    this.finalizado = false;
+    this.completo = false;
   }
 }

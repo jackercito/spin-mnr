@@ -50,7 +50,7 @@
       <label for="finalizado"> Finalizado </label>
       <div class="form-group input-group">
         <label for="finalizado" class="checkbox-inline">
-          <input type="checkbox" class="form-control" [(ngModel)]="experimento.finalizado" name="finalizado"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="checkbox" class="form-control" [(ngModel)]="experimento.completo" name="finalizado"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </label>
       </div>
     </div>
@@ -59,14 +59,14 @@
       <br />
     </div>
 
-    <div class="col-md-7" *ngIf="experimento.finalizado">
+    <div class="col-md-7" *ngIf="experimento.completo">
       <div class="form-group">
         <label>Fecha de salida: </label>
         <input type="date" class="form-control" [ngModel]="startDate | date:'yyyy-MM-dd'" (ngModelChange)="finDate2 = $event" name="fecha_salida">
       </div>
     </div>
 
-    <div class="col-md-7" *ngIf="experimento.finalizado">
+    <div class="col-md-7" *ngIf="experimento.completo">
       <div class="form-group">
         <label>Usuario de salida: </label>
         <input type="text" class="form-control" name="usuario_salida" [(ngModel)]="experimento.usuario_salida">

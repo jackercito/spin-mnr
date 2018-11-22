@@ -7,7 +7,6 @@ import { Subscription } from 'rxjs';
 import { Experimento } from '../../modelo/experimento.model'
 import { ExperimentosServiceService } from './../../services/experimentos-service.service';
 
-
 @Component({
   selector: 'app-ver-experimento',
   templateUrl: './ver-experimento.component.html',
@@ -37,6 +36,10 @@ export class VerExperimentoComponent implements OnInit {
     this._deleteExperimento();
   }
 
+  editarExperimento() {
+    this.router.navigate(['/experimentos/editar/' + this.experimento._id])
+  }
+
   onSuccess(msg) {
     this.snotifyService.success(msg, { showProgressBar: false, timeout: 5000, position: SnotifyPosition.rightTop });
   }
@@ -47,7 +50,9 @@ export class VerExperimentoComponent implements OnInit {
 
   private _getExperimento() {
     this.experimentosSubscription = this.apiExperimento.getOneExperimento$(this.route.snapshot.params['id']).subscribe(
-      data => this.experimento = data,
+      data => {
+        this.experimento = data;
+      },
       err => {
         this.onError(err, 'Error al cargar el experimento');
         this.router.navigate(['/experimentos/listar/'])
