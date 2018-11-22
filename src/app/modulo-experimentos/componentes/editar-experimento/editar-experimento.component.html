@@ -16,7 +16,7 @@
   <div class="col-md-7">
     <div class="form-group">
       <label>Fecha de entrada: </label>
-      <input type="date" class="form-control" [(ngModel)]="experimento.fecha_entrada | date:'yyyy-MM-dd'" name="fecha_entrada">
+      <!--<input type="date" class="form-control" [(ngModel)]="experimento.fecha_entrada | date:'yyyy-MM-dd'" name="fecha_entrada">-->
     </div>
   </div>
 
@@ -57,28 +57,28 @@
   <div class="col-md-7" *ngIf="experimento.completo">
     <div class="form-group">
       <label>Fecha de salida: </label>
-      <input type="date" class="form-control" [(ngModel)]="experimento.fecha_salida | date:'yyyy-MM-dd'" name="fecha_salida">
+      <!--<input type="date" class="form-control" [(ngModel)]="experimento.fecha_salida | date:'yyyy-MM-dd'" name="fecha_salida">-->
+      </div>
+    </div>
+
+    <div class="col-md-7" *ngIf="experimento.completo">
+      <div class="form-group">
+        <label>Usuario de salida: </label>
+        <input type="text" class="form-control" name="usuario_salida" [(ngModel)]="experimento.usuario_salida">
+      </div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <button (click)="editarExperimento()" class="btn btn-warning">
+        Guardar
+        <span class="glyphicon glyphicon-save"></span>
+      </button>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <button class="btn btn-info" type="button" (click)="goBack()">
+        Volver
+        <span class="glyphicon glyphicon-share-alt"></span>
+      </button>
     </div>
   </div>
-
-  <div class="col-md-7" *ngIf="experimento.completo">
-    <div class="form-group">
-      <label>Usuario de salida: </label>
-      <input type="text" class="form-control" name="usuario_salida" [(ngModel)]="experimento.usuario_salida">
-    </div>
-  </div>
-
-  <div class="col-md-6 form-group">
-    <button (click)="editarExperimento()" class="btn btn-warning">
-      Guardar
-      <span class="glyphicon glyphicon-save"></span>
-    </button>
-  </div>
-
-  <div class="col-md-6 form-group">
-    <button class="btn btn-info" type="button" (click)="goBack()">
-      Volver
-      <span class="glyphicon glyphicon-share-alt"></span>
-    </button>
-  </div>
-</div>
