@@ -42,11 +42,42 @@ exports.createExperimento = async function (experimento) {
   }
 }
 
+exports.updateExperimento = async function (experimento) {
+  var id = experimento.id
+  try {
+    var oldExperimento = await Experimento.findById(id);
+  } catch (e) {
+    throw Error("Error al actualizar el experimento. Err(EXP04-1): " + e)
+  }
+
+  // If no old Todo Object exists return false
+  if (!oldExperimento) {
+    return false;
+  }
+
+  oldExperimento.espectrometro = experimento.espectrometro;
+  oldExperimento.fecha_entrada = experimento.fecha_entrada;
+  oldExperimento.fecha_salida = experimento.fecha_salida;
+  oldExperimento.usuario_entrada = experimento.usuario_entrada;
+  oldExperimento.usuario_salida = experimento.usuario_salida;
+  oldExperimento.muestra = experimento.muestra;
+  oldExperimento.solicitud = experimento.solicitud;
+  oldExperimento.sonda = experimento.sonda;
+  oldExperimento.completo = experimento.completo;
+ 
+  try {
+    var _savedExperimento = await oldExperimento.save();
+    return _savedExperimento;
+  } catch (e) {
+    throw Error("Error al actualizar el experimento. Err(EXP04-2): " + e);
+  }
+}
+
 exports.deleteExperimento = async (id) => {
   try {
     var deleted = await Experimento.deleteOne({ _id: id })
     return deleted;
   } catch (err) {
-    throw Error("Ocurrio un error mientras se eliminaba el experimento. Err.: " + err)
+    throw Error("Ocurrio un error mientras se eliminaba el experimento. ErrErr(EXP05).: " + err)
   }
 }

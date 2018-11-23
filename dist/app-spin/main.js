@@ -513,6 +513,87 @@ var HeaderComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/componentes/ag-grid/localeText.ts":
+/*!***************************************************!*\
+  !*** ./src/app/componentes/ag-grid/localeText.ts ***!
+  \***************************************************/
+/*! exports provided: locale */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "locale", function() { return locale; });
+var locale = {
+    page: "Página",
+    more: "Más",
+    to: "a",
+    of: "de",
+    next: "Siguiente",
+    last: "Último",
+    first: "Primero",
+    previous: "Anterior",
+    loadingOoo: "Cargando...",
+    selectAll: "Seleccionar todo",
+    searchOoo: "Buscando...",
+    blanks: "En blanco",
+    filterOoo: "Filtrando...",
+    applyFilter: "Aplicando filtro...",
+    equals: "Igual",
+    notEqual: "No igual",
+    notContains: "No contiene",
+    lessThanOrEqual: "Menor o igual que",
+    greaterThanOrEqual: "Mayor o igual que",
+    inRange: "En el rango de",
+    lessThan: "Menor que",
+    greaterThan: "Mayor que",
+    contains: "Contiene",
+    startsWith: "Empieza por",
+    endsWith: "Acaba por",
+    group: "Grupo",
+    columns: "Columna",
+    //rowGroupColumns: "laPivot Cols",
+    //rowGroupColumnsEmptyMessage: "la please drag cols to group",
+    valueColumns: "Valor de la columna",
+    //pivotMode: "laPivot-Mode",
+    groups: "Grupos",
+    values: "Valores",
+    //pivots: "laPivots",
+    //valueColumnsEmptyMessage: "la drag cols to aggregate",
+    //pivotColumnsEmptyMessage: "la drag here to pivot",
+    noRowsToShow: "No hay registros",
+    pinColumn: "Fijar columna",
+    //valueAggregation: "laValue Agg",
+    autosizeThiscolumn: "Autoajustar columna",
+    autosizeAllColumns: "Autoajustar todas las columnas",
+    groupBy: "agrupar por",
+    ungroupBy: "desagrupar por",
+    resetColumns: "reinciar columna",
+    expandAll: "Expandior todo",
+    collapseAll: "Contraer todo",
+    toolPanel: "Panel de herramientas",
+    export: "Exportar",
+    csvExport: "Exportar a CSV",
+    excelExport: "Exportar a Excel",
+    pinLeft: "Bloquear a la izquierda",
+    pinRight: "Bloquear a la derecha",
+    noPin: "No bloquear",
+    sum: "Suma",
+    min: "Mínimo",
+    max: "Máximo",
+    none: "Ninguno",
+    count: "Contar",
+    average: "Media",
+    copy: "Copiar",
+    ctrlC: "Ctrl + C",
+    paste: "Pegar",
+    ctrlV: "Ctrl + V",
+    or: "O",
+    and: "Y"
+};
+
+
+/***/ }),
+
 /***/ "./src/app/componentes/auth0/callback/callback.component.css":
 /*!*******************************************************************!*\
   !*** ./src/app/componentes/auth0/callback/callback.component.css ***!
@@ -931,7 +1012,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"espectrometros\" name=\"espectrometros\" [ngModel]=\"experimento.espectrometro\" />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"sonda\" name=\"sonda\" [ngModel]=\"experimento.sonda\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [ngModel]=\"experimento.usuario_entrada\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [ngModel]=\"experimento.muestra\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [ngModel]=\"experimento.solicitud\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [ngModel]=\"experimento.completo\" name=\"finalizado\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de salida: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [ngModel]=\"experimento.usuario_salida\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button (click)=\"editarExperimento()\" class=\"btn btn-warning\">\r\n      Guardar\r\n      <span class=\"glyphicon glyphicon-save\"></span>\r\n    </button>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button class=\"btn btn-info\" type=\"button\" (click)=\"goBack()\">\r\n      Volver\r\n      <span class=\"glyphicon glyphicon-share-alt\"></span>\r\n    </button>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <select [(ngModel)]=\"espectrometroSeleccionado\" class=\"form-control\" name=\"espectrometro\" id=\"espectrometro\" (change)=\"onSelectEspectrometro($event.target.value)\" required>\r\n        <option *ngFor=\"let espect of espectrometros\" [value]=\"espect\">{{espect}}</option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <select [(ngModel)]=\"sondaSeleccionada\" class=\"form-control\" name=\"sonda\" id=\"sonda\" required>\r\n        <option *ngFor=\"let sond of sondas\" [value]=\"sond\">{{sond}}</option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\" (ngModelChange)=\"finDateFechaEntrada = $event\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [(ngModel)]=\"experimento.usuario_entrada\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [(ngModel)]=\"experimento.muestra\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [(ngModel)]=\"experimento.solicitud\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [(ngModel)]=\"experimento.completo\" name=\"finalizado\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\" (ngModelChange)=\"finDateFechaSalida = $event\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de salida: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [(ngModel)]=\"experimento.usuario_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-6 form-group\">\r\n      <button (click)=\"editarExperimento()\" class=\"btn btn-warning\">\r\n        Guardar\r\n        <span class=\"glyphicon glyphicon-save\"></span>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"col-md-6 form-group\">\r\n      <button class=\"btn btn-info\" type=\"button\" (click)=\"goBack()\">\r\n        Volver\r\n        <span class=\"glyphicon glyphicon-share-alt\"></span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -968,6 +1049,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+var ESPECTROMETROS = ['ESPECTROMETRO VARIAN MERCURY AS400', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras Líquidas)', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras sólidas)'];
+var SONDA_A = ['4NUC (5mm)', 'ATB (5mm)', 'BB (10mm)'];
+var SONDA_B = ['PABBI (5mm)', 'PASEX (10mm)'];
+var SONDA_C = ['SPRB400172_7164 (7,5mm)', 'SPRB400172_7423 (7,5mm)'];
 var EditarExperimentoComponent = /** @class */ (function () {
     function EditarExperimentoComponent(apiExperimento, auth, route, router, snotifyService, _location) {
         this.apiExperimento = apiExperimento;
@@ -977,6 +1062,9 @@ var EditarExperimentoComponent = /** @class */ (function () {
         this.snotifyService = snotifyService;
         this._location = _location;
         this.experimento = new _modelo_experimento_model__WEBPACK_IMPORTED_MODULE_5__["Experimento"]();
+        this.finDateFechaEntrada = new Date();
+        this.finDateFechaSalida = new Date();
+        this.espectrometros = ESPECTROMETROS;
         auth.handleLoginCallback();
     }
     EditarExperimentoComponent.prototype.ngOnInit = function () {
@@ -987,7 +1075,26 @@ var EditarExperimentoComponent = /** @class */ (function () {
             this.authSubscription.unsubscribe();
         this._destroyExperimentoSubscription();
     };
+    EditarExperimentoComponent.prototype.onSelectEspectrometro = function (event) {
+        switch (event) {
+            case ESPECTROMETROS[0]:
+                this.sondas = SONDA_A;
+                break;
+            case ESPECTROMETROS[1]:
+                this.sondas = SONDA_B;
+                break;
+            case ESPECTROMETROS[2]:
+                this.sondas = SONDA_C;
+                break;
+        }
+    };
     EditarExperimentoComponent.prototype.editarExperimento = function () {
+        this.experimento.espectrometro = this.espectrometroSeleccionado;
+        this.experimento.sonda = this.sondaSeleccionada;
+        this.experimento.fecha_entrada = this.finDateFechaEntrada;
+        if (this.experimento.completo)
+            this.experimento.fecha_salida = this.finDateFechaSalida;
+        this._putExperimento();
     };
     EditarExperimentoComponent.prototype.onSuccess = function (msg) {
         this.snotifyService.success(msg, { showProgressBar: false, timeout: 5000, position: ng_snotify__WEBPACK_IMPORTED_MODULE_2__["SnotifyPosition"].rightTop });
@@ -1002,10 +1109,22 @@ var EditarExperimentoComponent = /** @class */ (function () {
         var _this = this;
         this.experimentosSubscription = this.apiExperimento.getOneExperimento$(this.route.snapshot.params['id']).subscribe(function (data) {
             _this.experimento = data;
+            _this.onSelectEspectrometro(_this.experimento.espectrometro);
+            _this.espectrometroSeleccionado = _this.experimento.espectrometro;
+            _this.sondaSeleccionada = _this.experimento.sonda;
+            _this.finDateFechaEntrada = _this.experimento.fecha_entrada;
+            _this.finDateFechaSalida = _this.experimento.fecha_salida;
         }, function (err) {
             _this.onError(err, 'Error al cargar el experimento');
             _this.router.navigate(['/experimentos/listar/']);
         });
+    };
+    EditarExperimentoComponent.prototype._putExperimento = function () {
+        var _this = this;
+        this.experimentosSubscription = this.apiExperimento.putExperimento$(this.experimento).subscribe(function (data) {
+            _this.onSuccess("Experimento editado con exito");
+            _this.router.navigate(['/experimentos/mostrar/', _this.experimento._id]);
+        }, function (err) { return _this.onError(err, "Error al editar el experimento"); });
     };
     EditarExperimentoComponent.prototype._destroyExperimentoSubscription = function () {
         if (this.experimentosSubscription)
@@ -1049,7 +1168,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-12\">\r\n  <br />\r\n</div>\r\n<div class=\"col-md-12\">\r\n  <ag-grid-angular style=\"width: 100%; height: 720px;\"\r\n                   class=\"ag-theme-fresh\"\r\n                   rowSelection=\"single\"\r\n                   rowHeight=\"40\"\r\n                   [rowData]=\"rowData\"\r\n                   [columnDefs]=\"columnDefs\"\r\n                   [enableSorting]=\"true\"\r\n                   [enableColResize]=\"true\"\r\n                   [pagination]=\"true\"\r\n                   [paginationPageSize]=\"paginationPageSize\"\r\n                   [enableFilter]=\"true\"\r\n                   [floatingFilter]=\"true\"\r\n                   [frameworkComponents]=\"frameworkComponents\"\r\n                   [context]=\"context\"\r\n                   (gridReady)=\"onGridReady($event)\">\r\n  </ag-grid-angular>\r\n</div>\r\n"
+module.exports = "<div class=\"col-md-12\">\r\n  <br />\r\n</div>\r\n<div class=\"col-md-12\">\r\n  <ag-grid-angular style=\"width: 100%; height: 720px;\"\r\n                   class=\"ag-theme-fresh\"\r\n                   rowSelection=\"single\"\r\n                   rowHeight=\"40\"\r\n                   [rowData]=\"rowData\"\r\n                   [columnDefs]=\"columnDefs\"\r\n                   [enableSorting]=\"true\"\r\n                   [enableColResize]=\"true\"\r\n                   [pagination]=\"true\"\r\n                   [paginationPageSize]=\"paginationPageSize\"\r\n                   [enableFilter]=\"true\"\r\n                   [floatingFilter]=\"true\"\r\n                   [frameworkComponents]=\"frameworkComponents\"\r\n                   [context]=\"context\"\r\n                   [localeText]=\"localeText\"\r\n                   (gridReady)=\"onGridReady($event)\">\r\n  </ag-grid-angular>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1067,6 +1186,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../services/experimentos-service.service */ "./src/app/modulo-experimentos/services/experimentos-service.service.ts");
 /* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/auth0.service */ "./src/app/services/auth0.service.ts");
 /* harmony import */ var _componentes_ag_grid_boton_ver_experimento_boton_ver_experimento_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component */ "./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.ts");
+/* harmony import */ var _componentes_ag_grid_localeText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../componentes/ag-grid/localeText */ "./src/app/componentes/ag-grid/localeText.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1080,11 +1200,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ListarExperimentosComponent = /** @class */ (function () {
     function ListarExperimentosComponent(apiExperimento, auth) {
         this.apiExperimento = apiExperimento;
         this.auth = auth;
         this.sizePage = 25;
+        this.localeText = _componentes_ag_grid_localeText__WEBPACK_IMPORTED_MODULE_4__["locale"];
         this._getExperimentos();
         this.columnDefs = [
             {
@@ -1239,7 +1361,8 @@ function compararFechas(filterLocalDateAtMidnight, cellValue) {
 }
 function dateFormat(params) {
     var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-    if (params.value !== undefined || params.value != null)
+    console.log(params.value);
+    if (params.value !== undefined && params.value != null)
         return new Date(params.value).toLocaleDateString('es-ES', options);
     else
         return '';
@@ -1511,6 +1634,11 @@ var ExperimentosServiceService = /** @class */ (function () {
     ExperimentosServiceService.prototype.setExperimentos$ = function (experimento) {
         return this.http
             .post("/experimento", experimento, { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', "Bearer " + this.auth.accessToken) })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this._handleError));
+    };
+    ExperimentosServiceService.prototype.putExperimento$ = function (experimento) {
+        return this.http
+            .put("/experimento/" + experimento._id, experimento, this.option)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this._handleError));
     };
     ExperimentosServiceService.prototype.deleteExperimento$ = function (id) {

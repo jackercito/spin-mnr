@@ -2,42 +2,46 @@
   <div class="col-md-7">
     <div class="form-group">
       <label>Espectrometro: </label>
-      <input type="text" class="form-control" id="espectrometros" name="espectrometros" [(ngModel)]="experimento.espectrometro" />
+      <select [(ngModel)]="espectrometroSeleccionado" class="form-control" name="espectrometro" id="espectrometro" (change)="onSelectEspectrometro($event.target.value)" required>
+        <option *ngFor="let espect of espectrometros" [value]="espect">{{espect}}</option>
+      </select>
     </div>
   </div>
 
   <div class="col-md-7">
     <div class="form-group">
       <label>Sondas: </label>
-      <input type="text" class="form-control" id="sonda" name="sonda" [(ngModel)]="experimento.sonda" />
+      <select [(ngModel)]="sondaSeleccionada" class="form-control" name="sonda" id="sonda" required>
+        <option *ngFor="let sond of sondas" [value]="sond">{{sond}}</option>
+      </select>
     </div>
   </div>
 
   <div class="col-md-7">
     <div class="form-group">
       <label>Fecha de entrada: </label>
-      <!--<input type="date" class="form-control" [(ngModel)]="experimento.fecha_entrada | date:'yyyy-MM-dd'" name="fecha_entrada">-->
+      <input type="date" class="form-control" [ngModel]="experimento.fecha_entrada | date:'yyyy-MM-dd'" name="fecha_entrada" (ngModelChange)="finDateFechaEntrada = $event" required>
     </div>
   </div>
 
   <div class="col-md-7">
     <div class="form-group">
       <label>Usuario de entrada: </label>
-      <input type="text" class="form-control" name="usuario_entrada" [(ngModel)]="experimento.usuario_entrada">
+      <input type="text" class="form-control" name="usuario_entrada" [(ngModel)]="experimento.usuario_entrada" required>
     </div>
   </div>
 
   <div class="col-md-7">
     <div class="form-group">
       <label>Muestra: </label>
-      <input type="text" class="form-control" name="muestra" [(ngModel)]="experimento.muestra">
+      <input type="text" class="form-control" name="muestra" [(ngModel)]="experimento.muestra" required>
     </div>
   </div>
 
   <div class="col-md-7">
     <div class="form-group">
       <label>ID Solicitud: </label>
-      <input type="text" class="form-control" name="id_solicitud" [(ngModel)]="experimento.solicitud">
+      <input type="text" class="form-control" name="id_solicitud" [(ngModel)]="experimento.solicitud" required>
     </div>
   </div>
 
@@ -45,7 +49,7 @@
     <label for="finalizado"> Finalizado </label>
     <div class="form-group input-group">
       <label for="finalizado" class="checkbox-inline">
-        <input type="checkbox" class="form-control" [(ngModel)]="experimento.completo" name="finalizado"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" class="form-control" [(ngModel)]="experimento.completo" name="finalizado" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </label>
     </div>
   </div>
@@ -57,7 +61,7 @@
   <div class="col-md-7" *ngIf="experimento.completo">
     <div class="form-group">
       <label>Fecha de salida: </label>
-      <!--<input type="date" class="form-control" [(ngModel)]="experimento.fecha_salida | date:'yyyy-MM-dd'" name="fecha_salida">-->
+      <input type="date" class="form-control" [ngModel]="experimento.fecha_salida | date:'yyyy-MM-dd'" name="fecha_salida" (ngModelChange)="finDateFechaSalida = $event">
       </div>
     </div>
 

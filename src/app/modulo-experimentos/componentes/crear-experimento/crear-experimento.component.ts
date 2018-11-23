@@ -11,7 +11,7 @@ import { SnotifyService, SnotifyPosition } from 'ng-snotify';
 const ESPECTROMETROS = ['ESPECTROMETRO VARIAN MERCURY AS400', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras Líquidas)', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras sólidas)'];
 const SONDA_A = ['4NUC (5mm)', 'ATB (5mm)','BB (10mm)']
 const SONDA_B = ['PABBI (5mm)', 'PASEX (10mm)']
-const SONDA_C = ['SPRB400172_7164 (7,5mm)','SPRB400172_7423 (7,5mm)']
+const SONDA_C = ['SPRB400172_7164 (7,5mm)', 'SPRB400172_7423 (7,5mm)']
 
 @Component({
   selector: 'app-crear-experimento',

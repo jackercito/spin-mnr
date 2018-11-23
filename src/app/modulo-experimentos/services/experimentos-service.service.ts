@@ -34,6 +34,12 @@ export class ExperimentosServiceService {
       .pipe(catchError(this._handleError));
   }
 
+  putExperimento$(experimento: Experimento): Observable<Experimento> {
+    return this.http
+      .put<Experimento>(`/experimento/${experimento._id}`, experimento, this.option)
+      .pipe(catchError(this._handleError));
+  }
+
   deleteExperimento$(id: string): Observable<any> {
     return this.http
       .delete<any>(`/experimento/${id}`, this.option)

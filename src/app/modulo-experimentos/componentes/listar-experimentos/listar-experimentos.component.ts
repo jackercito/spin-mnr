@@ -5,6 +5,7 @@ import { ExperimentosServiceService } from './../../services/experimentos-servic
 import { Auth0Service } from '../../../services/auth0.service';
 
 import { BotonVerExperimentoComponent } from './../../../componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component';
+import { locale } from '../../../componentes/ag-grid/localeText'
 
 @Component({
   selector: 'app-listar-experimentos',
@@ -28,6 +29,8 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
   paginationPageSize;
   frameworkComponents;
   context;
+
+  public localeText = locale;
 
   constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service) {
     this._getExperimentos();
@@ -190,7 +193,7 @@ function compararFechas(filterLocalDateAtMidnight, cellValue) {
 
 function dateFormat(params) {
   var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-  if (params.value !== undefined || params.value != null)
+  if (params.value !== undefined && params.value != null)
     return new Date(params.value).toLocaleDateString('es-ES', options);
   else
     return '';

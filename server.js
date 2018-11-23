@@ -63,4 +63,4 @@ app.use('/experimento', jwtCheck, experimento);
 
 // Start the app by listening on the default Heroku port
 app.set('port', port);
-app.listen(port, () => { console.log("Ejecutandose") });
+app.listen(port, () => {});
