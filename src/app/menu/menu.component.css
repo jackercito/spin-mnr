@@ -14,9 +14,10 @@ nav.sidebar, .main {
 }
 
 @media (min-width: 765px) {
+
   .main {
     position: absolute;
-    width: calc(100% - 40px);
+    width: calc(100% - 45px);
     margin-left: 40px;
     float: right;
   }
@@ -88,6 +89,7 @@ nav.sidebar, .main {
 }
 
 @media (min-width: 1330px) {
+
   .main {
     width: calc(100% - 200px);
     margin-left: 200px;
@@ -104,7 +106,7 @@ nav.sidebar, .main {
 }
 
 nav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {
-  color: #ccc;
+  color: #CCC;
   background-color: transparent;
 }
 
@@ -121,12 +123,17 @@ section {
 }
 
 #branch {
-  color: #f00;
+  color: #ff0000;
 }
 
 .logo {
-  width: 120px;
-  height: 60px;
+  width: 150px;
+  height: 75px;
+}
+
+.logo2 {
+  width: 200px;
+  height: 80px;
 }
 
 .margen-derecho {
@@ -142,6 +149,34 @@ section {
 }
 
 .router-link-portal {
-  color: #da7863;
-  background-color: #da7863;
+  color: #DA7863;
+  background-color: #DA7863;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+.cabecera {
+  background-color: #17729D;
+  border-left: 5px solid rgba(0,0,0,0.08);
+  color: #fff;
+}
+
+.navbar.scrollbarr {
+  overflow: auto;
+  max-height: 95vh;
+}
+
+.navbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.navbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.navbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.26);
+  outline: 1px solid slategrey;
 }
