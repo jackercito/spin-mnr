@@ -129,11 +129,12 @@ section {
 .logo {
   width: 150px;
   height: 75px;
+  cursor: context-menu;
 }
 
 .logo2 {
-  width: 200px;
-  height: 80px;
+  width: 198px;
+  height: 75px;
 }
 
 .margen-derecho {
@@ -153,8 +154,10 @@ section {
   background-color: #DA7863;
 }
 
-a:hover {
+a:not(.nohover):hover {
   font-weight: bold;
+  background-color: #17729D;
+  border-left: 5px solid rgba(0,0,0,0.08);
 }
 
 .cabecera {
@@ -180,3 +183,15 @@ a:hover {
   background-color: rgba(0,0,0,.26);
   outline: 1px solid slategrey;
 }
+
+.powered {
+  color: transparent;
+}
+
+  .powered::-moz-selection {
+    color: transparent;
+  }
+
+  .powered::selection {
+    color: transparent;
+  }

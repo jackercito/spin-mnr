@@ -750,7 +750,7 @@ var PerfilComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body, html {\r\n  height: 99%;\r\n}\r\n\r\nnav.sidebar, .main {\r\n  transition: margin 200ms ease-out;\r\n}\r\n\r\n.main {\r\n  padding: 10px 10px 0 10px;\r\n}\r\n\r\n@media (min-width: 765px) {\r\n\r\n  .main {\r\n    position: absolute;\r\n    width: calc(100% - 45px);\r\n    margin-left: 40px;\r\n    float: right;\r\n  }\r\n\r\n  nav.sidebar:hover + .main {\r\n    margin-left: 200px;\r\n  }\r\n\r\n  nav.sidebar.navbar.sidebar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {\r\n    margin-left: 0px;\r\n  }\r\n\r\n  nav.sidebar .navbar-brand, nav.sidebar .navbar-header {\r\n    text-align: center;\r\n    width: 100%;\r\n    margin-left: 0px;\r\n  }\r\n\r\n  nav.sidebar a {\r\n    padding-right: 13px;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav > li:first-child {\r\n    border-top: 1px #e5e5e5 solid;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav > li {\r\n    border-bottom: 1px #e5e5e5 solid;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav .open .dropdown-menu {\r\n    position: static;\r\n    float: none;\r\n    width: auto;\r\n    margin-top: 0;\r\n    background-color: transparent;\r\n    border: 0;\r\n    box-shadow: none;\r\n  }\r\n\r\n  nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {\r\n    padding: 0 0px 0 0px;\r\n  }\r\n\r\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {\r\n    color: #777;\r\n  }\r\n\r\n  nav.sidebar {\r\n    width: 200px;\r\n    height: 100%;\r\n    margin-left: -160px;\r\n    float: left;\r\n    margin-bottom: 0px;\r\n  }\r\n\r\n    nav.sidebar li {\r\n      width: 100%;\r\n    }\r\n\r\n    nav.sidebar:hover {\r\n      margin-left: 0px;\r\n    }\r\n\r\n  .forAnimate {\r\n    opacity: 0;\r\n  }\r\n}\r\n\r\n@media (min-width: 1330px) {\r\n\r\n  .main {\r\n    width: calc(100% - 200px);\r\n    margin-left: 200px;\r\n  }\r\n\r\n  nav.sidebar {\r\n    margin-left: 0px;\r\n    float: left;\r\n  }\r\n\r\n    nav.sidebar .forAnimate {\r\n      opacity: 1;\r\n    }\r\n}\r\n\r\nnav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {\r\n  color: #CCC;\r\n  background-color: transparent;\r\n}\r\n\r\nnav:hover .forAnimate {\r\n  opacity: 1;\r\n}\r\n\r\nsection {\r\n  padding-left: 15px;\r\n}\r\n\r\n#master {\r\n  color: black;\r\n}\r\n\r\n#branch {\r\n  color: #ff0000;\r\n}\r\n\r\n.logo {\r\n  width: 150px;\r\n  height: 75px;\r\n}\r\n\r\n.logo2 {\r\n  width: 200px;\r\n  height: 80px;\r\n}\r\n\r\n.margen-derecho {\r\n  margin-right: 20px;\r\n}\r\n\r\n.pointer {\r\n  cursor: pointer;\r\n}\r\n\r\n.nopointer {\r\n  cursor: context-menu;\r\n}\r\n\r\n.router-link-portal {\r\n  color: #DA7863;\r\n  background-color: #DA7863;\r\n}\r\n\r\na:hover {\r\n  font-weight: bold;\r\n}\r\n\r\n.cabecera {\r\n  background-color: #17729D;\r\n  border-left: 5px solid rgba(0,0,0,0.08);\r\n  color: #fff;\r\n}\r\n\r\n.navbar.scrollbarr {\r\n  overflow: auto;\r\n  max-height: 95vh;\r\n}\r\n\r\n.navbar::-webkit-scrollbar {\r\n  width: 4px;\r\n}\r\n\r\n.navbar::-webkit-scrollbar-track {\r\n  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);\r\n}\r\n\r\n.navbar::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0,0,0,.26);\r\n  outline: 1px solid slategrey;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWVudS9tZW51LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0NBQ2I7O0FBRUQ7RUFJRSxrQ0FBa0M7Q0FDbkM7O0FBRUQ7RUFDRSwwQkFBMEI7Q0FDM0I7O0FBRUQ7O0VBRUU7SUFDRSxtQkFBbUI7SUFDbkIseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixhQUFhO0dBQ2Q7O0VBRUQ7SUFDRSxtQkFBbUI7R0FDcEI7O0VBRUQ7SUFDRSxpQkFBaUI7R0FDbEI7O0VBRUQ7SUFDRSxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLGlCQUFpQjtHQUNsQjs7RUFFRDtJQUNFLG9CQUFvQjtHQUNyQjs7RUFFRDtJQUNFLDhCQUE4QjtHQUMvQjs7RUFFRDtJQUNFLGlDQUFpQztHQUNsQzs7RUFFRDtJQUNFLGlCQUFpQjtJQUNqQixZQUFZO0lBQ1osWUFBWTtJQUNaLGNBQWM7SUFDZCw4QkFBOEI7SUFDOUIsVUFBVTtJQUVWLGlCQUFpQjtHQUNsQjs7RUFFRDtJQUNFLHFCQUFxQjtHQUN0Qjs7RUFFRDtJQUNFLFlBQVk7R0FDYjs7RUFFRDtJQUNFLGFBQWE7SUFDYixhQUFhO0lBQ2Isb0JBQW9CO0lBQ3BCLFlBQVk7SUFDWixtQkFBbUI7R0FDcEI7O0lBRUM7TUFDRSxZQUFZO0tBQ2I7O0lBRUQ7TUFDRSxpQkFBaUI7S0FDbEI7O0VBRUg7SUFDRSxXQUFXO0dBQ1o7Q0FDRjs7QUFFRDs7RUFFRTtJQUNFLDBCQUEwQjtJQUMxQixtQkFBbUI7R0FDcEI7O0VBRUQ7SUFDRSxpQkFBaUI7SUFDakIsWUFBWTtHQUNiOztJQUVDO01BQ0UsV0FBVztLQUNaO0NBQ0o7O0FBRUQ7RUFDRSxZQUFZO0VBQ1osOEJBQThCO0NBQy9COztBQUVEO0VBQ0UsV0FBVztDQUNaOztBQUVEO0VBQ0UsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGFBQWE7RUFDYixhQUFhO0NBQ2Q7O0FBRUQ7RUFDRSxhQUFhO0VBQ2IsYUFBYTtDQUNkOztBQUVEO0VBQ0UsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0UsZ0JBQWdCO0NBQ2pCOztBQUVEO0VBQ0UscUJBQXFCO0NBQ3RCOztBQUVEO0VBQ0UsZUFBZTtFQUNmLDBCQUEwQjtDQUMzQjs7QUFFRDtFQUNFLGtCQUFrQjtDQUNuQjs7QUFFRDtFQUNFLDBCQUEwQjtFQUMxQix3Q0FBd0M7RUFDeEMsWUFBWTtDQUNiOztBQUVEO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtDQUNsQjs7QUFFRDtFQUNFLFdBQVc7Q0FDWjs7QUFFRDtFQUNFLGtEQUFrRDtDQUNuRDs7QUFFRDtFQUNFLGtDQUFrQztFQUNsQyw2QkFBNkI7Q0FDOUIiLCJmaWxlIjoic3JjL2FwcC9tZW51L21lbnUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHksIGh0bWwge1xyXG4gIGhlaWdodDogOTklO1xyXG59XHJcblxyXG5uYXYuc2lkZWJhciwgLm1haW4ge1xyXG4gIC13ZWJraXQtdHJhbnNpdGlvbjogbWFyZ2luIDIwMG1zIGVhc2Utb3V0O1xyXG4gIC1tb3otdHJhbnNpdGlvbjogbWFyZ2luIDIwMG1zIGVhc2Utb3V0O1xyXG4gIC1vLXRyYW5zaXRpb246IG1hcmdpbiAyMDBtcyBlYXNlLW91dDtcclxuICB0cmFuc2l0aW9uOiBtYXJnaW4gMjAwbXMgZWFzZS1vdXQ7XHJcbn1cclxuXHJcbi5tYWluIHtcclxuICBwYWRkaW5nOiAxMHB4IDEwcHggMCAxMHB4O1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY1cHgpIHtcclxuXHJcbiAgLm1haW4ge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDQ1cHgpO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDQwcHg7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhcjpob3ZlciArIC5tYWluIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAyMDBweDtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyLm5hdmJhci5zaWRlYmFyID4gLmNvbnRhaW5lciAubmF2YmFyLWJyYW5kLCAubmF2YmFyID4gLmNvbnRhaW5lci1mbHVpZCAubmF2YmFyLWJyYW5kIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAwcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciAubmF2YmFyLWJyYW5kLCBuYXYuc2lkZWJhciAubmF2YmFyLWhlYWRlciB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbi1sZWZ0OiAwcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciBhIHtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDEzcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciAubmF2YmFyLW5hdiA+IGxpOmZpcnN0LWNoaWxkIHtcclxuICAgIGJvcmRlci10b3A6IDFweCAjZTVlNWU1IHNvbGlkO1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIgLm5hdmJhci1uYXYgPiBsaSB7XHJcbiAgICBib3JkZXItYm90dG9tOiAxcHggI2U1ZTVlNSBzb2xpZDtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyIC5uYXZiYXItbmF2IC5vcGVuIC5kcm9wZG93bi1tZW51IHtcclxuICAgIHBvc2l0aW9uOiBzdGF0aWM7XHJcbiAgICBmbG9hdDogbm9uZTtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG4gICAgbWFyZ2luLXRvcDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICAgYm9yZGVyOiAwO1xyXG4gICAgLXdlYmtpdC1ib3gtc2hhZG93OiBub25lO1xyXG4gICAgYm94LXNoYWRvdzogbm9uZTtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyIC5uYXZiYXItY29sbGFwc2UsIG5hdi5zaWRlYmFyIC5jb250YWluZXItZmx1aWQge1xyXG4gICAgcGFkZGluZzogMCAwcHggMCAwcHg7XHJcbiAgfVxyXG5cclxuICAubmF2YmFyLWludmVyc2UgLm5hdmJhci1uYXYgLm9wZW4gLmRyb3Bkb3duLW1lbnUgPiBsaSA+IGEge1xyXG4gICAgY29sb3I6ICM3Nzc7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciB7XHJcbiAgICB3aWR0aDogMjAwcHg7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBtYXJnaW4tbGVmdDogLTE2MHB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAwcHg7XHJcbiAgfVxyXG5cclxuICAgIG5hdi5zaWRlYmFyIGxpIHtcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICB9XHJcblxyXG4gICAgbmF2LnNpZGViYXI6aG92ZXIge1xyXG4gICAgICBtYXJnaW4tbGVmdDogMHB4O1xyXG4gICAgfVxyXG5cclxuICAuZm9yQW5pbWF0ZSB7XHJcbiAgICBvcGFjaXR5OiAwO1xyXG4gIH1cclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDEzMzBweCkge1xyXG5cclxuICAubWFpbiB7XHJcbiAgICB3aWR0aDogY2FsYygxMDAlIC0gMjAwcHgpO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDIwMHB4O1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIge1xyXG4gICAgbWFyZ2luLWxlZnQ6IDBweDtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gIH1cclxuXHJcbiAgICBuYXYuc2lkZWJhciAuZm9yQW5pbWF0ZSB7XHJcbiAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICB9XHJcbn1cclxuXHJcbm5hdi5zaWRlYmFyIC5uYXZiYXItbmF2IC5vcGVuIC5kcm9wZG93bi1tZW51ID4gbGkgPiBhOmhvdmVyLCBuYXYuc2lkZWJhciAubmF2YmFyLW5hdiAub3BlbiAuZHJvcGRvd24tbWVudSA+IGxpID4gYTpmb2N1cyB7XHJcbiAgY29sb3I6ICNDQ0M7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbm5hdjpob3ZlciAuZm9yQW5pbWF0ZSB7XHJcbiAgb3BhY2l0eTogMTtcclxufVxyXG5cclxuc2VjdGlvbiB7XHJcbiAgcGFkZGluZy1sZWZ0OiAxNXB4O1xyXG59XHJcblxyXG4jbWFzdGVyIHtcclxuICBjb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbiNicmFuY2gge1xyXG4gIGNvbG9yOiAjZmYwMDAwO1xyXG59XHJcblxyXG4ubG9nbyB7XHJcbiAgd2lkdGg6IDE1MHB4O1xyXG4gIGhlaWdodDogNzVweDtcclxufVxyXG5cclxuLmxvZ28yIHtcclxuICB3aWR0aDogMjAwcHg7XHJcbiAgaGVpZ2h0OiA4MHB4O1xyXG59XHJcblxyXG4ubWFyZ2VuLWRlcmVjaG8ge1xyXG4gIG1hcmdpbi1yaWdodDogMjBweDtcclxufVxyXG5cclxuLnBvaW50ZXIge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLm5vcG9pbnRlciB7XHJcbiAgY3Vyc29yOiBjb250ZXh0LW1lbnU7XHJcbn1cclxuXHJcbi5yb3V0ZXItbGluay1wb3J0YWwge1xyXG4gIGNvbG9yOiAjREE3ODYzO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNEQTc4NjM7XHJcbn1cclxuXHJcbmE6aG92ZXIge1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4uY2FiZWNlcmEge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICMxNzcyOUQ7XHJcbiAgYm9yZGVyLWxlZnQ6IDVweCBzb2xpZCByZ2JhKDAsMCwwLDAuMDgpO1xyXG4gIGNvbG9yOiAjZmZmO1xyXG59XHJcblxyXG4ubmF2YmFyLnNjcm9sbGJhcnIge1xyXG4gIG92ZXJmbG93OiBhdXRvO1xyXG4gIG1heC1oZWlnaHQ6IDk1dmg7XHJcbn1cclxuXHJcbi5uYXZiYXI6Oi13ZWJraXQtc2Nyb2xsYmFyIHtcclxuICB3aWR0aDogNHB4O1xyXG59XHJcblxyXG4ubmF2YmFyOjotd2Via2l0LXNjcm9sbGJhci10cmFjayB7XHJcbiAgLXdlYmtpdC1ib3gtc2hhZG93OiBpbnNldCAwIDAgNnB4IHJnYmEoMCwwLDAsMC4zKTtcclxufVxyXG5cclxuLm5hdmJhcjo6LXdlYmtpdC1zY3JvbGxiYXItdGh1bWIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsLjI2KTtcclxuICBvdXRsaW5lOiAxcHggc29saWQgc2xhdGVncmV5O1xyXG59XHJcbiJdfQ== */"
+module.exports = "body, html {\r\n  height: 99%;\r\n}\r\n\r\nnav.sidebar, .main {\r\n  transition: margin 200ms ease-out;\r\n}\r\n\r\n.main {\r\n  padding: 10px 10px 0 10px;\r\n}\r\n\r\n@media (min-width: 765px) {\r\n\r\n  .main {\r\n    position: absolute;\r\n    width: calc(100% - 45px);\r\n    margin-left: 40px;\r\n    float: right;\r\n  }\r\n\r\n  nav.sidebar:hover + .main {\r\n    margin-left: 200px;\r\n  }\r\n\r\n  nav.sidebar.navbar.sidebar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {\r\n    margin-left: 0px;\r\n  }\r\n\r\n  nav.sidebar .navbar-brand, nav.sidebar .navbar-header {\r\n    text-align: center;\r\n    width: 100%;\r\n    margin-left: 0px;\r\n  }\r\n\r\n  nav.sidebar a {\r\n    padding-right: 13px;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav > li:first-child {\r\n    border-top: 1px #e5e5e5 solid;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav > li {\r\n    border-bottom: 1px #e5e5e5 solid;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav .open .dropdown-menu {\r\n    position: static;\r\n    float: none;\r\n    width: auto;\r\n    margin-top: 0;\r\n    background-color: transparent;\r\n    border: 0;\r\n    box-shadow: none;\r\n  }\r\n\r\n  nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {\r\n    padding: 0 0px 0 0px;\r\n  }\r\n\r\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {\r\n    color: #777;\r\n  }\r\n\r\n  nav.sidebar {\r\n    width: 200px;\r\n    height: 100%;\r\n    margin-left: -160px;\r\n    float: left;\r\n    margin-bottom: 0px;\r\n  }\r\n\r\n    nav.sidebar li {\r\n      width: 100%;\r\n    }\r\n\r\n    nav.sidebar:hover {\r\n      margin-left: 0px;\r\n    }\r\n\r\n  .forAnimate {\r\n    opacity: 0;\r\n  }\r\n}\r\n\r\n@media (min-width: 1330px) {\r\n\r\n  .main {\r\n    width: calc(100% - 200px);\r\n    margin-left: 200px;\r\n  }\r\n\r\n  nav.sidebar {\r\n    margin-left: 0px;\r\n    float: left;\r\n  }\r\n\r\n    nav.sidebar .forAnimate {\r\n      opacity: 1;\r\n    }\r\n}\r\n\r\nnav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {\r\n  color: #CCC;\r\n  background-color: transparent;\r\n}\r\n\r\nnav:hover .forAnimate {\r\n  opacity: 1;\r\n}\r\n\r\nsection {\r\n  padding-left: 15px;\r\n}\r\n\r\n#master {\r\n  color: black;\r\n}\r\n\r\n#branch {\r\n  color: #ff0000;\r\n}\r\n\r\n.logo {\r\n  width: 150px;\r\n  height: 75px;\r\n  cursor: context-menu;\r\n}\r\n\r\n.logo2 {\r\n  width: 198px;\r\n  height: 75px;\r\n}\r\n\r\n.margen-derecho {\r\n  margin-right: 20px;\r\n}\r\n\r\n.pointer {\r\n  cursor: pointer;\r\n}\r\n\r\n.nopointer {\r\n  cursor: context-menu;\r\n}\r\n\r\n.router-link-portal {\r\n  color: #DA7863;\r\n  background-color: #DA7863;\r\n}\r\n\r\na:not(.nohover):hover {\r\n  font-weight: bold;\r\n  background-color: #17729D;\r\n  border-left: 5px solid rgba(0,0,0,0.08);\r\n}\r\n\r\n.cabecera {\r\n  background-color: #17729D;\r\n  border-left: 5px solid rgba(0,0,0,0.08);\r\n  color: #fff;\r\n}\r\n\r\n.navbar.scrollbarr {\r\n  overflow: auto;\r\n  max-height: 95vh;\r\n}\r\n\r\n.navbar::-webkit-scrollbar {\r\n  width: 4px;\r\n}\r\n\r\n.navbar::-webkit-scrollbar-track {\r\n  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);\r\n}\r\n\r\n.navbar::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0,0,0,.26);\r\n  outline: 1px solid slategrey;\r\n}\r\n\r\n.powered {\r\n  color: transparent;\r\n}\r\n\r\n.powered::-moz-selection {\r\n    color: transparent;\r\n  }\r\n\r\n.powered::selection {\r\n    color: transparent;\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWVudS9tZW51LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0NBQ2I7O0FBRUQ7RUFJRSxrQ0FBa0M7Q0FDbkM7O0FBRUQ7RUFDRSwwQkFBMEI7Q0FDM0I7O0FBRUQ7O0VBRUU7SUFDRSxtQkFBbUI7SUFDbkIseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixhQUFhO0dBQ2Q7O0VBRUQ7SUFDRSxtQkFBbUI7R0FDcEI7O0VBRUQ7SUFDRSxpQkFBaUI7R0FDbEI7O0VBRUQ7SUFDRSxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLGlCQUFpQjtHQUNsQjs7RUFFRDtJQUNFLG9CQUFvQjtHQUNyQjs7RUFFRDtJQUNFLDhCQUE4QjtHQUMvQjs7RUFFRDtJQUNFLGlDQUFpQztHQUNsQzs7RUFFRDtJQUNFLGlCQUFpQjtJQUNqQixZQUFZO0lBQ1osWUFBWTtJQUNaLGNBQWM7SUFDZCw4QkFBOEI7SUFDOUIsVUFBVTtJQUVWLGlCQUFpQjtHQUNsQjs7RUFFRDtJQUNFLHFCQUFxQjtHQUN0Qjs7RUFFRDtJQUNFLFlBQVk7R0FDYjs7RUFFRDtJQUNFLGFBQWE7SUFDYixhQUFhO0lBQ2Isb0JBQW9CO0lBQ3BCLFlBQVk7SUFDWixtQkFBbUI7R0FDcEI7O0lBRUM7TUFDRSxZQUFZO0tBQ2I7O0lBRUQ7TUFDRSxpQkFBaUI7S0FDbEI7O0VBRUg7SUFDRSxXQUFXO0dBQ1o7Q0FDRjs7QUFFRDs7RUFFRTtJQUNFLDBCQUEwQjtJQUMxQixtQkFBbUI7R0FDcEI7O0VBRUQ7SUFDRSxpQkFBaUI7SUFDakIsWUFBWTtHQUNiOztJQUVDO01BQ0UsV0FBVztLQUNaO0NBQ0o7O0FBRUQ7RUFDRSxZQUFZO0VBQ1osOEJBQThCO0NBQy9COztBQUVEO0VBQ0UsV0FBVztDQUNaOztBQUVEO0VBQ0UsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGFBQWE7RUFDYixhQUFhO0VBQ2IscUJBQXFCO0NBQ3RCOztBQUVEO0VBQ0UsYUFBYTtFQUNiLGFBQWE7Q0FDZDs7QUFFRDtFQUNFLG1CQUFtQjtDQUNwQjs7QUFFRDtFQUNFLGdCQUFnQjtDQUNqQjs7QUFFRDtFQUNFLHFCQUFxQjtDQUN0Qjs7QUFFRDtFQUNFLGVBQWU7RUFDZiwwQkFBMEI7Q0FDM0I7O0FBRUQ7RUFDRSxrQkFBa0I7RUFDbEIsMEJBQTBCO0VBQzFCLHdDQUF3QztDQUN6Qzs7QUFFRDtFQUNFLDBCQUEwQjtFQUMxQix3Q0FBd0M7RUFDeEMsWUFBWTtDQUNiOztBQUVEO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtDQUNsQjs7QUFFRDtFQUNFLFdBQVc7Q0FDWjs7QUFFRDtFQUNFLGtEQUFrRDtDQUNuRDs7QUFFRDtFQUNFLGtDQUFrQztFQUNsQyw2QkFBNkI7Q0FDOUI7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEI7O0FBRUM7SUFDRSxtQkFBbUI7R0FDcEI7O0FBRUQ7SUFDRSxtQkFBbUI7R0FDcEIiLCJmaWxlIjoic3JjL2FwcC9tZW51L21lbnUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHksIGh0bWwge1xyXG4gIGhlaWdodDogOTklO1xyXG59XHJcblxyXG5uYXYuc2lkZWJhciwgLm1haW4ge1xyXG4gIC13ZWJraXQtdHJhbnNpdGlvbjogbWFyZ2luIDIwMG1zIGVhc2Utb3V0O1xyXG4gIC1tb3otdHJhbnNpdGlvbjogbWFyZ2luIDIwMG1zIGVhc2Utb3V0O1xyXG4gIC1vLXRyYW5zaXRpb246IG1hcmdpbiAyMDBtcyBlYXNlLW91dDtcclxuICB0cmFuc2l0aW9uOiBtYXJnaW4gMjAwbXMgZWFzZS1vdXQ7XHJcbn1cclxuXHJcbi5tYWluIHtcclxuICBwYWRkaW5nOiAxMHB4IDEwcHggMCAxMHB4O1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY1cHgpIHtcclxuXHJcbiAgLm1haW4ge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDQ1cHgpO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDQwcHg7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhcjpob3ZlciArIC5tYWluIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAyMDBweDtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyLm5hdmJhci5zaWRlYmFyID4gLmNvbnRhaW5lciAubmF2YmFyLWJyYW5kLCAubmF2YmFyID4gLmNvbnRhaW5lci1mbHVpZCAubmF2YmFyLWJyYW5kIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAwcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciAubmF2YmFyLWJyYW5kLCBuYXYuc2lkZWJhciAubmF2YmFyLWhlYWRlciB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbi1sZWZ0OiAwcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciBhIHtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDEzcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciAubmF2YmFyLW5hdiA+IGxpOmZpcnN0LWNoaWxkIHtcclxuICAgIGJvcmRlci10b3A6IDFweCAjZTVlNWU1IHNvbGlkO1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIgLm5hdmJhci1uYXYgPiBsaSB7XHJcbiAgICBib3JkZXItYm90dG9tOiAxcHggI2U1ZTVlNSBzb2xpZDtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyIC5uYXZiYXItbmF2IC5vcGVuIC5kcm9wZG93bi1tZW51IHtcclxuICAgIHBvc2l0aW9uOiBzdGF0aWM7XHJcbiAgICBmbG9hdDogbm9uZTtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG4gICAgbWFyZ2luLXRvcDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICAgYm9yZGVyOiAwO1xyXG4gICAgLXdlYmtpdC1ib3gtc2hhZG93OiBub25lO1xyXG4gICAgYm94LXNoYWRvdzogbm9uZTtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyIC5uYXZiYXItY29sbGFwc2UsIG5hdi5zaWRlYmFyIC5jb250YWluZXItZmx1aWQge1xyXG4gICAgcGFkZGluZzogMCAwcHggMCAwcHg7XHJcbiAgfVxyXG5cclxuICAubmF2YmFyLWludmVyc2UgLm5hdmJhci1uYXYgLm9wZW4gLmRyb3Bkb3duLW1lbnUgPiBsaSA+IGEge1xyXG4gICAgY29sb3I6ICM3Nzc7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciB7XHJcbiAgICB3aWR0aDogMjAwcHg7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBtYXJnaW4tbGVmdDogLTE2MHB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAwcHg7XHJcbiAgfVxyXG5cclxuICAgIG5hdi5zaWRlYmFyIGxpIHtcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICB9XHJcblxyXG4gICAgbmF2LnNpZGViYXI6aG92ZXIge1xyXG4gICAgICBtYXJnaW4tbGVmdDogMHB4O1xyXG4gICAgfVxyXG5cclxuICAuZm9yQW5pbWF0ZSB7XHJcbiAgICBvcGFjaXR5OiAwO1xyXG4gIH1cclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDEzMzBweCkge1xyXG5cclxuICAubWFpbiB7XHJcbiAgICB3aWR0aDogY2FsYygxMDAlIC0gMjAwcHgpO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDIwMHB4O1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIge1xyXG4gICAgbWFyZ2luLWxlZnQ6IDBweDtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gIH1cclxuXHJcbiAgICBuYXYuc2lkZWJhciAuZm9yQW5pbWF0ZSB7XHJcbiAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICB9XHJcbn1cclxuXHJcbm5hdi5zaWRlYmFyIC5uYXZiYXItbmF2IC5vcGVuIC5kcm9wZG93bi1tZW51ID4gbGkgPiBhOmhvdmVyLCBuYXYuc2lkZWJhciAubmF2YmFyLW5hdiAub3BlbiAuZHJvcGRvd24tbWVudSA+IGxpID4gYTpmb2N1cyB7XHJcbiAgY29sb3I6ICNDQ0M7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbm5hdjpob3ZlciAuZm9yQW5pbWF0ZSB7XHJcbiAgb3BhY2l0eTogMTtcclxufVxyXG5cclxuc2VjdGlvbiB7XHJcbiAgcGFkZGluZy1sZWZ0OiAxNXB4O1xyXG59XHJcblxyXG4jbWFzdGVyIHtcclxuICBjb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbiNicmFuY2gge1xyXG4gIGNvbG9yOiAjZmYwMDAwO1xyXG59XHJcblxyXG4ubG9nbyB7XHJcbiAgd2lkdGg6IDE1MHB4O1xyXG4gIGhlaWdodDogNzVweDtcclxuICBjdXJzb3I6IGNvbnRleHQtbWVudTtcclxufVxyXG5cclxuLmxvZ28yIHtcclxuICB3aWR0aDogMTk4cHg7XHJcbiAgaGVpZ2h0OiA3NXB4O1xyXG59XHJcblxyXG4ubWFyZ2VuLWRlcmVjaG8ge1xyXG4gIG1hcmdpbi1yaWdodDogMjBweDtcclxufVxyXG5cclxuLnBvaW50ZXIge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLm5vcG9pbnRlciB7XHJcbiAgY3Vyc29yOiBjb250ZXh0LW1lbnU7XHJcbn1cclxuXHJcbi5yb3V0ZXItbGluay1wb3J0YWwge1xyXG4gIGNvbG9yOiAjREE3ODYzO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNEQTc4NjM7XHJcbn1cclxuXHJcbmE6bm90KC5ub2hvdmVyKTpob3ZlciB7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE3NzI5RDtcclxuICBib3JkZXItbGVmdDogNXB4IHNvbGlkIHJnYmEoMCwwLDAsMC4wOCk7XHJcbn1cclxuXHJcbi5jYWJlY2VyYSB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE3NzI5RDtcclxuICBib3JkZXItbGVmdDogNXB4IHNvbGlkIHJnYmEoMCwwLDAsMC4wOCk7XHJcbiAgY29sb3I6ICNmZmY7XHJcbn1cclxuXHJcbi5uYXZiYXIuc2Nyb2xsYmFyciB7XHJcbiAgb3ZlcmZsb3c6IGF1dG87XHJcbiAgbWF4LWhlaWdodDogOTV2aDtcclxufVxyXG5cclxuLm5hdmJhcjo6LXdlYmtpdC1zY3JvbGxiYXIge1xyXG4gIHdpZHRoOiA0cHg7XHJcbn1cclxuXHJcbi5uYXZiYXI6Oi13ZWJraXQtc2Nyb2xsYmFyLXRyYWNrIHtcclxuICAtd2Via2l0LWJveC1zaGFkb3c6IGluc2V0IDAgMCA2cHggcmdiYSgwLDAsMCwwLjMpO1xyXG59XHJcblxyXG4ubmF2YmFyOjotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwuMjYpO1xyXG4gIG91dGxpbmU6IDFweCBzb2xpZCBzbGF0ZWdyZXk7XHJcbn1cclxuXHJcbi5wb3dlcmVkIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbiAgLnBvd2VyZWQ6Oi1tb3otc2VsZWN0aW9uIHtcclxuICAgIGNvbG9yOiB0cmFuc3BhcmVudDtcclxuICB9XHJcblxyXG4gIC5wb3dlcmVkOjpzZWxlY3Rpb24ge1xyXG4gICAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gIH1cclxuIl19 */"
 
 /***/ }),
 
@@ -761,7 +761,7 @@ module.exports = "body, html {\r\n  height: 99%;\r\n}\r\n\r\nnav.sidebar, .main 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\r\n<nav class=\"navbar navbar-default sidebar margen-derecho\" role=\"navigation\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"navbar-header\">\r\n      <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bs-sidebar-navbar-collapse-1\">\r\n        <span class=\"sr-only\">Menu</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"collapse navbar-collapse\" id=\"bs-sidebar-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li align=\"center\">\r\n        <img src=\"assets/images/rmn2.png\" class=\"logo2 active hidden-xs hidden-md hidden-sm\" />\r\n        <br />\r\n        <a href=\"#\">\r\n          <img src=\"assets/images/logo.jpg\" class=\"logo active hidden-xs hidden-md hidden-sm\" />\r\n        </a>\r\n        <br />\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\">\r\n        <a href=\"#\">\r\n          Home\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-home\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" *ngIf=\"!auth.authenticated\">\r\n        <a class=\"pointer\" (click)=\"auth.login()\">\r\n          Login\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-log-in\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" *ngIf=\"auth.authenticated\">\r\n        <a class=\"pointer\" (click)=\"auth.logout()\">\r\n          Logout\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-log-out\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\" *ngIf=\"auth.authenticated\">\r\n        <a routerLink=\"/experimentos/listar\">\r\n          Listar Experimentos\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-th-list\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\" *ngIf=\"auth.authenticated\">\r\n        <a routerLink=\"/experimentos/nuevo\">\r\n          Nuevo Experimento\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-file\"></span>\r\n        </a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<label class=\"powered\">Powered by Jackercito</label>\r\n<nav class=\"navbar navbar-default sidebar margen-derecho\" role=\"navigation\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"navbar-header\">\r\n      <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bs-sidebar-navbar-collapse-1\">\r\n        <span class=\"sr-only\">Menu</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"collapse navbar-collapse\" id=\"bs-sidebar-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li align=\"center\">\r\n        <img src=\"assets/images/rmn2.png\" class=\"logo2 active hidden-xs hidden-md hidden-sm\" />\r\n        <br />\r\n        <a href=\"#\" class=\"nohover\">\r\n          <img src=\"assets/images/logo.jpg\" class=\"logo active hidden-xs hidden-md hidden-sm\" />\r\n        </a>\r\n        <br />\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\">\r\n        <a href=\"#\">\r\n          Home\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-home\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" *ngIf=\"!auth.authenticated\">\r\n        <a class=\"pointer\" (click)=\"auth.login()\">\r\n          Login\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-log-in\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" *ngIf=\"auth.authenticated\">\r\n        <a class=\"pointer\" (click)=\"auth.logout()\">\r\n          Logout\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-log-out\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\" *ngIf=\"auth.authenticated\">\r\n        <a routerLink=\"/experimentos/listar\">\r\n          Listar Experimentos\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-th-list\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\" *ngIf=\"auth.authenticated\">\r\n        <a routerLink=\"/experimentos/nuevo\">\r\n          Nuevo Experimento\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-file\"></span>\r\n        </a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1157,7 +1157,7 @@ var EditarExperimentoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsby1leHBlcmltZW50b3MvY29tcG9uZW50ZXMvbGlzdGFyLWV4cGVyaW1lbnRvcy9saXN0YXItZXhwZXJpbWVudG9zLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".izquierda {\r\n  float: left;\r\n}\r\n\r\n.derecha {\r\n  float: right;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxvLWV4cGVyaW1lbnRvcy9jb21wb25lbnRlcy9saXN0YXItZXhwZXJpbWVudG9zL2xpc3Rhci1leHBlcmltZW50b3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7Q0FDYjs7QUFFRDtFQUNFLGFBQWE7Q0FDZCIsImZpbGUiOiJzcmMvYXBwL21vZHVsby1leHBlcmltZW50b3MvY29tcG9uZW50ZXMvbGlzdGFyLWV4cGVyaW1lbnRvcy9saXN0YXItZXhwZXJpbWVudG9zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaXpxdWllcmRhIHtcclxuICBmbG9hdDogbGVmdDtcclxufVxyXG5cclxuLmRlcmVjaGEge1xyXG4gIGZsb2F0OiByaWdodDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -1168,7 +1168,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-12\">\r\n  <br />\r\n</div>\r\n<div class=\"col-md-12\">\r\n  <ag-grid-angular style=\"width: 100%; height: 720px;\"\r\n                   class=\"ag-theme-fresh\"\r\n                   rowSelection=\"single\"\r\n                   rowHeight=\"40\"\r\n                   [rowData]=\"rowData\"\r\n                   [columnDefs]=\"columnDefs\"\r\n                   [enableSorting]=\"true\"\r\n                   [enableColResize]=\"true\"\r\n                   [pagination]=\"true\"\r\n                   [paginationPageSize]=\"paginationPageSize\"\r\n                   [enableFilter]=\"true\"\r\n                   [floatingFilter]=\"true\"\r\n                   [frameworkComponents]=\"frameworkComponents\"\r\n                   [context]=\"context\"\r\n                   [localeText]=\"localeText\"\r\n                   (gridReady)=\"onGridReady($event)\">\r\n  </ag-grid-angular>\r\n</div>\r\n"
+module.exports = "<br />\r\n<br />\r\n\r\n<div class=\"col-md-12\">\r\n  <ag-grid-angular style=\"width: 100%; height: 720px;\"\r\n                   class=\"ag-theme-fresh\"\r\n                   rowSelection=\"single\"\r\n                   rowHeight=\"40\"\r\n                   [localeText]=\"localeText\"\r\n                   [rowData]=\"rowData\"\r\n                   [columnDefs]=\"columnDefs\"\r\n                   [enableSorting]=\"true\"\r\n                   [enableColResize]=\"true\"\r\n                   [pagination]=\"true\"\r\n                   [paginationPageSize]=\"paginationPageSize\"\r\n                   [enableFilter]=\"true\"\r\n                   [floatingFilter]=\"true\"\r\n                   [frameworkComponents]=\"frameworkComponents\"\r\n                   [context]=\"context\"\r\n                   (filterChanged)=\"onFilterChanged($event)\"\r\n                   (gridReady)=\"onGridReady($event)\">\r\n  </ag-grid-angular>\r\n</div>\r\n\r\n<div class=\"col-md-6 derecha\">\r\n  <br />\r\n  <label style=\"margin-left: 20px;\">\r\n    <button (click)=\"onBtExport()\" class=\"btn btn-primary\">\r\n      Exportar CSV &nbsp;&nbsp;\r\n      <span class=\"glyphicon glyphicon-download\"></span>\r\n    </button>\r\n  </label>\r\n</div>\r\n\r\n<div class=\"col-md-6 derecha\">\r\n  <br />\r\n  <a class=\"btn btn-danger\" (click)=\"resetearFiltros()\">\r\n    Borrar Filtros &nbsp;\r\n    <span class=\"glyphicon glyphicon-remove\"></span>\r\n  </a>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1214,7 +1214,8 @@ var ListarExperimentosComponent = /** @class */ (function () {
                 field: "espectrometro",
                 suppressMenu: true,
                 filterParams: {
-                    caseSensitive: true
+                    caseSensitive: true,
+                    newRowsAction: 'keep'
                 },
                 minWidth: 135
             }, {
@@ -1222,7 +1223,8 @@ var ListarExperimentosComponent = /** @class */ (function () {
                 field: "sonda",
                 suppressMenu: true,
                 filterParams: {
-                    caseSensitive: true
+                    caseSensitive: true,
+                    newRowsAction: 'keep'
                 },
                 minWidth: 135
             }, {
@@ -1230,7 +1232,8 @@ var ListarExperimentosComponent = /** @class */ (function () {
                 field: "muestra",
                 suppressMenu: true,
                 filterParams: {
-                    caseSensitive: true
+                    caseSensitive: true,
+                    newRowsAction: 'keep'
                 },
                 minWidth: 135
             }, {
@@ -1238,7 +1241,8 @@ var ListarExperimentosComponent = /** @class */ (function () {
                 field: "solicitud",
                 suppressMenu: true,
                 filterParams: {
-                    caseSensitive: true
+                    caseSensitive: true,
+                    newRowsAction: 'keep'
                 },
                 minWidth: 135
             }, {
@@ -1246,7 +1250,8 @@ var ListarExperimentosComponent = /** @class */ (function () {
                 field: "usuario_entrada",
                 suppressMenu: true,
                 filterParams: {
-                    caseSensitive: true
+                    caseSensitive: true,
+                    newRowsAction: 'keep'
                 },
                 minWidth: 135
             }, {
@@ -1260,11 +1265,26 @@ var ListarExperimentosComponent = /** @class */ (function () {
                 },
                 suppressMenu: true
             }, {
+                headerName: "",
+                field: "completo",
+                suppressFilter: true,
+                minWidth: 25,
+                maxWidth: 25,
+                width: 25,
+                cellStyle: function (params) {
+                    if (params.value)
+                        return { backgroundColor: 'green' };
+                    else
+                        return { backgroundColor: 'red' };
+                },
+                valueGetter: function (param) { return ''; }
+            }, {
                 headerName: "USUARIO (SALIDA)",
                 field: "usuario_salida",
                 suppressMenu: true,
                 filterParams: {
-                    caseSensitive: true
+                    caseSensitive: true,
+                    newRowsAction: 'keep'
                 },
                 minWidth: 135
             }, {
@@ -1296,6 +1316,8 @@ var ListarExperimentosComponent = /** @class */ (function () {
     ListarExperimentosComponent.prototype.onGridReady = function (params) {
         this.gridApi = params.api;
         this.gridColumnApi = params.columnApi;
+        this.autoSizeAll();
+        this.getFiltros();
     };
     ListarExperimentosComponent.prototype.onPageSizeChanged = function (newPageSize) {
         this.gridApi.paginationSetPageSize(this.sizePage);
@@ -1317,6 +1339,73 @@ var ListarExperimentosComponent = /** @class */ (function () {
         // Unsubscribe from observables
         this.authSubscription.unsubscribe();
         this._destroyExperimentosSubscription();
+    };
+    ListarExperimentosComponent.prototype.onFilterChanged = function (value) {
+        this.guardar();
+        try {
+            this.gridApi.setQuickFilter(value);
+        }
+        catch (err) { }
+    };
+    ListarExperimentosComponent.prototype.getFiltros = function () {
+        if (localStorage.getItem('ColumnStateExperimentos') != "" && localStorage.getItem('ColumnStateExperimentos') != null) {
+            var columnStateToken = JSON.parse(localStorage.getItem('ColumnStateExperimentos'));
+            this.gridColumnApi.setColumnState(columnStateToken);
+        }
+        if (localStorage.getItem('FilterModelExperimentos') != "" && localStorage.getItem('FilterModelExperimentos') != null) {
+            var filterModelToken = JSON.parse(localStorage.getItem('FilterModelExperimentos'));
+            this.gridApi.setFilterModel(filterModelToken);
+        }
+        if (localStorage.getItem('SortModelExperimentos') != "" && localStorage.getItem('SortModelExperimentos') != null) {
+            var sortModelToken = JSON.parse(localStorage.getItem('SortModelExperimentos'));
+            this.gridApi.setSortModel(sortModelToken);
+        }
+    };
+    ListarExperimentosComponent.prototype.resetearFiltros = function () {
+        localStorage.setItem('ColumnStateExperimentos', "");
+        localStorage.setItem('FilterModelExperimentos', "");
+        localStorage.setItem('SortModelExperimentos', "");
+        this.gridApi.setFilterModel(null);
+        this.gridColumnApi.resetColumnState();
+        this.gridColumnApi.resetColumnGroupState();
+        this.gridApi.setSortModel(null);
+        this.gridApi.onFilterChanged();
+    };
+    ListarExperimentosComponent.prototype.autoSizeAll = function () {
+        var allColumnIds = [];
+        this.gridColumnApi.getAllColumns().forEach(function (column) {
+            allColumnIds.push(column.colId);
+        });
+        this.gridColumnApi.autoSizeColumns(allColumnIds);
+    };
+    ListarExperimentosComponent.prototype.onBtExport = function () {
+        var params = {
+            processCellCallback: function (param) {
+                var valor = param.value;
+                ;
+                if (param.value) {
+                    switch (param.column.colDef.field) {
+                        case "fecha_entrada":
+                            var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+                            valor = new Date(param.value).toLocaleDateString('es-ES', options);
+                            break;
+                        case "fecha_salida":
+                            var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+                            valor = new Date(param.value).toLocaleDateString('es-ES', options);
+                            break;
+                        default:
+                            return param.value;
+                    }
+                }
+                return valor;
+            }
+        };
+        this.gridApi.exportDataAsCsv(params);
+    };
+    ListarExperimentosComponent.prototype.guardar = function () {
+        localStorage.setItem('ColumnStateExperimentos', JSON.stringify(this.gridColumnApi.getColumnState()));
+        localStorage.setItem('FilterModelExperimentos', JSON.stringify(this.gridApi.getFilterModel()));
+        localStorage.setItem('SortModelExperimentos', JSON.stringify(this.gridApi.getSortModel()));
     };
     ListarExperimentosComponent.prototype._getExperimentos = function () {
         var _this = this;

@@ -41,7 +41,8 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
         field: "espectrometro",
         suppressMenu: true,
         filterParams: {
-          caseSensitive: true
+          caseSensitive: true,
+          newRowsAction: 'keep'
         },
         minWidth: 135
       }, {
@@ -49,7 +50,8 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
         field: "sonda",
         suppressMenu: true,
         filterParams: {
-          caseSensitive: true
+          caseSensitive: true,
+          newRowsAction: 'keep'
         },
         minWidth: 135
       }, {
@@ -57,7 +59,8 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
         field: "muestra",
         suppressMenu: true,
         filterParams: {
-          caseSensitive: true
+          caseSensitive: true,
+          newRowsAction: 'keep'
         },
         minWidth: 135
       }, {
@@ -65,7 +68,8 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
         field: "solicitud",
         suppressMenu: true,
         filterParams: {
-          caseSensitive: true
+          caseSensitive: true,
+          newRowsAction: 'keep'
         },
         minWidth: 135
       }, {
@@ -73,7 +77,8 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
         field: "usuario_entrada",
         suppressMenu: true,
         filterParams: {
-          caseSensitive: true
+          caseSensitive: true,
+          newRowsAction: 'keep'
         },
         minWidth: 135
       }, {
@@ -87,11 +92,26 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
         },
         suppressMenu: true
       }, {
+        headerName: "",
+        field: "completo",
+        suppressFilter: true,
+        minWidth: 25,
+        maxWidth: 25,
+        width: 25,
+        cellStyle: function (params) {
+          if (params.value)
+            return { backgroundColor: 'green' };
+          else
+            return { backgroundColor: 'red' };
+        },
+        valueGetter: function (param) { return '' }
+      }, {
         headerName: "USUARIO (SALIDA)",
         field: "usuario_salida",
         suppressMenu: true,
         filterParams: {
-          caseSensitive: true
+          caseSensitive: true,
+          newRowsAction: 'keep'
         },
         minWidth: 135
       }, {
@@ -127,6 +147,8 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
   onGridReady(params) {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
+    this.autoSizeAll();
+    this.getFiltros();
   }
 
   onPageSizeChanged(newPageSize) {
@@ -149,6 +171,80 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
     // Unsubscribe from observables
     this.authSubscription.unsubscribe();
     this._destroyExperimentosSubscription();
+  }
+
+  onFilterChanged(value) {
+    this.guardar();
+    try {
+      this.gridApi.setQuickFilter(value);
+    } catch (err) { }
+  }
+
+  getFiltros() {
+    if (localStorage.getItem('ColumnStateExperimentos') != "" && localStorage.getItem('ColumnStateExperimentos') != null) {
+      var columnStateToken = JSON.parse(localStorage.getItem('ColumnStateExperimentos'));
+      this.gridColumnApi.setColumnState(columnStateToken);
+    }
+
+    if (localStorage.getItem('FilterModelExperimentos') != "" && localStorage.getItem('FilterModelExperimentos') != null) {
+      var filterModelToken = JSON.parse(localStorage.getItem('FilterModelExperimentos'));
+      this.gridApi.setFilterModel(filterModelToken);
+    }
+
+    if (localStorage.getItem('SortModelExperimentos') != "" && localStorage.getItem('SortModelExperimentos') != null) {
+      var sortModelToken = JSON.parse(localStorage.getItem('SortModelExperimentos'));
+      this.gridApi.setSortModel(sortModelToken);
+    }
+  }
+
+  resetearFiltros() {
+    localStorage.setItem('ColumnStateExperimentos', "");
+    localStorage.setItem('FilterModelExperimentos', "");
+    localStorage.setItem('SortModelExperimentos', "");
+
+    this.gridApi.setFilterModel(null);
+    this.gridColumnApi.resetColumnState();
+    this.gridColumnApi.resetColumnGroupState();
+    this.gridApi.setSortModel(null);
+    this.gridApi.onFilterChanged();
+  }
+
+  autoSizeAll() {
+    var allColumnIds = [];
+    this.gridColumnApi.getAllColumns().forEach(function (column) {
+      allColumnIds.push(column.colId);
+    });
+    this.gridColumnApi.autoSizeColumns(allColumnIds);
+  }
+
+  onBtExport() {
+    var params = {
+      processCellCallback: function (param) {
+        var valor = param.value;;
+        if (param.value) {
+          switch (param.column.colDef.field) {
+            case "fecha_entrada":
+              var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+              valor = new Date(param.value).toLocaleDateString('es-ES', options);
+              break;
+            case "fecha_salida":
+              var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+              valor = new Date(param.value).toLocaleDateString('es-ES', options);
+              break;
+            default:
+              return param.value;
+          }
+        }
+        return valor;
+      }
+    }
+    this.gridApi.exportDataAsCsv(params);
+  }
+
+  private guardar() {
+    localStorage.setItem('ColumnStateExperimentos', JSON.stringify(this.gridColumnApi.getColumnState()));
+    localStorage.setItem('FilterModelExperimentos', JSON.stringify(this.gridApi.getFilterModel()));
+    localStorage.setItem('SortModelExperimentos', JSON.stringify(this.gridApi.getSortModel()));
   }
 
   private _getExperimentos() {
