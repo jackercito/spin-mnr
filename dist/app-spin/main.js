@@ -1273,11 +1273,10 @@ var ListarExperimentosComponent = /** @class */ (function () {
                 width: 25,
                 cellStyle: function (params) {
                     if (params.value)
-                        return { backgroundColor: 'green' };
+                        return { backgroundColor: 'green', color: 'green' };
                     else
-                        return { backgroundColor: 'red' };
+                        return { backgroundColor: 'red', color: 'red' };
                 },
-                valueGetter: function (param) { return ''; }
             }, {
                 headerName: "USUARIO (SALIDA)",
                 field: "usuario_salida",
