@@ -4,6 +4,7 @@ _this = this
 
 exports.getExperimentos = async function (req, res, next) {
   try {
+    //
     var experimentos = await ExperimentoService.getExperimentos({})
     res.json(experimentos);
   } catch (e) {
