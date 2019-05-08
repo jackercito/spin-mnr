@@ -10,4 +10,6 @@ const DB = process.env.MONGO_DB;
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://" + USER + ":" + PASSWORD + "@" + DB, { useNewUrlParser: true });
 
+console.log("mongodb://" + USER + ":" + PASSWORD + "@" + DB);
+
 exports.mongoose = mongoose;
