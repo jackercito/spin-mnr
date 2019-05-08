@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import { GridOptions } from "ag-grid/main";
+import { GridOptions } from "ag-grid-community";
 import { Subscription } from 'rxjs';
 import { ExperimentosServiceService } from './../../services/experimentos-service.service';
 import { Auth0Service } from '../../../services/auth0.service';
@@ -17,73 +17,66 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
   authSubscription: Subscription;
   experimentosSubscription: Subscription;
 
-  gridOptions: GridOptions;
-  columnDefs: any[]
-  sizePage: number = 25;
-  rowData: any[];
-
   private gridApi;
   private gridColumnApi;
   private getRowHeight;
 
-  paginationPageSize;
-  frameworkComponents;
-  context;
-
+  public paginationPageSize;
+  public context;
   public localeText = locale;
+  public frameworkComponents;
+
+  gridOptions: GridOptions;
+  columnDefs: any[]
+  rowData: any[];
+  sizePage: number = 25;
+  empresas: any[];
+  delegaciones: any[];
 
   constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service) {
     this._getExperimentos();
+
+    this.gridOptions = <GridOptions>{};
+    this.gridOptions.rowModelType = 'infinite';
+    this.gridOptions.rowHeight = 35;
+    this.paginationPageSize = 25;
+
+    var def = {
+      filter: "agTextColumnFilter",
+      filterParams: {
+        caseSensitive: false,
+        newRowsAction: 'keep'
+      },
+      resizable: true,
+      sortable: true,
+      minWidth: 135
+    }
 
     this.columnDefs = [
       {
         headerName: "ESPECTROMETRO",
         field: "espectrometro",
-        suppressMenu: true,
-        filterParams: {
-          caseSensitive: true,
-          newRowsAction: 'keep'
-        },
-        minWidth: 135
+        ...def,
       }, {
         headerName: "SONDA",
         field: "sonda",
-        suppressMenu: true,
-        filterParams: {
-          caseSensitive: true,
-          newRowsAction: 'keep'
-        },
-        minWidth: 135
+        ...def,
       }, {
         headerName: "MUESTRA",
         field: "muestra",
-        suppressMenu: true,
-        filterParams: {
-          caseSensitive: true,
-          newRowsAction: 'keep'
-        },
-        minWidth: 135
+        ...def,
       }, {
         headerName: "SOLICITUD",
         field: "solicitud",
-        suppressMenu: true,
-        filterParams: {
-          caseSensitive: true,
-          newRowsAction: 'keep'
-        },
-        minWidth: 135
+        ...def,
       }, {
         headerName: "USUARIO (ENTRADA)",
         field: "usuario_entrada",
-        suppressMenu: true,
-        filterParams: {
-          caseSensitive: true,
-          newRowsAction: 'keep'
-        },
-        minWidth: 135
+        ...def,
       }, {
         headerName: "FECHA (ENTRADA)",
         field: "fecha_entrada",
+        ...def,
         filter: "agDateColumnFilter",
         valueFormatter: dateFormat,
         filterParams: {
@@ -94,7 +87,9 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
       }, {
         headerName: "",
         field: "completo",
-        suppressFilter: true,
+        suppressMenu: true,
+        ...def,
+        filter: false,
         minWidth: 25,
         maxWidth: 25,
         width: 25,
@@ -108,15 +103,11 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
       }, {
         headerName: "USUARIO (SALIDA)",
         field: "usuario_salida",
-        suppressMenu: true,
-        filterParams: {
-          caseSensitive: true,
-          newRowsAction: 'keep'
-        },
-        minWidth: 135
+        ...def,
       }, {
         headerName: "FECHA (SALIDA)",
         field: "fecha_salida",
+        ...def,
         filter: "agDateColumnFilter",
         valueFormatter: dateFormat,
         filterParams: {
@@ -126,7 +117,8 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
         suppressMenu: true
       }, {
         headerName: "VER",
-        suppressFilter: true,
+        ...def,
+        filter: false,
         pinned: "right",
         field: "value",
         cellRenderer: 'botonVerExperimentoComponent',
@@ -265,7 +257,6 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
       this.experimentosSubscription.unsubscribe();
     }
   }
-
 }
 
 function compararFechas(filterLocalDateAtMidnight, cellValue) {

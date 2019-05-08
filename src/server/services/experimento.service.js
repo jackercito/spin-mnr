@@ -3,9 +3,9 @@ var Experimento = require("../models/experimento.model");
 // Saving the context of this module inside the _the variable
 _this = this;
 
-exports.getExperimentos = async function(query, option) {
+exports.getExperimentos = async function(query) {
   try {
-    var experimentos = await Experimento.paginate(query, option)
+    var experimentos = await Experimento.find(query)
     return experimentos;
   } catch (err) {
     throw Error("Error al paginar los experimenentos. Err(EXP01): " + err)

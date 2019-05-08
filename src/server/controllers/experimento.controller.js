@@ -3,16 +3,8 @@ var ExperimentoService = require('./../services/experimento.service');
 _this = this
 
 exports.getExperimentos = async function (req, res, next) {
-  var page = req.query.page ? req.query.page : 1
-  var limit = req.query.limit ? req.query.limit : 1000000;
-
-  var options = {
-    page,
-    limit
-  }
-
   try {
-    var experimentos = await ExperimentoService.getExperimentos({}, options)
+    var experimentos = await ExperimentoService.getExperimentos({})
     res.json(experimentos.docs);
   } catch (e) {
     return res.status(400).json({ status: 400, message: e.message });
@@ -43,13 +35,10 @@ exports.postExperimento = async function (req, res, next) {
     completo: req.body.completo,
   });
 
-  console.log(experimento);
-
   try {
     var _experimentoGuardado = await ExperimentoService.createExperimento(experimento);
     res.json(_experimentoGuardado);
   } catch (e) {
-    console.log(e);
     return res.status(400).json({ status: 400, message: e });
   }
 }

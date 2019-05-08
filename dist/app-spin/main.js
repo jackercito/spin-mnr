@@ -1,5 +1,126 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/app.component.html":
+/*!**************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/app.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"col-md-2 col-sm-1\">\r\n  <app-menu></app-menu>\r\n</div>\r\n\r\n<div class=\"col-md-10 col-sm-9\">\r\n  <br />\r\n  <router-outlet></router-outlet>\r\n</div>\r\n\r\n<ng-snotify></ng-snotify>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.html":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.html ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a [routerLink]=\"['/experimentos/mostrar/', id]\" class=\"btn btn-info\">\r\n  Ver &nbsp;\r\n  <span class=\"glyphicon glyphicon-eye-open\"></span>\r\n</a>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/componentes/ag-grid/header-group/header-group.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/componentes/ag-grid/header-group/header-group.component.html ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n  <div class=\"customHeaderLabel\"> {{this.params.displayName}}</div>\r\n  <div (click)=\"expandOrCollapse()\" class=\"{{'customExpandButton' + (this.expanded ?  ' expanded': ' collapsed')}}\"><i class=\"fa fa-arrow-right\"></i></div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/componentes/ag-grid/header/header.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/componentes/ag-grid/header/header.component.html ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n  <div [hidden]=\"!params.enableMenu\" class=\"customHeaderMenuButton\" (click)=\"onMenuClick()\"><i class=\"{{'fa ' + params.menuIcon}}\"></i></div>\r\n  <div class=\"customHeaderLabel\">{{params.displayName}}</div>\r\n  <div [hidden]=\"!params.enableSorting\" class=\"{{'customSortDownLabel'+ (this.sorted === 'desc' ? ' active' : '') }}\" (click)=\"onSortRequested('desc', $event)\">\r\n    <i class=\"fa fa-long-arrow-down\"></i>\r\n  </div>\r\n  <div [hidden]=\"!params.enableSorting\" class=\"{{'customSortUpLabel'+ (this.sorted === 'asc' ? ' active' : '') }}\" (click)=\"onSortRequested('asc', $event)\">\r\n    <i class=\"fa fa-long-arrow-up\"></i>\r\n  </div>\r\n  <div [hidden]=\"!params.enableSorting\" class=\"{{'customSortRemoveLabel'+ (this.sorted === '' ? ' active' : '') }}\" (click)=\"onSortRequested('', $event)\">\r\n    <i class=\"fa fa-times\"></i>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/componentes/auth0/callback/callback.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/componentes/auth0/callback/callback.component.html ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  callback works!\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/componentes/auth0/perfil/perfil.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/componentes/auth0/perfil/perfil.component.html ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>{{auth.userProfile.name}}</h1>\r\n\r\n<ul>\r\n  <li *ngFor=\"let profileProp of profileArray\">\r\n    <code>{{profileProp}}</code>\r\n  </li>\r\n</ul>\r\n\r\n<p>\r\n  <a routerLink=\"/\" href>Back to Home</a>\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/menu/menu.component.html":
+/*!********************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/menu/menu.component.html ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<label class=\"powered\">Powered by Jackercito</label>\r\n<nav class=\"navbar navbar-default sidebar margen-derecho\" role=\"navigation\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"navbar-header\">\r\n      <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bs-sidebar-navbar-collapse-1\">\r\n        <span class=\"sr-only\">Menu</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"collapse navbar-collapse\" id=\"bs-sidebar-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li align=\"center\">\r\n        <img src=\"assets/images/rmn2.png\" class=\"logo2 active hidden-xs hidden-md hidden-sm\" />\r\n        <br />\r\n        <a href=\"#\" class=\"nohover\">\r\n          <img src=\"assets/images/logo.jpg\" class=\"logo active hidden-xs hidden-md hidden-sm\" />\r\n        </a>\r\n        <br />\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\">\r\n        <a href=\"#\">\r\n          Home\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-home\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" *ngIf=\"!auth.authenticated\">\r\n        <a class=\"pointer\" (click)=\"auth.login()\">\r\n          Login\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-log-in\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" *ngIf=\"auth.authenticated\">\r\n        <a class=\"pointer\" (click)=\"auth.logout()\">\r\n          Logout\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-log-out\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\" *ngIf=\"auth.authenticated\">\r\n        <a routerLink=\"/experimentos/listar\">\r\n          Listar Experimentos\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-th-list\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\" *ngIf=\"auth.authenticated\">\r\n        <a routerLink=\"/experimentos/nuevo\">\r\n          Nuevo Experimento\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-file\"></span>\r\n        </a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/modulo-experimentos/componentes/crear-experimento/crear-experimento.component.html":
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/modulo-experimentos/componentes/crear-experimento/crear-experimento.component.html ***!
+  \******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n  <form (ngSubmit)=\"savedExperimento()\" #experimentoForm=\"ngForm\">\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Espectrometro: </label>\r\n        <select [(ngModel)]=\"espectrometroSeleccionado\" class=\"form-control\" name=\"espectrometro\" id=\"espectrometro\" (change)=\"onSelectEspectrometro($event.target.value)\" required>\r\n          <option *ngFor=\"let espect of espectrometros\" [value]=\"espect\">{{espect}}</option>\r\n        </select>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Sondas: </label>\r\n        <select [(ngModel)]=\"sondaSeleccionada\" class=\"form-control\" name=\"sonda\" id=\"sonda\" required>\r\n          <option *ngFor=\"let sond of sondas\" [value]=\"sond\">{{sond}}</option>\r\n        </select>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Fecha de entrada: </label>\r\n        <input type=\"date\" class=\"form-control\" [ngModel]=\"startDate | date:'yyyy-MM-dd'\" (ngModelChange)=\"finDate = $event\" name=\"fecha_entrada\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de entrada: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [(ngModel)]=\"experimento.usuario_entrada\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Muestra: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"muestra\" [(ngModel)]=\"experimento.muestra\" required>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>ID Solicitud: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [(ngModel)]=\"experimento.solicitud\" required>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <label for=\"finalizado\"> Finalizado </label>\r\n      <div class=\"form-group input-group\">\r\n        <label for=\"finalizado\" class=\"checkbox-inline\">\r\n          <input type=\"checkbox\" class=\"form-control\" [(ngModel)]=\"experimento.completo\" name=\"finalizado\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n        </label>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <br />\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n      <div class=\"form-group\">\r\n        <label>Fecha de salida: </label>\r\n        <input type=\"date\" class=\"form-control\" [ngModel]=\"startDate | date:'yyyy-MM-dd'\" (ngModelChange)=\"finDate2 = $event\" name=\"fecha_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de salida: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [(ngModel)]=\"experimento.usuario_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!experimentoForm.form.valid\">Guardar Experimento</button>\r\n      </div>\r\n    </div>\r\n  </form>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/modulo-experimentos/componentes/editar-experimento/editar-experimento.component.html":
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/modulo-experimentos/componentes/editar-experimento/editar-experimento.component.html ***!
+  \********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <select [(ngModel)]=\"espectrometroSeleccionado\" class=\"form-control\" name=\"espectrometro\" id=\"espectrometro\" (change)=\"onSelectEspectrometro($event.target.value)\" required>\r\n        <option *ngFor=\"let espect of espectrometros\" [value]=\"espect\">{{espect}}</option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <select [(ngModel)]=\"sondaSeleccionada\" class=\"form-control\" name=\"sonda\" id=\"sonda\" required>\r\n        <option *ngFor=\"let sond of sondas\" [value]=\"sond\">{{sond}}</option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\" (ngModelChange)=\"finDateFechaEntrada = $event\" required>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [(ngModel)]=\"experimento.usuario_entrada\" required>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [(ngModel)]=\"experimento.muestra\" required>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [(ngModel)]=\"experimento.solicitud\" required>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [(ngModel)]=\"experimento.completo\" name=\"finalizado\" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\" (ngModelChange)=\"finDateFechaSalida = $event\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de salida: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [(ngModel)]=\"experimento.usuario_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-6 form-group\">\r\n      <button (click)=\"editarExperimento()\" class=\"btn btn-warning\">\r\n        Guardar\r\n        <span class=\"glyphicon glyphicon-save\"></span>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"col-md-6 form-group\">\r\n      <button class=\"btn btn-info\" type=\"button\" (click)=\"goBack()\">\r\n        Volver\r\n        <span class=\"glyphicon glyphicon-share-alt\"></span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/modulo-experimentos/componentes/listar-experimentos/listar-experimentos.component.html":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/modulo-experimentos/componentes/listar-experimentos/listar-experimentos.component.html ***!
+  \**********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<br />\r\n<br />\r\n\r\n<div class=\"col-md-12\">\r\n  <ag-grid-angular style=\"width: 100%; height: 720px;\"\r\n                   class=\"ag-theme-fresh\"\r\n                   rowSelection=\"single\"\r\n                   rowHeight=\"40\"\r\n                   [localeText]=\"localeText\"\r\n                   [rowData]=\"rowData\"\r\n                   [columnDefs]=\"columnDefs\"\r\n                   [pagination]=\"true\"\r\n                   [paginationPageSize]=\"paginationPageSize\"\r\n                   [floatingFilter]=\"true\"\r\n                   [frameworkComponents]=\"frameworkComponents\"\r\n                   [context]=\"context\"\r\n                   (filterChanged)=\"onFilterChanged($event)\"\r\n                   (gridReady)=\"onGridReady($event)\">\r\n  </ag-grid-angular>\r\n</div>\r\n\r\n<div class=\"col-md-6 derecha\">\r\n  <br />\r\n  <label style=\"margin-left: 20px;\">\r\n    <button (click)=\"onBtExport()\" class=\"btn btn-primary\">\r\n      Exportar CSV &nbsp;&nbsp;\r\n      <span class=\"glyphicon glyphicon-download\"></span>\r\n    </button>\r\n  </label>\r\n</div>\r\n\r\n<div class=\"col-md-6 derecha\">\r\n  <br />\r\n  <a class=\"btn btn-danger\" (click)=\"resetearFiltros()\">\r\n    Borrar Filtros &nbsp;\r\n    <span class=\"glyphicon glyphicon-remove\"></span>\r\n  </a>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/modulo-experimentos/componentes/ver-experimento/ver-experimento.component.html":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/modulo-experimentos/componentes/ver-experimento/ver-experimento.component.html ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"espectrometros\" name=\"espectrometros\" [ngModel]=\"experimento.espectrometro\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"sonda\" name=\"sonda\" [ngModel]=\"experimento.sonda\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [ngModel]=\"experimento.usuario_entrada\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [ngModel]=\"experimento.muestra\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [ngModel]=\"experimento.solicitud\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [ngModel]=\"experimento.completo\" name=\"finalizado\" disabled> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de salida: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [ngModel]=\"experimento.usuario_salida\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button (click)=\"editarExperimento()\" class=\"btn btn-warning\" >\r\n      Editar\r\n      <span class=\"glyphicon glyphicon-edit\"></span>\r\n    </button>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteExperimento()\">\r\n      Eliminar\r\n      <span class=\"glyphicon glyphicon-remove\"></span>\r\n    </button>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -124,17 +245,6 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
-/***/ "./src/app/app.component.html":
-/*!************************************!*\
-  !*** ./src/app/app.component.html ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"col-md-2 col-sm-1\">\r\n  <app-menu></app-menu>\r\n</div>\r\n\r\n<div class=\"col-md-10 col-sm-9\">\r\n  <br />\r\n  <router-outlet></router-outlet>\r\n</div>\r\n\r\n<ng-snotify></ng-snotify>\r\n"
-
-/***/ }),
-
 /***/ "./src/app/app.component.ts":
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
@@ -171,7 +281,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
+            template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _services_auth0_service__WEBPACK_IMPORTED_MODULE_2__["Auth0Service"]])
@@ -297,17 +407,6 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
-/***/ "./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.html":
-/*!************************************************************************************************!*\
-  !*** ./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.html ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<a [routerLink]=\"['/experimentos/mostrar/', id]\" class=\"btn btn-info\">\r\n  Ver &nbsp;\r\n  <span class=\"glyphicon glyphicon-eye-open\"></span>\r\n</a>\r\n"
-
-/***/ }),
-
 /***/ "./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.ts":
 /*!**********************************************************************************************!*\
   !*** ./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.ts ***!
@@ -339,7 +438,7 @@ var BotonVerExperimentoComponent = /** @class */ (function () {
     BotonVerExperimentoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-boton-ver-experimento',
-            template: __webpack_require__(/*! ./boton-ver-experimento.component.html */ "./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.html"),
+            template: __webpack_require__(/*! raw-loader!./boton-ver-experimento.component.html */ "./node_modules/raw-loader/index.js!./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.html"),
             styles: [__webpack_require__(/*! ./boton-ver-experimento.component.css */ "./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.css")]
         })
     ], BotonVerExperimentoComponent);
@@ -350,17 +449,6 @@ var BotonVerExperimentoComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/componentes/ag-grid/header-group/header-group.component.html":
-/*!******************************************************************************!*\
-  !*** ./src/app/componentes/ag-grid/header-group/header-group.component.html ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div>\r\n  <div class=\"customHeaderLabel\"> {{this.params.displayName}}</div>\r\n  <div (click)=\"expandOrCollapse()\" class=\"{{'customExpandButton' + (this.expanded ?  ' expanded': ' collapsed')}}\"><i class=\"fa fa-arrow-right\"></i></div>\r\n</div>\r\n"
-
-/***/ }),
-
 /***/ "./src/app/componentes/ag-grid/header-group/header-group.component.scss":
 /*!******************************************************************************!*\
   !*** ./src/app/componentes/ag-grid/header-group/header-group.component.scss ***!
@@ -368,7 +456,7 @@ module.exports = "<div>\r\n  <div class=\"customHeaderLabel\"> {{this.params.dis
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".customHeaderLabel {\n  margin-left: 5px;\n  margin-top: 3px;\n  float: left; }\n\n.customExpandButton {\n  float: right;\n  margin-top: 5px;\n  margin-left: 3px; }\n\n.expanded {\n  -webkit-animation-name: toExpanded;\n          animation-name: toExpanded;\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s;\n  /* IE 9 */\n  -webkit-transform: rotate(180deg);\n  /* Chrome, Safari, Opera */\n  transform: rotate(180deg); }\n\n.collapsed {\n  color: cornflowerblue;\n  -webkit-animation-name: toCollapsed;\n          animation-name: toCollapsed;\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s;\n  /* IE 9 */\n  -webkit-transform: rotate(0deg);\n  /* Chrome, Safari, Opera */\n  transform: rotate(0deg); }\n\n@-webkit-keyframes toExpanded {\n  from {\n    color: cornflowerblue;\n    /* IE 9 */\n    -webkit-transform: rotate(0deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(0deg); }\n  to {\n    color: black;\n    /* IE 9 */\n    -webkit-transform: rotate(180deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(180deg); } }\n\n@keyframes toExpanded {\n  from {\n    color: cornflowerblue;\n    /* IE 9 */\n    -webkit-transform: rotate(0deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(0deg); }\n  to {\n    color: black;\n    /* IE 9 */\n    -webkit-transform: rotate(180deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(180deg); } }\n\n@-webkit-keyframes toCollapsed {\n  from {\n    color: black;\n    /* IE 9 */\n    -webkit-transform: rotate(180deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(180deg); }\n  to {\n    color: cornflowerblue;\n    /* IE 9 */\n    -webkit-transform: rotate(0deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(0deg); } }\n\n@keyframes toCollapsed {\n  from {\n    color: black;\n    /* IE 9 */\n    -webkit-transform: rotate(180deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(180deg); }\n  to {\n    color: cornflowerblue;\n    /* IE 9 */\n    -webkit-transform: rotate(0deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(0deg); } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvYWctZ3JpZC9oZWFkZXItZ3JvdXAvQzpcXFVzZXJzXFxwYWxvbnNvXFxzb3VyY2VcXHJlcG9zXFxhcHAtc3Bpblxcc3Bpbi1tbnIvc3JjXFxhcHBcXGNvbXBvbmVudGVzXFxhZy1ncmlkXFxoZWFkZXItZ3JvdXBcXGhlYWRlci1ncm91cC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFnQjtFQUNoQixnQkFBZTtFQUNmLFlBQVcsRUFDWjs7QUFFRDtFQUNFLGFBQVk7RUFDWixnQkFBZTtFQUNmLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLG1DQUEwQjtVQUExQiwyQkFBMEI7RUFDMUIsK0JBQXNCO1VBQXRCLHVCQUFzQjtFQUNTLFVBQVU7RUFDekMsa0NBQWlDO0VBQUUsMkJBQTJCO0VBQzlELDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLHNCQUFxQjtFQUNyQixvQ0FBMkI7VUFBM0IsNEJBQTJCO0VBQzNCLCtCQUFzQjtVQUF0Qix1QkFBc0I7RUFDTyxVQUFVO0VBQ3ZDLGdDQUErQjtFQUFFLDJCQUEyQjtFQUM1RCx3QkFBdUIsRUFDeEI7O0FBSUQ7RUFDRTtJQUNFLHNCQUFxQjtJQUNRLFVBQVU7SUFDdkMsZ0NBQStCO0lBQUUsMkJBQTJCO0lBQzVELHdCQUF1QixFQUFBO0VBR3pCO0lBQ0UsYUFBWTtJQUNtQixVQUFVO0lBQ3pDLGtDQUFpQztJQUFFLDJCQUEyQjtJQUM5RCwwQkFBeUIsRUFBQSxFQUFBOztBQVo3QjtFQUNFO0lBQ0Usc0JBQXFCO0lBQ1EsVUFBVTtJQUN2QyxnQ0FBK0I7SUFBRSwyQkFBMkI7SUFDNUQsd0JBQXVCLEVBQUE7RUFHekI7SUFDRSxhQUFZO0lBQ21CLFVBQVU7SUFDekMsa0NBQWlDO0lBQUUsMkJBQTJCO0lBQzlELDBCQUF5QixFQUFBLEVBQUE7O0FBSTdCO0VBQ0U7SUFDRSxhQUFZO0lBQ21CLFVBQVU7SUFDekMsa0NBQWlDO0lBQUUsMkJBQTJCO0lBQzlELDBCQUF5QixFQUFBO0VBRzNCO0lBQ0Usc0JBQXFCO0lBQ1EsVUFBVTtJQUN2QyxnQ0FBK0I7SUFBRSwyQkFBMkI7SUFDNUQsd0JBQXVCLEVBQUEsRUFBQTs7QUFaM0I7RUFDRTtJQUNFLGFBQVk7SUFDbUIsVUFBVTtJQUN6QyxrQ0FBaUM7SUFBRSwyQkFBMkI7SUFDOUQsMEJBQXlCLEVBQUE7RUFHM0I7SUFDRSxzQkFBcUI7SUFDUSxVQUFVO0lBQ3ZDLGdDQUErQjtJQUFFLDJCQUEyQjtJQUM1RCx3QkFBdUIsRUFBQSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50ZXMvYWctZ3JpZC9oZWFkZXItZ3JvdXAvaGVhZGVyLWdyb3VwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmN1c3RvbUhlYWRlckxhYmVsIHtcclxuICBtYXJnaW4tbGVmdDogNXB4O1xyXG4gIG1hcmdpbi10b3A6IDNweDtcclxuICBmbG9hdDogbGVmdDtcclxufVxyXG5cclxuLmN1c3RvbUV4cGFuZEJ1dHRvbiB7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG4gIG1hcmdpbi10b3A6IDVweDtcclxuICBtYXJnaW4tbGVmdDogM3B4O1xyXG59XHJcblxyXG4uZXhwYW5kZWQge1xyXG4gIGFuaW1hdGlvbi1uYW1lOiB0b0V4cGFuZGVkO1xyXG4gIGFuaW1hdGlvbi1kdXJhdGlvbjogMXM7XHJcbiAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7IC8qIElFIDkgKi9cclxuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7IC8qIENocm9tZSwgU2FmYXJpLCBPcGVyYSAqL1xyXG4gIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XHJcbn1cclxuXHJcbi5jb2xsYXBzZWQge1xyXG4gIGNvbG9yOiBjb3JuZmxvd2VyYmx1ZTtcclxuICBhbmltYXRpb24tbmFtZTogdG9Db2xsYXBzZWQ7XHJcbiAgYW5pbWF0aW9uLWR1cmF0aW9uOiAxcztcclxuICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IC8qIElFIDkgKi9cclxuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyAvKiBDaHJvbWUsIFNhZmFyaSwgT3BlcmEgKi9cclxuICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcclxufVxyXG5cclxuXHJcblxyXG5Aa2V5ZnJhbWVzIHRvRXhwYW5kZWQge1xyXG4gIGZyb20ge1xyXG4gICAgY29sb3I6IGNvcm5mbG93ZXJibHVlO1xyXG4gICAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyAvKiBJRSA5ICovXHJcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyAvKiBDaHJvbWUsIFNhZmFyaSwgT3BlcmEgKi9cclxuICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xyXG4gIH1cclxuXHJcbiAgdG8ge1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7IC8qIElFIDkgKi9cclxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgLyogQ2hyb21lLCBTYWZhcmksIE9wZXJhICovXHJcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpO1xyXG4gIH1cclxufVxyXG5cclxuQGtleWZyYW1lcyB0b0NvbGxhcHNlZCB7XHJcbiAgZnJvbSB7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgLyogSUUgOSAqL1xyXG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpOyAvKiBDaHJvbWUsIFNhZmFyaSwgT3BlcmEgKi9cclxuICAgIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XHJcbiAgfVxyXG5cclxuICB0byB7XHJcbiAgICBjb2xvcjogY29ybmZsb3dlcmJsdWU7XHJcbiAgICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IC8qIElFIDkgKi9cclxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IC8qIENocm9tZSwgU2FmYXJpLCBPcGVyYSAqL1xyXG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
+module.exports = ".customHeaderLabel {\n  margin-left: 5px;\n  margin-top: 3px;\n  float: left;\n}\n\n.customExpandButton {\n  float: right;\n  margin-top: 5px;\n  margin-left: 3px;\n}\n\n.expanded {\n  -webkit-animation-name: toExpanded;\n          animation-name: toExpanded;\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s;\n  /* IE 9 */\n  -webkit-transform: rotate(180deg);\n  /* Chrome, Safari, Opera */\n  transform: rotate(180deg);\n}\n\n.collapsed {\n  color: cornflowerblue;\n  -webkit-animation-name: toCollapsed;\n          animation-name: toCollapsed;\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s;\n  /* IE 9 */\n  -webkit-transform: rotate(0deg);\n  /* Chrome, Safari, Opera */\n  transform: rotate(0deg);\n}\n\n@-webkit-keyframes toExpanded {\n  from {\n    color: cornflowerblue;\n    /* IE 9 */\n    -webkit-transform: rotate(0deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(0deg);\n  }\n  to {\n    color: black;\n    /* IE 9 */\n    -webkit-transform: rotate(180deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(180deg);\n  }\n}\n\n@keyframes toExpanded {\n  from {\n    color: cornflowerblue;\n    /* IE 9 */\n    -webkit-transform: rotate(0deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(0deg);\n  }\n  to {\n    color: black;\n    /* IE 9 */\n    -webkit-transform: rotate(180deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(180deg);\n  }\n}\n\n@-webkit-keyframes toCollapsed {\n  from {\n    color: black;\n    /* IE 9 */\n    -webkit-transform: rotate(180deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(180deg);\n  }\n  to {\n    color: cornflowerblue;\n    /* IE 9 */\n    -webkit-transform: rotate(0deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(0deg);\n  }\n}\n\n@keyframes toCollapsed {\n  from {\n    color: black;\n    /* IE 9 */\n    -webkit-transform: rotate(180deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(180deg);\n  }\n  to {\n    color: cornflowerblue;\n    /* IE 9 */\n    -webkit-transform: rotate(0deg);\n    /* Chrome, Safari, Opera */\n    transform: rotate(0deg);\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvYWctZ3JpZC9oZWFkZXItZ3JvdXAvQzpcXFVzZXJzXFxwYWxvbnNvXFxzb3VyY2VcXHJlcG9zXFxhcHAtc3Bpblxcc3Bpbi1tbnIvc3JjXFxhcHBcXGNvbXBvbmVudGVzXFxhZy1ncmlkXFxoZWFkZXItZ3JvdXBcXGhlYWRlci1ncm91cC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50ZXMvYWctZ3JpZC9oZWFkZXItZ3JvdXAvaGVhZGVyLWdyb3VwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtBQ0NGOztBREVBO0VBQ0UsWUFBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtBQ0NGOztBREVBO0VBQ0Usa0NBQUE7VUFBQSwwQkFBQTtFQUNBLDhCQUFBO1VBQUEsc0JBQUE7RUFDK0IsU0FBQTtFQUMvQixpQ0FBQTtFQUFtQywwQkFBQTtFQUNuQyx5QkFBQTtBQ0dGOztBREFBO0VBQ0UscUJBQUE7RUFDQSxtQ0FBQTtVQUFBLDJCQUFBO0VBQ0EsOEJBQUE7VUFBQSxzQkFBQTtFQUM2QixTQUFBO0VBQzdCLCtCQUFBO0VBQWlDLDBCQUFBO0VBQ2pDLHVCQUFBO0FDS0Y7O0FEQUE7RUFDRTtJQUNFLHFCQUFBO0lBQzZCLFNBQUE7SUFDN0IsK0JBQUE7SUFBaUMsMEJBQUE7SUFDakMsdUJBQUE7RUNLRjtFREZBO0lBQ0UsWUFBQTtJQUMrQixTQUFBO0lBQy9CLGlDQUFBO0lBQW1DLDBCQUFBO0lBQ25DLHlCQUFBO0VDTUY7QUFDRjs7QURuQkE7RUFDRTtJQUNFLHFCQUFBO0lBQzZCLFNBQUE7SUFDN0IsK0JBQUE7SUFBaUMsMEJBQUE7SUFDakMsdUJBQUE7RUNLRjtFREZBO0lBQ0UsWUFBQTtJQUMrQixTQUFBO0lBQy9CLGlDQUFBO0lBQW1DLDBCQUFBO0lBQ25DLHlCQUFBO0VDTUY7QUFDRjs7QURIQTtFQUNFO0lBQ0UsWUFBQTtJQUMrQixTQUFBO0lBQy9CLGlDQUFBO0lBQW1DLDBCQUFBO0lBQ25DLHlCQUFBO0VDT0Y7RURKQTtJQUNFLHFCQUFBO0lBQzZCLFNBQUE7SUFDN0IsK0JBQUE7SUFBaUMsMEJBQUE7SUFDakMsdUJBQUE7RUNRRjtBQUNGOztBRHJCQTtFQUNFO0lBQ0UsWUFBQTtJQUMrQixTQUFBO0lBQy9CLGlDQUFBO0lBQW1DLDBCQUFBO0lBQ25DLHlCQUFBO0VDT0Y7RURKQTtJQUNFLHFCQUFBO0lBQzZCLFNBQUE7SUFDN0IsK0JBQUE7SUFBaUMsMEJBQUE7SUFDakMsdUJBQUE7RUNRRjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50ZXMvYWctZ3JpZC9oZWFkZXItZ3JvdXAvaGVhZGVyLWdyb3VwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmN1c3RvbUhlYWRlckxhYmVsIHtcclxuICBtYXJnaW4tbGVmdDogNXB4O1xyXG4gIG1hcmdpbi10b3A6IDNweDtcclxuICBmbG9hdDogbGVmdDtcclxufVxyXG5cclxuLmN1c3RvbUV4cGFuZEJ1dHRvbiB7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG4gIG1hcmdpbi10b3A6IDVweDtcclxuICBtYXJnaW4tbGVmdDogM3B4O1xyXG59XHJcblxyXG4uZXhwYW5kZWQge1xyXG4gIGFuaW1hdGlvbi1uYW1lOiB0b0V4cGFuZGVkO1xyXG4gIGFuaW1hdGlvbi1kdXJhdGlvbjogMXM7XHJcbiAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7IC8qIElFIDkgKi9cclxuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7IC8qIENocm9tZSwgU2FmYXJpLCBPcGVyYSAqL1xyXG4gIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XHJcbn1cclxuXHJcbi5jb2xsYXBzZWQge1xyXG4gIGNvbG9yOiBjb3JuZmxvd2VyYmx1ZTtcclxuICBhbmltYXRpb24tbmFtZTogdG9Db2xsYXBzZWQ7XHJcbiAgYW5pbWF0aW9uLWR1cmF0aW9uOiAxcztcclxuICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IC8qIElFIDkgKi9cclxuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyAvKiBDaHJvbWUsIFNhZmFyaSwgT3BlcmEgKi9cclxuICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcclxufVxyXG5cclxuXHJcblxyXG5Aa2V5ZnJhbWVzIHRvRXhwYW5kZWQge1xyXG4gIGZyb20ge1xyXG4gICAgY29sb3I6IGNvcm5mbG93ZXJibHVlO1xyXG4gICAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyAvKiBJRSA5ICovXHJcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyAvKiBDaHJvbWUsIFNhZmFyaSwgT3BlcmEgKi9cclxuICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xyXG4gIH1cclxuXHJcbiAgdG8ge1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7IC8qIElFIDkgKi9cclxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgLyogQ2hyb21lLCBTYWZhcmksIE9wZXJhICovXHJcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpO1xyXG4gIH1cclxufVxyXG5cclxuQGtleWZyYW1lcyB0b0NvbGxhcHNlZCB7XHJcbiAgZnJvbSB7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgLyogSUUgOSAqL1xyXG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpOyAvKiBDaHJvbWUsIFNhZmFyaSwgT3BlcmEgKi9cclxuICAgIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XHJcbiAgfVxyXG5cclxuICB0byB7XHJcbiAgICBjb2xvcjogY29ybmZsb3dlcmJsdWU7XHJcbiAgICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IC8qIElFIDkgKi9cclxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IC8qIENocm9tZSwgU2FmYXJpLCBPcGVyYSAqL1xyXG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XHJcbiAgfVxyXG59XHJcbiIsIi5jdXN0b21IZWFkZXJMYWJlbCB7XG4gIG1hcmdpbi1sZWZ0OiA1cHg7XG4gIG1hcmdpbi10b3A6IDNweDtcbiAgZmxvYXQ6IGxlZnQ7XG59XG5cbi5jdXN0b21FeHBhbmRCdXR0b24ge1xuICBmbG9hdDogcmlnaHQ7XG4gIG1hcmdpbi10b3A6IDVweDtcbiAgbWFyZ2luLWxlZnQ6IDNweDtcbn1cblxuLmV4cGFuZGVkIHtcbiAgYW5pbWF0aW9uLW5hbWU6IHRvRXhwYW5kZWQ7XG4gIGFuaW1hdGlvbi1kdXJhdGlvbjogMXM7XG4gIC1tcy10cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpO1xuICAvKiBJRSA5ICovXG4gIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTtcbiAgLyogQ2hyb21lLCBTYWZhcmksIE9wZXJhICovXG4gIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XG59XG5cbi5jb2xsYXBzZWQge1xuICBjb2xvcjogY29ybmZsb3dlcmJsdWU7XG4gIGFuaW1hdGlvbi1uYW1lOiB0b0NvbGxhcHNlZDtcbiAgYW5pbWF0aW9uLWR1cmF0aW9uOiAxcztcbiAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAvKiBJRSA5ICovXG4gIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gIC8qIENocm9tZSwgU2FmYXJpLCBPcGVyYSAqL1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbn1cblxuQGtleWZyYW1lcyB0b0V4cGFuZGVkIHtcbiAgZnJvbSB7XG4gICAgY29sb3I6IGNvcm5mbG93ZXJibHVlO1xuICAgIC1tcy10cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgICAvKiBJRSA5ICovXG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgICAvKiBDaHJvbWUsIFNhZmFyaSwgT3BlcmEgKi9cbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgfVxuICB0byB7XG4gICAgY29sb3I6IGJsYWNrO1xuICAgIC1tcy10cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpO1xuICAgIC8qIElFIDkgKi9cbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XG4gICAgLyogQ2hyb21lLCBTYWZhcmksIE9wZXJhICovXG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTtcbiAgfVxufVxuQGtleWZyYW1lcyB0b0NvbGxhcHNlZCB7XG4gIGZyb20ge1xuICAgIGNvbG9yOiBibGFjaztcbiAgICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTtcbiAgICAvKiBJRSA5ICovXG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpO1xuICAgIC8qIENocm9tZSwgU2FmYXJpLCBPcGVyYSAqL1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XG4gIH1cbiAgdG8ge1xuICAgIGNvbG9yOiBjb3JuZmxvd2VyYmx1ZTtcbiAgICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgLyogSUUgOSAqL1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgLyogQ2hyb21lLCBTYWZhcmksIE9wZXJhICovXG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gIH1cbn0iXX0= */"
 
 /***/ }),
 
@@ -410,7 +498,7 @@ var HeaderGroupComponent = /** @class */ (function () {
     HeaderGroupComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-header-group',
-            template: __webpack_require__(/*! ./header-group.component.html */ "./src/app/componentes/ag-grid/header-group/header-group.component.html"),
+            template: __webpack_require__(/*! raw-loader!./header-group.component.html */ "./node_modules/raw-loader/index.js!./src/app/componentes/ag-grid/header-group/header-group.component.html"),
             styles: [__webpack_require__(/*! ./header-group.component.scss */ "./src/app/componentes/ag-grid/header-group/header-group.component.scss")]
         })
     ], HeaderGroupComponent);
@@ -421,17 +509,6 @@ var HeaderGroupComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/componentes/ag-grid/header/header.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/componentes/ag-grid/header/header.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div>\r\n  <div [hidden]=\"!params.enableMenu\" class=\"customHeaderMenuButton\" (click)=\"onMenuClick()\"><i class=\"{{'fa ' + params.menuIcon}}\"></i></div>\r\n  <div class=\"customHeaderLabel\">{{params.displayName}}</div>\r\n  <div [hidden]=\"!params.enableSorting\" class=\"{{'customSortDownLabel'+ (this.sorted === 'desc' ? ' active' : '') }}\" (click)=\"onSortRequested('desc', $event)\">\r\n    <i class=\"fa fa-long-arrow-down\"></i>\r\n  </div>\r\n  <div [hidden]=\"!params.enableSorting\" class=\"{{'customSortUpLabel'+ (this.sorted === 'asc' ? ' active' : '') }}\" (click)=\"onSortRequested('asc', $event)\">\r\n    <i class=\"fa fa-long-arrow-up\"></i>\r\n  </div>\r\n  <div [hidden]=\"!params.enableSorting\" class=\"{{'customSortRemoveLabel'+ (this.sorted === '' ? ' active' : '') }}\" (click)=\"onSortRequested('', $event)\">\r\n    <i class=\"fa fa-times\"></i>\r\n  </div>\r\n</div>\r\n"
-
-/***/ }),
-
 /***/ "./src/app/componentes/ag-grid/header/header.component.scss":
 /*!******************************************************************!*\
   !*** ./src/app/componentes/ag-grid/header/header.component.scss ***!
@@ -439,7 +516,7 @@ module.exports = "<div>\r\n  <div [hidden]=\"!params.enableMenu\" class=\"custom
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".customHeaderMenuButton {\n  margin-top: 5px;\n  margin-left: 4px;\n  float: left; }\n\n.customHeaderLabel {\n  margin-left: 5px;\n  margin-top: 3px;\n  float: left; }\n\n.customSortDownLabel {\n  float: left;\n  margin-left: 10px;\n  margin-top: 5px; }\n\n.customSortUpLabel {\n  float: left;\n  margin-left: 3px;\n  margin-top: 4px; }\n\n.customSortRemoveLabel {\n  float: left;\n  font-size: 11px;\n  margin-left: 3px;\n  margin-top: 6px; }\n\n.active {\n  color: cornflowerblue; }\n\n.hidden {\n  display: none; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvYWctZ3JpZC9oZWFkZXIvQzpcXFVzZXJzXFxwYWxvbnNvXFxzb3VyY2VcXHJlcG9zXFxhcHAtc3Bpblxcc3Bpbi1tbnIvc3JjXFxhcHBcXGNvbXBvbmVudGVzXFxhZy1ncmlkXFxoZWFkZXJcXGhlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFlO0VBQ2YsaUJBQWdCO0VBQ2hCLFlBQVcsRUFDWjs7QUFFRDtFQUNFLGlCQUFnQjtFQUNoQixnQkFBZTtFQUNmLFlBQVcsRUFDWjs7QUFFRDtFQUNFLFlBQVc7RUFDWCxrQkFBaUI7RUFDakIsZ0JBQWUsRUFDaEI7O0FBRUQ7RUFDRSxZQUFXO0VBQ1gsaUJBQWdCO0VBQ2hCLGdCQUFlLEVBQ2hCOztBQUVEO0VBQ0UsWUFBVztFQUNYLGdCQUFlO0VBQ2YsaUJBQWdCO0VBQ2hCLGdCQUFlLEVBQ2hCOztBQUVEO0VBQ0Usc0JBQXFCLEVBQ3RCOztBQUVEO0VBQ0UsY0FBYSxFQUNkIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50ZXMvYWctZ3JpZC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmN1c3RvbUhlYWRlck1lbnVCdXR0b24ge1xyXG4gIG1hcmdpbi10b3A6IDVweDtcclxuICBtYXJnaW4tbGVmdDogNHB4O1xyXG4gIGZsb2F0OiBsZWZ0O1xyXG59XHJcblxyXG4uY3VzdG9tSGVhZGVyTGFiZWwge1xyXG4gIG1hcmdpbi1sZWZ0OiA1cHg7XHJcbiAgbWFyZ2luLXRvcDogM3B4O1xyXG4gIGZsb2F0OiBsZWZ0O1xyXG59XHJcblxyXG4uY3VzdG9tU29ydERvd25MYWJlbCB7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgbWFyZ2luLXRvcDogNXB4O1xyXG59XHJcblxyXG4uY3VzdG9tU29ydFVwTGFiZWwge1xyXG4gIGZsb2F0OiBsZWZ0O1xyXG4gIG1hcmdpbi1sZWZ0OiAzcHg7XHJcbiAgbWFyZ2luLXRvcDogNHB4O1xyXG59XHJcblxyXG4uY3VzdG9tU29ydFJlbW92ZUxhYmVsIHtcclxuICBmbG9hdDogbGVmdDtcclxuICBmb250LXNpemU6IDExcHg7XHJcbiAgbWFyZ2luLWxlZnQ6IDNweDtcclxuICBtYXJnaW4tdG9wOiA2cHg7XHJcbn1cclxuXHJcbi5hY3RpdmUge1xyXG4gIGNvbG9yOiBjb3JuZmxvd2VyYmx1ZTtcclxufVxyXG5cclxuLmhpZGRlbiB7XHJcbiAgZGlzcGxheTogbm9uZTtcclxufVxyXG4iXX0= */"
+module.exports = ".customHeaderMenuButton {\n  margin-top: 5px;\n  margin-left: 4px;\n  float: left;\n}\n\n.customHeaderLabel {\n  margin-left: 5px;\n  margin-top: 3px;\n  float: left;\n}\n\n.customSortDownLabel {\n  float: left;\n  margin-left: 10px;\n  margin-top: 5px;\n}\n\n.customSortUpLabel {\n  float: left;\n  margin-left: 3px;\n  margin-top: 4px;\n}\n\n.customSortRemoveLabel {\n  float: left;\n  font-size: 11px;\n  margin-left: 3px;\n  margin-top: 6px;\n}\n\n.active {\n  color: cornflowerblue;\n}\n\n.hidden {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvYWctZ3JpZC9oZWFkZXIvQzpcXFVzZXJzXFxwYWxvbnNvXFxzb3VyY2VcXHJlcG9zXFxhcHAtc3Bpblxcc3Bpbi1tbnIvc3JjXFxhcHBcXGNvbXBvbmVudGVzXFxhZy1ncmlkXFxoZWFkZXJcXGhlYWRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50ZXMvYWctZ3JpZC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtBQ0NGOztBREVBO0VBQ0UsZ0JBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtBQ0NGOztBREVBO0VBQ0UsV0FBQTtFQUNBLGlCQUFBO0VBQ0EsZUFBQTtBQ0NGOztBREVBO0VBQ0UsV0FBQTtFQUNBLGdCQUFBO0VBQ0EsZUFBQTtBQ0NGOztBREVBO0VBQ0UsV0FBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLGVBQUE7QUNDRjs7QURFQTtFQUNFLHFCQUFBO0FDQ0Y7O0FERUE7RUFDRSxhQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRlcy9hZy1ncmlkL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VzdG9tSGVhZGVyTWVudUJ1dHRvbiB7XHJcbiAgbWFyZ2luLXRvcDogNXB4O1xyXG4gIG1hcmdpbi1sZWZ0OiA0cHg7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5jdXN0b21IZWFkZXJMYWJlbCB7XHJcbiAgbWFyZ2luLWxlZnQ6IDVweDtcclxuICBtYXJnaW4tdG9wOiAzcHg7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5jdXN0b21Tb3J0RG93bkxhYmVsIHtcclxuICBmbG9hdDogbGVmdDtcclxuICBtYXJnaW4tbGVmdDogMTBweDtcclxuICBtYXJnaW4tdG9wOiA1cHg7XHJcbn1cclxuXHJcbi5jdXN0b21Tb3J0VXBMYWJlbCB7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbiAgbWFyZ2luLWxlZnQ6IDNweDtcclxuICBtYXJnaW4tdG9wOiA0cHg7XHJcbn1cclxuXHJcbi5jdXN0b21Tb3J0UmVtb3ZlTGFiZWwge1xyXG4gIGZsb2F0OiBsZWZ0O1xyXG4gIGZvbnQtc2l6ZTogMTFweDtcclxuICBtYXJnaW4tbGVmdDogM3B4O1xyXG4gIG1hcmdpbi10b3A6IDZweDtcclxufVxyXG5cclxuLmFjdGl2ZSB7XHJcbiAgY29sb3I6IGNvcm5mbG93ZXJibHVlO1xyXG59XHJcblxyXG4uaGlkZGVuIHtcclxuICBkaXNwbGF5OiBub25lO1xyXG59XHJcbiIsIi5jdXN0b21IZWFkZXJNZW51QnV0dG9uIHtcbiAgbWFyZ2luLXRvcDogNXB4O1xuICBtYXJnaW4tbGVmdDogNHB4O1xuICBmbG9hdDogbGVmdDtcbn1cblxuLmN1c3RvbUhlYWRlckxhYmVsIHtcbiAgbWFyZ2luLWxlZnQ6IDVweDtcbiAgbWFyZ2luLXRvcDogM3B4O1xuICBmbG9hdDogbGVmdDtcbn1cblxuLmN1c3RvbVNvcnREb3duTGFiZWwge1xuICBmbG9hdDogbGVmdDtcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XG4gIG1hcmdpbi10b3A6IDVweDtcbn1cblxuLmN1c3RvbVNvcnRVcExhYmVsIHtcbiAgZmxvYXQ6IGxlZnQ7XG4gIG1hcmdpbi1sZWZ0OiAzcHg7XG4gIG1hcmdpbi10b3A6IDRweDtcbn1cblxuLmN1c3RvbVNvcnRSZW1vdmVMYWJlbCB7XG4gIGZsb2F0OiBsZWZ0O1xuICBmb250LXNpemU6IDExcHg7XG4gIG1hcmdpbi1sZWZ0OiAzcHg7XG4gIG1hcmdpbi10b3A6IDZweDtcbn1cblxuLmFjdGl2ZSB7XG4gIGNvbG9yOiBjb3JuZmxvd2VyYmx1ZTtcbn1cblxuLmhpZGRlbiB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il19 */"
 
 /***/ }),
 
@@ -501,7 +578,7 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-header',
-            template: __webpack_require__(/*! ./header.component.html */ "./src/app/componentes/ag-grid/header/header.component.html"),
+            template: __webpack_require__(/*! raw-loader!./header.component.html */ "./node_modules/raw-loader/index.js!./src/app/componentes/ag-grid/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.scss */ "./src/app/componentes/ag-grid/header/header.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]])
@@ -605,17 +682,6 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
-/***/ "./src/app/componentes/auth0/callback/callback.component.html":
-/*!********************************************************************!*\
-  !*** ./src/app/componentes/auth0/callback/callback.component.html ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\r\n  callback works!\r\n</p>\r\n"
-
-/***/ }),
-
 /***/ "./src/app/componentes/auth0/callback/callback.component.ts":
 /*!******************************************************************!*\
   !*** ./src/app/componentes/auth0/callback/callback.component.ts ***!
@@ -654,7 +720,7 @@ var CallbackComponent = /** @class */ (function () {
     CallbackComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-callback',
-            template: __webpack_require__(/*! ./callback.component.html */ "./src/app/componentes/auth0/callback/callback.component.html"),
+            template: __webpack_require__(/*! raw-loader!./callback.component.html */ "./node_modules/raw-loader/index.js!./src/app/componentes/auth0/callback/callback.component.html"),
             styles: [__webpack_require__(/*! ./callback.component.css */ "./src/app/componentes/auth0/callback/callback.component.css")]
         }),
         __metadata("design:paramtypes", [_services_auth0_service__WEBPACK_IMPORTED_MODULE_1__["Auth0Service"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
@@ -674,17 +740,6 @@ var CallbackComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudGVzL2F1dGgwL3BlcmZpbC9wZXJmaWwuY29tcG9uZW50LmNzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/componentes/auth0/perfil/perfil.component.html":
-/*!****************************************************************!*\
-  !*** ./src/app/componentes/auth0/perfil/perfil.component.html ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h1>{{auth.userProfile.name}}</h1>\r\n\r\n<ul>\r\n  <li *ngFor=\"let profileProp of profileArray\">\r\n    <code>{{profileProp}}</code>\r\n  </li>\r\n</ul>\r\n\r\n<p>\r\n  <a routerLink=\"/\" href>Back to Home</a>\r\n</p>\r\n"
 
 /***/ }),
 
@@ -731,7 +786,7 @@ var PerfilComponent = /** @class */ (function () {
     PerfilComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-perfil',
-            template: __webpack_require__(/*! ./perfil.component.html */ "./src/app/componentes/auth0/perfil/perfil.component.html"),
+            template: __webpack_require__(/*! raw-loader!./perfil.component.html */ "./node_modules/raw-loader/index.js!./src/app/componentes/auth0/perfil/perfil.component.html"),
             styles: [__webpack_require__(/*! ./perfil.component.css */ "./src/app/componentes/auth0/perfil/perfil.component.css")]
         }),
         __metadata("design:paramtypes", [_services_auth0_service__WEBPACK_IMPORTED_MODULE_1__["Auth0Service"]])
@@ -750,18 +805,7 @@ var PerfilComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body, html {\r\n  height: 99%;\r\n}\r\n\r\nnav.sidebar, .main {\r\n  transition: margin 200ms ease-out;\r\n}\r\n\r\n.main {\r\n  padding: 10px 10px 0 10px;\r\n}\r\n\r\n@media (min-width: 765px) {\r\n\r\n  .main {\r\n    position: absolute;\r\n    width: calc(100% - 45px);\r\n    margin-left: 40px;\r\n    float: right;\r\n  }\r\n\r\n  nav.sidebar:hover + .main {\r\n    margin-left: 200px;\r\n  }\r\n\r\n  nav.sidebar.navbar.sidebar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {\r\n    margin-left: 0px;\r\n  }\r\n\r\n  nav.sidebar .navbar-brand, nav.sidebar .navbar-header {\r\n    text-align: center;\r\n    width: 100%;\r\n    margin-left: 0px;\r\n  }\r\n\r\n  nav.sidebar a {\r\n    padding-right: 13px;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav > li:first-child {\r\n    border-top: 1px #e5e5e5 solid;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav > li {\r\n    border-bottom: 1px #e5e5e5 solid;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav .open .dropdown-menu {\r\n    position: static;\r\n    float: none;\r\n    width: auto;\r\n    margin-top: 0;\r\n    background-color: transparent;\r\n    border: 0;\r\n    box-shadow: none;\r\n  }\r\n\r\n  nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {\r\n    padding: 0 0px 0 0px;\r\n  }\r\n\r\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {\r\n    color: #777;\r\n  }\r\n\r\n  nav.sidebar {\r\n    width: 200px;\r\n    height: 100%;\r\n    margin-left: -160px;\r\n    float: left;\r\n    margin-bottom: 0px;\r\n  }\r\n\r\n    nav.sidebar li {\r\n      width: 100%;\r\n    }\r\n\r\n    nav.sidebar:hover {\r\n      margin-left: 0px;\r\n    }\r\n\r\n  .forAnimate {\r\n    opacity: 0;\r\n  }\r\n}\r\n\r\n@media (min-width: 1330px) {\r\n\r\n  .main {\r\n    width: calc(100% - 200px);\r\n    margin-left: 200px;\r\n  }\r\n\r\n  nav.sidebar {\r\n    margin-left: 0px;\r\n    float: left;\r\n  }\r\n\r\n    nav.sidebar .forAnimate {\r\n      opacity: 1;\r\n    }\r\n}\r\n\r\nnav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {\r\n  color: #CCC;\r\n  background-color: transparent;\r\n}\r\n\r\nnav:hover .forAnimate {\r\n  opacity: 1;\r\n}\r\n\r\nsection {\r\n  padding-left: 15px;\r\n}\r\n\r\n#master {\r\n  color: black;\r\n}\r\n\r\n#branch {\r\n  color: #ff0000;\r\n}\r\n\r\n.logo {\r\n  width: 150px;\r\n  height: 75px;\r\n  cursor: context-menu;\r\n}\r\n\r\n.logo2 {\r\n  width: 198px;\r\n  height: 75px;\r\n}\r\n\r\n.margen-derecho {\r\n  margin-right: 20px;\r\n}\r\n\r\n.pointer {\r\n  cursor: pointer;\r\n}\r\n\r\n.nopointer {\r\n  cursor: context-menu;\r\n}\r\n\r\n.router-link-portal {\r\n  color: #DA7863;\r\n  background-color: #DA7863;\r\n}\r\n\r\na:not(.nohover):hover {\r\n  font-weight: bold;\r\n  background-color: #17729D;\r\n  border-left: 5px solid rgba(0,0,0,0.08);\r\n}\r\n\r\n.cabecera {\r\n  background-color: #17729D;\r\n  border-left: 5px solid rgba(0,0,0,0.08);\r\n  color: #fff;\r\n}\r\n\r\n.navbar.scrollbarr {\r\n  overflow: auto;\r\n  max-height: 95vh;\r\n}\r\n\r\n.navbar::-webkit-scrollbar {\r\n  width: 4px;\r\n}\r\n\r\n.navbar::-webkit-scrollbar-track {\r\n  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);\r\n}\r\n\r\n.navbar::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0,0,0,.26);\r\n  outline: 1px solid slategrey;\r\n}\r\n\r\n.powered {\r\n  color: transparent;\r\n}\r\n\r\n.powered::-moz-selection {\r\n    color: transparent;\r\n  }\r\n\r\n.powered::selection {\r\n    color: transparent;\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWVudS9tZW51LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0NBQ2I7O0FBRUQ7RUFJRSxrQ0FBa0M7Q0FDbkM7O0FBRUQ7RUFDRSwwQkFBMEI7Q0FDM0I7O0FBRUQ7O0VBRUU7SUFDRSxtQkFBbUI7SUFDbkIseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixhQUFhO0dBQ2Q7O0VBRUQ7SUFDRSxtQkFBbUI7R0FDcEI7O0VBRUQ7SUFDRSxpQkFBaUI7R0FDbEI7O0VBRUQ7SUFDRSxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLGlCQUFpQjtHQUNsQjs7RUFFRDtJQUNFLG9CQUFvQjtHQUNyQjs7RUFFRDtJQUNFLDhCQUE4QjtHQUMvQjs7RUFFRDtJQUNFLGlDQUFpQztHQUNsQzs7RUFFRDtJQUNFLGlCQUFpQjtJQUNqQixZQUFZO0lBQ1osWUFBWTtJQUNaLGNBQWM7SUFDZCw4QkFBOEI7SUFDOUIsVUFBVTtJQUVWLGlCQUFpQjtHQUNsQjs7RUFFRDtJQUNFLHFCQUFxQjtHQUN0Qjs7RUFFRDtJQUNFLFlBQVk7R0FDYjs7RUFFRDtJQUNFLGFBQWE7SUFDYixhQUFhO0lBQ2Isb0JBQW9CO0lBQ3BCLFlBQVk7SUFDWixtQkFBbUI7R0FDcEI7O0lBRUM7TUFDRSxZQUFZO0tBQ2I7O0lBRUQ7TUFDRSxpQkFBaUI7S0FDbEI7O0VBRUg7SUFDRSxXQUFXO0dBQ1o7Q0FDRjs7QUFFRDs7RUFFRTtJQUNFLDBCQUEwQjtJQUMxQixtQkFBbUI7R0FDcEI7O0VBRUQ7SUFDRSxpQkFBaUI7SUFDakIsWUFBWTtHQUNiOztJQUVDO01BQ0UsV0FBVztLQUNaO0NBQ0o7O0FBRUQ7RUFDRSxZQUFZO0VBQ1osOEJBQThCO0NBQy9COztBQUVEO0VBQ0UsV0FBVztDQUNaOztBQUVEO0VBQ0UsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLGFBQWE7RUFDYixhQUFhO0VBQ2IscUJBQXFCO0NBQ3RCOztBQUVEO0VBQ0UsYUFBYTtFQUNiLGFBQWE7Q0FDZDs7QUFFRDtFQUNFLG1CQUFtQjtDQUNwQjs7QUFFRDtFQUNFLGdCQUFnQjtDQUNqQjs7QUFFRDtFQUNFLHFCQUFxQjtDQUN0Qjs7QUFFRDtFQUNFLGVBQWU7RUFDZiwwQkFBMEI7Q0FDM0I7O0FBRUQ7RUFDRSxrQkFBa0I7RUFDbEIsMEJBQTBCO0VBQzFCLHdDQUF3QztDQUN6Qzs7QUFFRDtFQUNFLDBCQUEwQjtFQUMxQix3Q0FBd0M7RUFDeEMsWUFBWTtDQUNiOztBQUVEO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtDQUNsQjs7QUFFRDtFQUNFLFdBQVc7Q0FDWjs7QUFFRDtFQUNFLGtEQUFrRDtDQUNuRDs7QUFFRDtFQUNFLGtDQUFrQztFQUNsQyw2QkFBNkI7Q0FDOUI7O0FBRUQ7RUFDRSxtQkFBbUI7Q0FDcEI7O0FBRUM7SUFDRSxtQkFBbUI7R0FDcEI7O0FBRUQ7SUFDRSxtQkFBbUI7R0FDcEIiLCJmaWxlIjoic3JjL2FwcC9tZW51L21lbnUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHksIGh0bWwge1xyXG4gIGhlaWdodDogOTklO1xyXG59XHJcblxyXG5uYXYuc2lkZWJhciwgLm1haW4ge1xyXG4gIC13ZWJraXQtdHJhbnNpdGlvbjogbWFyZ2luIDIwMG1zIGVhc2Utb3V0O1xyXG4gIC1tb3otdHJhbnNpdGlvbjogbWFyZ2luIDIwMG1zIGVhc2Utb3V0O1xyXG4gIC1vLXRyYW5zaXRpb246IG1hcmdpbiAyMDBtcyBlYXNlLW91dDtcclxuICB0cmFuc2l0aW9uOiBtYXJnaW4gMjAwbXMgZWFzZS1vdXQ7XHJcbn1cclxuXHJcbi5tYWluIHtcclxuICBwYWRkaW5nOiAxMHB4IDEwcHggMCAxMHB4O1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY1cHgpIHtcclxuXHJcbiAgLm1haW4ge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDQ1cHgpO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDQwcHg7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhcjpob3ZlciArIC5tYWluIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAyMDBweDtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyLm5hdmJhci5zaWRlYmFyID4gLmNvbnRhaW5lciAubmF2YmFyLWJyYW5kLCAubmF2YmFyID4gLmNvbnRhaW5lci1mbHVpZCAubmF2YmFyLWJyYW5kIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAwcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciAubmF2YmFyLWJyYW5kLCBuYXYuc2lkZWJhciAubmF2YmFyLWhlYWRlciB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbi1sZWZ0OiAwcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciBhIHtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDEzcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciAubmF2YmFyLW5hdiA+IGxpOmZpcnN0LWNoaWxkIHtcclxuICAgIGJvcmRlci10b3A6IDFweCAjZTVlNWU1IHNvbGlkO1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIgLm5hdmJhci1uYXYgPiBsaSB7XHJcbiAgICBib3JkZXItYm90dG9tOiAxcHggI2U1ZTVlNSBzb2xpZDtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyIC5uYXZiYXItbmF2IC5vcGVuIC5kcm9wZG93bi1tZW51IHtcclxuICAgIHBvc2l0aW9uOiBzdGF0aWM7XHJcbiAgICBmbG9hdDogbm9uZTtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG4gICAgbWFyZ2luLXRvcDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICAgYm9yZGVyOiAwO1xyXG4gICAgLXdlYmtpdC1ib3gtc2hhZG93OiBub25lO1xyXG4gICAgYm94LXNoYWRvdzogbm9uZTtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyIC5uYXZiYXItY29sbGFwc2UsIG5hdi5zaWRlYmFyIC5jb250YWluZXItZmx1aWQge1xyXG4gICAgcGFkZGluZzogMCAwcHggMCAwcHg7XHJcbiAgfVxyXG5cclxuICAubmF2YmFyLWludmVyc2UgLm5hdmJhci1uYXYgLm9wZW4gLmRyb3Bkb3duLW1lbnUgPiBsaSA+IGEge1xyXG4gICAgY29sb3I6ICM3Nzc7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciB7XHJcbiAgICB3aWR0aDogMjAwcHg7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBtYXJnaW4tbGVmdDogLTE2MHB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAwcHg7XHJcbiAgfVxyXG5cclxuICAgIG5hdi5zaWRlYmFyIGxpIHtcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICB9XHJcblxyXG4gICAgbmF2LnNpZGViYXI6aG92ZXIge1xyXG4gICAgICBtYXJnaW4tbGVmdDogMHB4O1xyXG4gICAgfVxyXG5cclxuICAuZm9yQW5pbWF0ZSB7XHJcbiAgICBvcGFjaXR5OiAwO1xyXG4gIH1cclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDEzMzBweCkge1xyXG5cclxuICAubWFpbiB7XHJcbiAgICB3aWR0aDogY2FsYygxMDAlIC0gMjAwcHgpO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDIwMHB4O1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIge1xyXG4gICAgbWFyZ2luLWxlZnQ6IDBweDtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gIH1cclxuXHJcbiAgICBuYXYuc2lkZWJhciAuZm9yQW5pbWF0ZSB7XHJcbiAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICB9XHJcbn1cclxuXHJcbm5hdi5zaWRlYmFyIC5uYXZiYXItbmF2IC5vcGVuIC5kcm9wZG93bi1tZW51ID4gbGkgPiBhOmhvdmVyLCBuYXYuc2lkZWJhciAubmF2YmFyLW5hdiAub3BlbiAuZHJvcGRvd24tbWVudSA+IGxpID4gYTpmb2N1cyB7XHJcbiAgY29sb3I6ICNDQ0M7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbm5hdjpob3ZlciAuZm9yQW5pbWF0ZSB7XHJcbiAgb3BhY2l0eTogMTtcclxufVxyXG5cclxuc2VjdGlvbiB7XHJcbiAgcGFkZGluZy1sZWZ0OiAxNXB4O1xyXG59XHJcblxyXG4jbWFzdGVyIHtcclxuICBjb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbiNicmFuY2gge1xyXG4gIGNvbG9yOiAjZmYwMDAwO1xyXG59XHJcblxyXG4ubG9nbyB7XHJcbiAgd2lkdGg6IDE1MHB4O1xyXG4gIGhlaWdodDogNzVweDtcclxuICBjdXJzb3I6IGNvbnRleHQtbWVudTtcclxufVxyXG5cclxuLmxvZ28yIHtcclxuICB3aWR0aDogMTk4cHg7XHJcbiAgaGVpZ2h0OiA3NXB4O1xyXG59XHJcblxyXG4ubWFyZ2VuLWRlcmVjaG8ge1xyXG4gIG1hcmdpbi1yaWdodDogMjBweDtcclxufVxyXG5cclxuLnBvaW50ZXIge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLm5vcG9pbnRlciB7XHJcbiAgY3Vyc29yOiBjb250ZXh0LW1lbnU7XHJcbn1cclxuXHJcbi5yb3V0ZXItbGluay1wb3J0YWwge1xyXG4gIGNvbG9yOiAjREE3ODYzO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNEQTc4NjM7XHJcbn1cclxuXHJcbmE6bm90KC5ub2hvdmVyKTpob3ZlciB7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE3NzI5RDtcclxuICBib3JkZXItbGVmdDogNXB4IHNvbGlkIHJnYmEoMCwwLDAsMC4wOCk7XHJcbn1cclxuXHJcbi5jYWJlY2VyYSB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE3NzI5RDtcclxuICBib3JkZXItbGVmdDogNXB4IHNvbGlkIHJnYmEoMCwwLDAsMC4wOCk7XHJcbiAgY29sb3I6ICNmZmY7XHJcbn1cclxuXHJcbi5uYXZiYXIuc2Nyb2xsYmFyciB7XHJcbiAgb3ZlcmZsb3c6IGF1dG87XHJcbiAgbWF4LWhlaWdodDogOTV2aDtcclxufVxyXG5cclxuLm5hdmJhcjo6LXdlYmtpdC1zY3JvbGxiYXIge1xyXG4gIHdpZHRoOiA0cHg7XHJcbn1cclxuXHJcbi5uYXZiYXI6Oi13ZWJraXQtc2Nyb2xsYmFyLXRyYWNrIHtcclxuICAtd2Via2l0LWJveC1zaGFkb3c6IGluc2V0IDAgMCA2cHggcmdiYSgwLDAsMCwwLjMpO1xyXG59XHJcblxyXG4ubmF2YmFyOjotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwuMjYpO1xyXG4gIG91dGxpbmU6IDFweCBzb2xpZCBzbGF0ZWdyZXk7XHJcbn1cclxuXHJcbi5wb3dlcmVkIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbiAgLnBvd2VyZWQ6Oi1tb3otc2VsZWN0aW9uIHtcclxuICAgIGNvbG9yOiB0cmFuc3BhcmVudDtcclxuICB9XHJcblxyXG4gIC5wb3dlcmVkOjpzZWxlY3Rpb24ge1xyXG4gICAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gIH1cclxuIl19 */"
-
-/***/ }),
-
-/***/ "./src/app/menu/menu.component.html":
-/*!******************************************!*\
-  !*** ./src/app/menu/menu.component.html ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<label class=\"powered\">Powered by Jackercito</label>\r\n<nav class=\"navbar navbar-default sidebar margen-derecho\" role=\"navigation\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"navbar-header\">\r\n      <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bs-sidebar-navbar-collapse-1\">\r\n        <span class=\"sr-only\">Menu</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"collapse navbar-collapse\" id=\"bs-sidebar-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li align=\"center\">\r\n        <img src=\"assets/images/rmn2.png\" class=\"logo2 active hidden-xs hidden-md hidden-sm\" />\r\n        <br />\r\n        <a href=\"#\" class=\"nohover\">\r\n          <img src=\"assets/images/logo.jpg\" class=\"logo active hidden-xs hidden-md hidden-sm\" />\r\n        </a>\r\n        <br />\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\">\r\n        <a href=\"#\">\r\n          Home\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-home\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" *ngIf=\"!auth.authenticated\">\r\n        <a class=\"pointer\" (click)=\"auth.login()\">\r\n          Login\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-log-in\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" *ngIf=\"auth.authenticated\">\r\n        <a class=\"pointer\" (click)=\"auth.logout()\">\r\n          Logout\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-log-out\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\" *ngIf=\"auth.authenticated\">\r\n        <a routerLink=\"/experimentos/listar\">\r\n          Listar Experimentos\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-th-list\"></span>\r\n        </a>\r\n      </li>\r\n\r\n      <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\" *ngIf=\"auth.authenticated\">\r\n        <a routerLink=\"/experimentos/nuevo\">\r\n          Nuevo Experimento\r\n          <span style=\"font-size:16px;\" class=\"pull-right hidden-xs showopacity glyphicon glyphicon-file\"></span>\r\n        </a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "body, html {\r\n  height: 99%;\r\n}\r\n\r\nnav.sidebar, .main {\r\n  transition: margin 200ms ease-out;\r\n}\r\n\r\n.main {\r\n  padding: 10px 10px 0 10px;\r\n}\r\n\r\n@media (min-width: 765px) {\r\n\r\n  .main {\r\n    position: absolute;\r\n    width: calc(100% - 45px);\r\n    margin-left: 40px;\r\n    float: right;\r\n  }\r\n\r\n  nav.sidebar:hover + .main {\r\n    margin-left: 200px;\r\n  }\r\n\r\n  nav.sidebar.navbar.sidebar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {\r\n    margin-left: 0px;\r\n  }\r\n\r\n  nav.sidebar .navbar-brand, nav.sidebar .navbar-header {\r\n    text-align: center;\r\n    width: 100%;\r\n    margin-left: 0px;\r\n  }\r\n\r\n  nav.sidebar a {\r\n    padding-right: 13px;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav > li:first-child {\r\n    border-top: 1px #e5e5e5 solid;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav > li {\r\n    border-bottom: 1px #e5e5e5 solid;\r\n  }\r\n\r\n  nav.sidebar .navbar-nav .open .dropdown-menu {\r\n    position: static;\r\n    float: none;\r\n    width: auto;\r\n    margin-top: 0;\r\n    background-color: transparent;\r\n    border: 0;\r\n    box-shadow: none;\r\n  }\r\n\r\n  nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {\r\n    padding: 0 0px 0 0px;\r\n  }\r\n\r\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {\r\n    color: #777;\r\n  }\r\n\r\n  nav.sidebar {\r\n    width: 200px;\r\n    height: 100%;\r\n    margin-left: -160px;\r\n    float: left;\r\n    margin-bottom: 0px;\r\n  }\r\n\r\n    nav.sidebar li {\r\n      width: 100%;\r\n    }\r\n\r\n    nav.sidebar:hover {\r\n      margin-left: 0px;\r\n    }\r\n\r\n  .forAnimate {\r\n    opacity: 0;\r\n  }\r\n}\r\n\r\n@media (min-width: 1330px) {\r\n\r\n  .main {\r\n    width: calc(100% - 200px);\r\n    margin-left: 200px;\r\n  }\r\n\r\n  nav.sidebar {\r\n    margin-left: 0px;\r\n    float: left;\r\n  }\r\n\r\n    nav.sidebar .forAnimate {\r\n      opacity: 1;\r\n    }\r\n}\r\n\r\nnav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {\r\n  color: #CCC;\r\n  background-color: transparent;\r\n}\r\n\r\nnav:hover .forAnimate {\r\n  opacity: 1;\r\n}\r\n\r\nsection {\r\n  padding-left: 15px;\r\n}\r\n\r\n#master {\r\n  color: black;\r\n}\r\n\r\n#branch {\r\n  color: #ff0000;\r\n}\r\n\r\n.logo {\r\n  width: 150px;\r\n  height: 75px;\r\n  cursor: context-menu;\r\n}\r\n\r\n.logo2 {\r\n  width: 198px;\r\n  height: 75px;\r\n}\r\n\r\n.margen-derecho {\r\n  margin-right: 20px;\r\n}\r\n\r\n.pointer {\r\n  cursor: pointer;\r\n}\r\n\r\n.nopointer {\r\n  cursor: context-menu;\r\n}\r\n\r\n.router-link-portal {\r\n  color: #DA7863;\r\n  background-color: #DA7863;\r\n}\r\n\r\na:not(.nohover):hover {\r\n  font-weight: bold;\r\n  background-color: #17729D;\r\n  border-left: 5px solid rgba(0,0,0,0.08);\r\n}\r\n\r\n.cabecera {\r\n  background-color: #17729D;\r\n  border-left: 5px solid rgba(0,0,0,0.08);\r\n  color: #fff;\r\n}\r\n\r\n.navbar.scrollbarr {\r\n  overflow: auto;\r\n  max-height: 95vh;\r\n}\r\n\r\n.navbar::-webkit-scrollbar {\r\n  width: 4px;\r\n}\r\n\r\n.navbar::-webkit-scrollbar-track {\r\n  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);\r\n}\r\n\r\n.navbar::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0,0,0,.26);\r\n  outline: 1px solid slategrey;\r\n}\r\n\r\n.powered {\r\n  color: transparent;\r\n}\r\n\r\n.powered::-moz-selection {\r\n    color: transparent;\r\n  }\r\n\r\n.powered::selection {\r\n    color: transparent;\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWVudS9tZW51LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0FBQ2I7O0FBRUE7RUFJRSxpQ0FBaUM7QUFDbkM7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUE7O0VBRUU7SUFDRSxrQkFBa0I7SUFDbEIsd0JBQXdCO0lBQ3hCLGlCQUFpQjtJQUNqQixZQUFZO0VBQ2Q7O0VBRUE7SUFDRSxrQkFBa0I7RUFDcEI7O0VBRUE7SUFDRSxnQkFBZ0I7RUFDbEI7O0VBRUE7SUFDRSxrQkFBa0I7SUFDbEIsV0FBVztJQUNYLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLDZCQUE2QjtFQUMvQjs7RUFFQTtJQUNFLGdDQUFnQztFQUNsQzs7RUFFQTtJQUNFLGdCQUFnQjtJQUNoQixXQUFXO0lBQ1gsV0FBVztJQUNYLGFBQWE7SUFDYiw2QkFBNkI7SUFDN0IsU0FBUztJQUVULGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLG9CQUFvQjtFQUN0Qjs7RUFFQTtJQUNFLFdBQVc7RUFDYjs7RUFFQTtJQUNFLFlBQVk7SUFDWixZQUFZO0lBQ1osbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxrQkFBa0I7RUFDcEI7O0lBRUU7TUFDRSxXQUFXO0lBQ2I7O0lBRUE7TUFDRSxnQkFBZ0I7SUFDbEI7O0VBRUY7SUFDRSxVQUFVO0VBQ1o7QUFDRjs7QUFFQTs7RUFFRTtJQUNFLHlCQUF5QjtJQUN6QixrQkFBa0I7RUFDcEI7O0VBRUE7SUFDRSxnQkFBZ0I7SUFDaEIsV0FBVztFQUNiOztJQUVFO01BQ0UsVUFBVTtJQUNaO0FBQ0o7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsNkJBQTZCO0FBQy9COztBQUVBO0VBQ0UsVUFBVTtBQUNaOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixZQUFZO0VBQ1osb0JBQW9CO0FBQ3RCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxvQkFBb0I7QUFDdEI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLHlCQUF5QjtFQUN6Qix1Q0FBdUM7QUFDekM7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsdUNBQXVDO0VBQ3ZDLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxVQUFVO0FBQ1o7O0FBRUE7RUFDRSxpREFBaUQ7QUFDbkQ7O0FBRUE7RUFDRSxpQ0FBaUM7RUFDakMsNEJBQTRCO0FBQzlCOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVFO0lBQ0Usa0JBQWtCO0VBQ3BCOztBQUVBO0lBQ0Usa0JBQWtCO0VBQ3BCIiwiZmlsZSI6InNyYy9hcHAvbWVudS9tZW51LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5LCBodG1sIHtcclxuICBoZWlnaHQ6IDk5JTtcclxufVxyXG5cclxubmF2LnNpZGViYXIsIC5tYWluIHtcclxuICAtd2Via2l0LXRyYW5zaXRpb246IG1hcmdpbiAyMDBtcyBlYXNlLW91dDtcclxuICAtbW96LXRyYW5zaXRpb246IG1hcmdpbiAyMDBtcyBlYXNlLW91dDtcclxuICAtby10cmFuc2l0aW9uOiBtYXJnaW4gMjAwbXMgZWFzZS1vdXQ7XHJcbiAgdHJhbnNpdGlvbjogbWFyZ2luIDIwMG1zIGVhc2Utb3V0O1xyXG59XHJcblxyXG4ubWFpbiB7XHJcbiAgcGFkZGluZzogMTBweCAxMHB4IDAgMTBweDtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDc2NXB4KSB7XHJcblxyXG4gIC5tYWluIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSA0NXB4KTtcclxuICAgIG1hcmdpbi1sZWZ0OiA0MHB4O1xyXG4gICAgZmxvYXQ6IHJpZ2h0O1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXI6aG92ZXIgKyAubWFpbiB7XHJcbiAgICBtYXJnaW4tbGVmdDogMjAwcHg7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhci5uYXZiYXIuc2lkZWJhciA+IC5jb250YWluZXIgLm5hdmJhci1icmFuZCwgLm5hdmJhciA+IC5jb250YWluZXItZmx1aWQgLm5hdmJhci1icmFuZCB7XHJcbiAgICBtYXJnaW4tbGVmdDogMHB4O1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIgLm5hdmJhci1icmFuZCwgbmF2LnNpZGViYXIgLm5hdmJhci1oZWFkZXIge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBtYXJnaW4tbGVmdDogMHB4O1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIgYSB7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiAxM3B4O1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIgLm5hdmJhci1uYXYgPiBsaTpmaXJzdC1jaGlsZCB7XHJcbiAgICBib3JkZXItdG9wOiAxcHggI2U1ZTVlNSBzb2xpZDtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyIC5uYXZiYXItbmF2ID4gbGkge1xyXG4gICAgYm9yZGVyLWJvdHRvbTogMXB4ICNlNWU1ZTUgc29saWQ7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciAubmF2YmFyLW5hdiAub3BlbiAuZHJvcGRvd24tbWVudSB7XHJcbiAgICBwb3NpdGlvbjogc3RhdGljO1xyXG4gICAgZmxvYXQ6IG5vbmU7XHJcbiAgICB3aWR0aDogYXV0bztcclxuICAgIG1hcmdpbi10b3A6IDA7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuICAgIGJvcmRlcjogMDtcclxuICAgIC13ZWJraXQtYm94LXNoYWRvdzogbm9uZTtcclxuICAgIGJveC1zaGFkb3c6IG5vbmU7XHJcbiAgfVxyXG5cclxuICBuYXYuc2lkZWJhciAubmF2YmFyLWNvbGxhcHNlLCBuYXYuc2lkZWJhciAuY29udGFpbmVyLWZsdWlkIHtcclxuICAgIHBhZGRpbmc6IDAgMHB4IDAgMHB4O1xyXG4gIH1cclxuXHJcbiAgLm5hdmJhci1pbnZlcnNlIC5uYXZiYXItbmF2IC5vcGVuIC5kcm9wZG93bi1tZW51ID4gbGkgPiBhIHtcclxuICAgIGNvbG9yOiAjNzc3O1xyXG4gIH1cclxuXHJcbiAgbmF2LnNpZGViYXIge1xyXG4gICAgd2lkdGg6IDIwMHB4O1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IC0xNjBweDtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMHB4O1xyXG4gIH1cclxuXHJcbiAgICBuYXYuc2lkZWJhciBsaSB7XHJcbiAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgfVxyXG5cclxuICAgIG5hdi5zaWRlYmFyOmhvdmVyIHtcclxuICAgICAgbWFyZ2luLWxlZnQ6IDBweDtcclxuICAgIH1cclxuXHJcbiAgLmZvckFuaW1hdGUge1xyXG4gICAgb3BhY2l0eTogMDtcclxuICB9XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiAxMzMwcHgpIHtcclxuXHJcbiAgLm1haW4ge1xyXG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDIwMHB4KTtcclxuICAgIG1hcmdpbi1sZWZ0OiAyMDBweDtcclxuICB9XHJcblxyXG4gIG5hdi5zaWRlYmFyIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAwcHg7XHJcbiAgICBmbG9hdDogbGVmdDtcclxuICB9XHJcblxyXG4gICAgbmF2LnNpZGViYXIgLmZvckFuaW1hdGUge1xyXG4gICAgICBvcGFjaXR5OiAxO1xyXG4gICAgfVxyXG59XHJcblxyXG5uYXYuc2lkZWJhciAubmF2YmFyLW5hdiAub3BlbiAuZHJvcGRvd24tbWVudSA+IGxpID4gYTpob3ZlciwgbmF2LnNpZGViYXIgLm5hdmJhci1uYXYgLm9wZW4gLmRyb3Bkb3duLW1lbnUgPiBsaSA+IGE6Zm9jdXMge1xyXG4gIGNvbG9yOiAjQ0NDO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG5uYXY6aG92ZXIgLmZvckFuaW1hdGUge1xyXG4gIG9wYWNpdHk6IDE7XHJcbn1cclxuXHJcbnNlY3Rpb24ge1xyXG4gIHBhZGRpbmctbGVmdDogMTVweDtcclxufVxyXG5cclxuI21hc3RlciB7XHJcbiAgY29sb3I6IGJsYWNrO1xyXG59XHJcblxyXG4jYnJhbmNoIHtcclxuICBjb2xvcjogI2ZmMDAwMDtcclxufVxyXG5cclxuLmxvZ28ge1xyXG4gIHdpZHRoOiAxNTBweDtcclxuICBoZWlnaHQ6IDc1cHg7XHJcbiAgY3Vyc29yOiBjb250ZXh0LW1lbnU7XHJcbn1cclxuXHJcbi5sb2dvMiB7XHJcbiAgd2lkdGg6IDE5OHB4O1xyXG4gIGhlaWdodDogNzVweDtcclxufVxyXG5cclxuLm1hcmdlbi1kZXJlY2hvIHtcclxuICBtYXJnaW4tcmlnaHQ6IDIwcHg7XHJcbn1cclxuXHJcbi5wb2ludGVyIHtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuXHJcbi5ub3BvaW50ZXIge1xyXG4gIGN1cnNvcjogY29udGV4dC1tZW51O1xyXG59XHJcblxyXG4ucm91dGVyLWxpbmstcG9ydGFsIHtcclxuICBjb2xvcjogI0RBNzg2MztcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjREE3ODYzO1xyXG59XHJcblxyXG5hOm5vdCgubm9ob3Zlcik6aG92ZXIge1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICMxNzcyOUQ7XHJcbiAgYm9yZGVyLWxlZnQ6IDVweCBzb2xpZCByZ2JhKDAsMCwwLDAuMDgpO1xyXG59XHJcblxyXG4uY2FiZWNlcmEge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICMxNzcyOUQ7XHJcbiAgYm9yZGVyLWxlZnQ6IDVweCBzb2xpZCByZ2JhKDAsMCwwLDAuMDgpO1xyXG4gIGNvbG9yOiAjZmZmO1xyXG59XHJcblxyXG4ubmF2YmFyLnNjcm9sbGJhcnIge1xyXG4gIG92ZXJmbG93OiBhdXRvO1xyXG4gIG1heC1oZWlnaHQ6IDk1dmg7XHJcbn1cclxuXHJcbi5uYXZiYXI6Oi13ZWJraXQtc2Nyb2xsYmFyIHtcclxuICB3aWR0aDogNHB4O1xyXG59XHJcblxyXG4ubmF2YmFyOjotd2Via2l0LXNjcm9sbGJhci10cmFjayB7XHJcbiAgLXdlYmtpdC1ib3gtc2hhZG93OiBpbnNldCAwIDAgNnB4IHJnYmEoMCwwLDAsMC4zKTtcclxufVxyXG5cclxuLm5hdmJhcjo6LXdlYmtpdC1zY3JvbGxiYXItdGh1bWIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsLjI2KTtcclxuICBvdXRsaW5lOiAxcHggc29saWQgc2xhdGVncmV5O1xyXG59XHJcblxyXG4ucG93ZXJlZCB7XHJcbiAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4gIC5wb3dlcmVkOjotbW96LXNlbGVjdGlvbiB7XHJcbiAgICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgfVxyXG5cclxuICAucG93ZXJlZDo6c2VsZWN0aW9uIHtcclxuICAgIGNvbG9yOiB0cmFuc3BhcmVudDtcclxuICB9XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -816,7 +860,7 @@ var MenuComponent = /** @class */ (function () {
     MenuComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-menu',
-            template: __webpack_require__(/*! ./menu.component.html */ "./src/app/menu/menu.component.html"),
+            template: __webpack_require__(/*! raw-loader!./menu.component.html */ "./node_modules/raw-loader/index.js!./src/app/menu/menu.component.html"),
             styles: [__webpack_require__(/*! ./menu.component.css */ "./src/app/menu/menu.component.css")]
         }),
         __metadata("design:paramtypes", [_services_auth0_service__WEBPACK_IMPORTED_MODULE_2__["Auth0Service"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
@@ -880,17 +924,6 @@ var MenuModule = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsby1leHBlcmltZW50b3MvY29tcG9uZW50ZXMvY3JlYXItZXhwZXJpbWVudG8vY3JlYXItZXhwZXJpbWVudG8uY29tcG9uZW50LmNzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/modulo-experimentos/componentes/crear-experimento/crear-experimento.component.html":
-/*!****************************************************************************************************!*\
-  !*** ./src/app/modulo-experimentos/componentes/crear-experimento/crear-experimento.component.html ***!
-  \****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n  <form (ngSubmit)=\"savedExperimento()\" #experimentoForm=\"ngForm\">\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Espectrometro: </label>\r\n        <select [(ngModel)]=\"espectrometroSeleccionado\" class=\"form-control\" name=\"espectrometro\" id=\"espectrometro\" (change)=\"onSelectEspectrometro($event.target.value)\" required>\r\n          <option *ngFor=\"let espect of espectrometros\" [value]=\"espect\">{{espect}}</option>\r\n        </select>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Sondas: </label>\r\n        <select [(ngModel)]=\"sondaSeleccionada\" class=\"form-control\" name=\"sonda\" id=\"sonda\" required>\r\n          <option *ngFor=\"let sond of sondas\" [value]=\"sond\">{{sond}}</option>\r\n        </select>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Fecha de entrada: </label>\r\n        <input type=\"date\" class=\"form-control\" [ngModel]=\"startDate | date:'yyyy-MM-dd'\" (ngModelChange)=\"finDate = $event\" name=\"fecha_entrada\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de entrada: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [(ngModel)]=\"experimento.usuario_entrada\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>Muestra: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"muestra\" [(ngModel)]=\"experimento.muestra\" required>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <label>ID Solicitud: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [(ngModel)]=\"experimento.solicitud\" required>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <label for=\"finalizado\"> Finalizado </label>\r\n      <div class=\"form-group input-group\">\r\n        <label for=\"finalizado\" class=\"checkbox-inline\">\r\n          <input type=\"checkbox\" class=\"form-control\" [(ngModel)]=\"experimento.completo\" name=\"finalizado\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n        </label>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <br />\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n      <div class=\"form-group\">\r\n        <label>Fecha de salida: </label>\r\n        <input type=\"date\" class=\"form-control\" [ngModel]=\"startDate | date:'yyyy-MM-dd'\" (ngModelChange)=\"finDate2 = $event\" name=\"fecha_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de salida: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [(ngModel)]=\"experimento.usuario_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\">\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!experimentoForm.form.valid\">Guardar Experimento</button>\r\n      </div>\r\n    </div>\r\n  </form>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -982,7 +1015,7 @@ var CrearExperimentoComponent = /** @class */ (function () {
     CrearExperimentoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-crear-experimento',
-            template: __webpack_require__(/*! ./crear-experimento.component.html */ "./src/app/modulo-experimentos/componentes/crear-experimento/crear-experimento.component.html"),
+            template: __webpack_require__(/*! raw-loader!./crear-experimento.component.html */ "./node_modules/raw-loader/index.js!./src/app/modulo-experimentos/componentes/crear-experimento/crear-experimento.component.html"),
             styles: [__webpack_require__(/*! ./crear-experimento.component.css */ "./src/app/modulo-experimentos/componentes/crear-experimento/crear-experimento.component.css")]
         }),
         __metadata("design:paramtypes", [_services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_2__["ExperimentosServiceService"], _services_auth0_service__WEBPACK_IMPORTED_MODULE_3__["Auth0Service"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], ng_snotify__WEBPACK_IMPORTED_MODULE_5__["SnotifyService"]])
@@ -1002,17 +1035,6 @@ var CrearExperimentoComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsby1leHBlcmltZW50b3MvY29tcG9uZW50ZXMvZWRpdGFyLWV4cGVyaW1lbnRvL2VkaXRhci1leHBlcmltZW50by5jb21wb25lbnQuY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/modulo-experimentos/componentes/editar-experimento/editar-experimento.component.html":
-/*!******************************************************************************************************!*\
-  !*** ./src/app/modulo-experimentos/componentes/editar-experimento/editar-experimento.component.html ***!
-  \******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <select [(ngModel)]=\"espectrometroSeleccionado\" class=\"form-control\" name=\"espectrometro\" id=\"espectrometro\" (change)=\"onSelectEspectrometro($event.target.value)\" required>\r\n        <option *ngFor=\"let espect of espectrometros\" [value]=\"espect\">{{espect}}</option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <select [(ngModel)]=\"sondaSeleccionada\" class=\"form-control\" name=\"sonda\" id=\"sonda\" required>\r\n        <option *ngFor=\"let sond of sondas\" [value]=\"sond\">{{sond}}</option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\" (ngModelChange)=\"finDateFechaEntrada = $event\" required>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [(ngModel)]=\"experimento.usuario_entrada\" required>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [(ngModel)]=\"experimento.muestra\" required>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [(ngModel)]=\"experimento.solicitud\" required>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [(ngModel)]=\"experimento.completo\" name=\"finalizado\" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\" (ngModelChange)=\"finDateFechaSalida = $event\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n      <div class=\"form-group\">\r\n        <label>Usuario de salida: </label>\r\n        <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [(ngModel)]=\"experimento.usuario_salida\">\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-6 form-group\">\r\n      <button (click)=\"editarExperimento()\" class=\"btn btn-warning\">\r\n        Guardar\r\n        <span class=\"glyphicon glyphicon-save\"></span>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"col-md-6 form-group\">\r\n      <button class=\"btn btn-info\" type=\"button\" (click)=\"goBack()\">\r\n        Volver\r\n        <span class=\"glyphicon glyphicon-share-alt\"></span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -1133,7 +1155,7 @@ var EditarExperimentoComponent = /** @class */ (function () {
     EditarExperimentoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-editar-experimento',
-            template: __webpack_require__(/*! ./editar-experimento.component.html */ "./src/app/modulo-experimentos/componentes/editar-experimento/editar-experimento.component.html"),
+            template: __webpack_require__(/*! raw-loader!./editar-experimento.component.html */ "./node_modules/raw-loader/index.js!./src/app/modulo-experimentos/componentes/editar-experimento/editar-experimento.component.html"),
             styles: [__webpack_require__(/*! ./editar-experimento.component.css */ "./src/app/modulo-experimentos/componentes/editar-experimento/editar-experimento.component.css")]
         }),
         __metadata("design:paramtypes", [_services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_6__["ExperimentosServiceService"],
@@ -1157,18 +1179,7 @@ var EditarExperimentoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".izquierda {\r\n  float: left;\r\n}\r\n\r\n.derecha {\r\n  float: right;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxvLWV4cGVyaW1lbnRvcy9jb21wb25lbnRlcy9saXN0YXItZXhwZXJpbWVudG9zL2xpc3Rhci1leHBlcmltZW50b3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7Q0FDYjs7QUFFRDtFQUNFLGFBQWE7Q0FDZCIsImZpbGUiOiJzcmMvYXBwL21vZHVsby1leHBlcmltZW50b3MvY29tcG9uZW50ZXMvbGlzdGFyLWV4cGVyaW1lbnRvcy9saXN0YXItZXhwZXJpbWVudG9zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaXpxdWllcmRhIHtcclxuICBmbG9hdDogbGVmdDtcclxufVxyXG5cclxuLmRlcmVjaGEge1xyXG4gIGZsb2F0OiByaWdodDtcclxufVxyXG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/modulo-experimentos/componentes/listar-experimentos/listar-experimentos.component.html":
-/*!********************************************************************************************************!*\
-  !*** ./src/app/modulo-experimentos/componentes/listar-experimentos/listar-experimentos.component.html ***!
-  \********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<br />\r\n<br />\r\n\r\n<div class=\"col-md-12\">\r\n  <ag-grid-angular style=\"width: 100%; height: 720px;\"\r\n                   class=\"ag-theme-fresh\"\r\n                   rowSelection=\"single\"\r\n                   rowHeight=\"40\"\r\n                   [localeText]=\"localeText\"\r\n                   [rowData]=\"rowData\"\r\n                   [columnDefs]=\"columnDefs\"\r\n                   [enableSorting]=\"true\"\r\n                   [enableColResize]=\"true\"\r\n                   [pagination]=\"true\"\r\n                   [paginationPageSize]=\"paginationPageSize\"\r\n                   [enableFilter]=\"true\"\r\n                   [floatingFilter]=\"true\"\r\n                   [frameworkComponents]=\"frameworkComponents\"\r\n                   [context]=\"context\"\r\n                   (filterChanged)=\"onFilterChanged($event)\"\r\n                   (gridReady)=\"onGridReady($event)\">\r\n  </ag-grid-angular>\r\n</div>\r\n\r\n<div class=\"col-md-6 derecha\">\r\n  <br />\r\n  <label style=\"margin-left: 20px;\">\r\n    <button (click)=\"onBtExport()\" class=\"btn btn-primary\">\r\n      Exportar CSV &nbsp;&nbsp;\r\n      <span class=\"glyphicon glyphicon-download\"></span>\r\n    </button>\r\n  </label>\r\n</div>\r\n\r\n<div class=\"col-md-6 derecha\">\r\n  <br />\r\n  <a class=\"btn btn-danger\" (click)=\"resetearFiltros()\">\r\n    Borrar Filtros &nbsp;\r\n    <span class=\"glyphicon glyphicon-remove\"></span>\r\n  </a>\r\n</div>\r\n"
+module.exports = ".izquierda {\r\n  float: left;\r\n}\r\n\r\n.derecha {\r\n  float: right;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxvLWV4cGVyaW1lbnRvcy9jb21wb25lbnRlcy9saXN0YXItZXhwZXJpbWVudG9zL2xpc3Rhci1leHBlcmltZW50b3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFlBQVk7QUFDZCIsImZpbGUiOiJzcmMvYXBwL21vZHVsby1leHBlcmltZW50b3MvY29tcG9uZW50ZXMvbGlzdGFyLWV4cGVyaW1lbnRvcy9saXN0YXItZXhwZXJpbWVudG9zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaXpxdWllcmRhIHtcclxuICBmbG9hdDogbGVmdDtcclxufVxyXG5cclxuLmRlcmVjaGEge1xyXG4gIGZsb2F0OiByaWdodDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -1187,6 +1198,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_auth0_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/auth0.service */ "./src/app/services/auth0.service.ts");
 /* harmony import */ var _componentes_ag_grid_boton_ver_experimento_boton_ver_experimento_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component */ "./src/app/componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component.ts");
 /* harmony import */ var _componentes_ag_grid_localeText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../componentes/ag-grid/localeText */ "./src/app/componentes/ag-grid/localeText.ts");
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1205,107 +1227,45 @@ var ListarExperimentosComponent = /** @class */ (function () {
     function ListarExperimentosComponent(apiExperimento, auth) {
         this.apiExperimento = apiExperimento;
         this.auth = auth;
-        this.sizePage = 25;
         this.localeText = _componentes_ag_grid_localeText__WEBPACK_IMPORTED_MODULE_4__["locale"];
+        this.sizePage = 25;
         this._getExperimentos();
+        this.gridOptions = {};
+        this.gridOptions.rowModelType = 'infinite';
+        this.gridOptions.rowHeight = 35;
+        this.paginationPageSize = 25;
+        var def = {
+            filter: "agTextColumnFilter",
+            filterParams: {
+                caseSensitive: false,
+                newRowsAction: 'keep'
+            },
+            resizable: true,
+            sortable: true,
+            minWidth: 135
+        };
         this.columnDefs = [
-            {
-                headerName: "ESPECTROMETRO",
-                field: "espectrometro",
-                suppressMenu: true,
-                filterParams: {
-                    caseSensitive: true,
-                    newRowsAction: 'keep'
-                },
-                minWidth: 135
-            }, {
-                headerName: "SONDA",
-                field: "sonda",
-                suppressMenu: true,
-                filterParams: {
-                    caseSensitive: true,
-                    newRowsAction: 'keep'
-                },
-                minWidth: 135
-            }, {
-                headerName: "MUESTRA",
-                field: "muestra",
-                suppressMenu: true,
-                filterParams: {
-                    caseSensitive: true,
-                    newRowsAction: 'keep'
-                },
-                minWidth: 135
-            }, {
-                headerName: "SOLICITUD",
-                field: "solicitud",
-                suppressMenu: true,
-                filterParams: {
-                    caseSensitive: true,
-                    newRowsAction: 'keep'
-                },
-                minWidth: 135
-            }, {
-                headerName: "USUARIO (ENTRADA)",
-                field: "usuario_entrada",
-                suppressMenu: true,
-                filterParams: {
-                    caseSensitive: true,
-                    newRowsAction: 'keep'
-                },
-                minWidth: 135
-            }, {
-                headerName: "FECHA (ENTRADA)",
-                field: "fecha_entrada",
-                filter: "agDateColumnFilter",
-                valueFormatter: dateFormat,
-                filterParams: {
+            __assign({ headerName: "ESPECTROMETRO", field: "espectrometro" }, def),
+            __assign({ headerName: "SONDA", field: "sonda" }, def),
+            __assign({ headerName: "MUESTRA", field: "muestra" }, def),
+            __assign({ headerName: "SOLICITUD", field: "solicitud" }, def),
+            __assign({ headerName: "USUARIO (ENTRADA)", field: "usuario_entrada" }, def),
+            __assign({ headerName: "FECHA (ENTRADA)", field: "fecha_entrada" }, def, { filter: "agDateColumnFilter", valueFormatter: dateFormat, filterParams: {
                     comparator: compararFechas,
                     newRowsAction: 'keep'
-                },
-                suppressMenu: true
-            }, {
-                headerName: "",
-                field: "completo",
-                suppressFilter: true,
-                minWidth: 25,
-                maxWidth: 25,
-                width: 25,
-                cellStyle: function (params) {
+                }, suppressMenu: true }),
+            __assign({ headerName: "", field: "completo", suppressMenu: true }, def, { filter: false, minWidth: 25, maxWidth: 25, width: 25, cellStyle: function (params) {
                     if (params.value)
                         return { backgroundColor: 'green', color: 'green' };
                     else
                         return { backgroundColor: 'red', color: 'red' };
-                },
-            }, {
-                headerName: "USUARIO (SALIDA)",
-                field: "usuario_salida",
-                suppressMenu: true,
-                filterParams: {
-                    caseSensitive: true,
-                    newRowsAction: 'keep'
-                },
-                minWidth: 135
-            }, {
-                headerName: "FECHA (SALIDA)",
-                field: "fecha_salida",
-                filter: "agDateColumnFilter",
-                valueFormatter: dateFormat,
-                filterParams: {
+                } }),
+            __assign({ headerName: "USUARIO (SALIDA)", field: "usuario_salida" }, def),
+            __assign({ headerName: "FECHA (SALIDA)", field: "fecha_salida" }, def, { filter: "agDateColumnFilter", valueFormatter: dateFormat, filterParams: {
                     comparator: compararFechas,
                     newRowsAction: 'keep'
-                },
-                suppressMenu: true
-            }, {
-                headerName: "VER",
-                suppressFilter: true,
-                pinned: "right",
-                field: "value",
-                cellRenderer: 'botonVerExperimentoComponent',
-                colId: "params",
-                width: 100,
-                minWidth: 100
-            }
+                }, suppressMenu: true }),
+            __assign({ headerName: "VER" }, def, { filter: false, pinned: "right", field: "value", cellRenderer: 'botonVerExperimentoComponent', colId: "params", width: 100, minWidth: 100 })
         ];
         this.context = { componentParent: this };
         this.frameworkComponents = {
@@ -1423,7 +1383,7 @@ var ListarExperimentosComponent = /** @class */ (function () {
     ListarExperimentosComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-listar-experimentos',
-            template: __webpack_require__(/*! ./listar-experimentos.component.html */ "./src/app/modulo-experimentos/componentes/listar-experimentos/listar-experimentos.component.html"),
+            template: __webpack_require__(/*! raw-loader!./listar-experimentos.component.html */ "./node_modules/raw-loader/index.js!./src/app/modulo-experimentos/componentes/listar-experimentos/listar-experimentos.component.html"),
             styles: [__webpack_require__(/*! ./listar-experimentos.component.css */ "./src/app/modulo-experimentos/componentes/listar-experimentos/listar-experimentos.component.css")]
         }),
         __metadata("design:paramtypes", [_services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_1__["ExperimentosServiceService"], _services_auth0_service__WEBPACK_IMPORTED_MODULE_2__["Auth0Service"]])
@@ -1466,17 +1426,6 @@ function dateFormat(params) {
 /***/ (function(module, exports) {
 
 module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsby1leHBlcmltZW50b3MvY29tcG9uZW50ZXMvdmVyLWV4cGVyaW1lbnRvL3Zlci1leHBlcmltZW50by5jb21wb25lbnQuY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/modulo-experimentos/componentes/ver-experimento/ver-experimento.component.html":
-/*!************************************************************************************************!*\
-  !*** ./src/app/modulo-experimentos/componentes/ver-experimento/ver-experimento.component.html ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Espectrometro: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"espectrometros\" name=\"espectrometros\" [ngModel]=\"experimento.espectrometro\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Sondas: </label>\r\n      <input type=\"text\" class=\"form-control\" id=\"sonda\" name=\"sonda\" [ngModel]=\"experimento.sonda\" disabled />\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de entrada: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_entrada | date:'yyyy-MM-dd'\" name=\"fecha_entrada\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de entrada: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_entrada\" [ngModel]=\"experimento.usuario_entrada\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>Muestra: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"muestra\" [ngModel]=\"experimento.muestra\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <div class=\"form-group\">\r\n      <label>ID Solicitud: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"id_solicitud\" [ngModel]=\"experimento.solicitud\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <label for=\"finalizado\"> Finalizado </label>\r\n    <div class=\"form-group input-group\">\r\n      <label for=\"finalizado\" class=\"checkbox-inline\">\r\n        <input type=\"checkbox\" class=\"form-control\" [ngModel]=\"experimento.completo\" name=\"finalizado\" disabled> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\">\r\n    <br />\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Fecha de salida: </label>\r\n      <input type=\"date\" class=\"form-control\" [ngModel]=\"experimento.fecha_salida | date:'yyyy-MM-dd'\" name=\"fecha_salida\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-7\" *ngIf=\"experimento.completo\">\r\n    <div class=\"form-group\">\r\n      <label>Usuario de salida: </label>\r\n      <input type=\"text\" class=\"form-control\" name=\"usuario_salida\" [ngModel]=\"experimento.usuario_salida\" disabled>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button (click)=\"editarExperimento()\" class=\"btn btn-warning\" >\r\n      Editar\r\n      <span class=\"glyphicon glyphicon-edit\"></span>\r\n    </button>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 form-group\">\r\n    <button class=\"btn btn-danger\" type=\"button\" (click)=\"deleteExperimento()\">\r\n      Eliminar\r\n      <span class=\"glyphicon glyphicon-remove\"></span>\r\n    </button>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1564,7 +1513,7 @@ var VerExperimentoComponent = /** @class */ (function () {
     VerExperimentoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-ver-experimento',
-            template: __webpack_require__(/*! ./ver-experimento.component.html */ "./src/app/modulo-experimentos/componentes/ver-experimento/ver-experimento.component.html"),
+            template: __webpack_require__(/*! raw-loader!./ver-experimento.component.html */ "./node_modules/raw-loader/index.js!./src/app/modulo-experimentos/componentes/ver-experimento/ver-experimento.component.html"),
             styles: [__webpack_require__(/*! ./ver-experimento.component.css */ "./src/app/modulo-experimentos/componentes/ver-experimento/ver-experimento.component.css")]
         }),
         __metadata("design:paramtypes", [_services_experimentos_service_service__WEBPACK_IMPORTED_MODULE_5__["ExperimentosServiceService"], _services_auth0_service__WEBPACK_IMPORTED_MODULE_1__["Auth0Service"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], ng_snotify__WEBPACK_IMPORTED_MODULE_2__["SnotifyService"]])
