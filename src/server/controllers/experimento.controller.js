@@ -23,9 +23,9 @@ exports.getOneExperimento = async function (req, res, next) {
 }
 
 exports.postExperimento = async function (req, res, next) {
-  var existe = await ExperimentoService.getExperimentos({ solicitud: req.body.solicitud })
-  if (existe.length > 0)
-    return res.status(400).json({ status: 201, message: 'Solicitud existente' });
+  //var existe = await ExperimentoService.getExperimentos({ solicitud: req.body.solicitud })
+  //if (existe.length > 0)
+  //  return res.status(400).json({ status: 201, message: 'Solicitud existente' });
 
   var experimento = ({
     espectrometro: req.body.espectrometro,
