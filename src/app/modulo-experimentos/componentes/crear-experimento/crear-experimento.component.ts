@@ -75,8 +75,11 @@ export class CrearExperimentoComponent implements OnInit {
   private _savedExperimento() {
     this.experimentosSubscription = this.apiExperimento.setExperimentos$(this.experimento).subscribe(
       data => {
-        this.onSuccess('Experimento creado con exito');
-        this.router.navigate(['/experimentos/mostrar/' + data['_id']])
+        if(data.status == 200){
+          this.onSuccess('Experimento creado con exito');
+          this.router.navigate(['/experimentos/mostrar/' + data['_id']])
+        } else if (data.status == 200)
+          this.onError('El experimento ya existe con id_solicitud: ' + this.experimento.solicitud, 'Error')
       },
       err => this.onError(err, 'Error al crear el experimento')
     );

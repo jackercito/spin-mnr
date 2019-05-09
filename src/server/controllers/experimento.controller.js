@@ -4,7 +4,6 @@ _this = this
 
 exports.getExperimentos = async function (req, res, next) {
   try {
-    //
     var experimentos = await ExperimentoService.getExperimentos({})
     res.json(experimentos);
   } catch (e) {
@@ -24,6 +23,10 @@ exports.getOneExperimento = async function (req, res, next) {
 }
 
 exports.postExperimento = async function (req, res, next) {
+  var existe = await ExperimentoService.getExperimentos({ solicitud: req.body.solicitud })
+  if (existe.length > 0)
+    return res.status(400).json({ status: 201, message: 'Solicitud existente' });
+
   var experimento = ({
     espectrometro: req.body.espectrometro,
     fecha_entrada: req.body.fecha_entrada,
