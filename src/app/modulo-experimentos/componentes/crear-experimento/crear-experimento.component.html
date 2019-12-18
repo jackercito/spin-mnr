@@ -9,13 +9,6 @@
       </div>
     </div>
 
-    <div class="col-md-7" *ngIf="espectrometroSeleccionado == 'ESPECTRÓMETRO BRUKER AVANCE III / HD(Muestras sólidas)'">
-      <div class="form-group">
-        <label>Nucleo: </label>
-        <input type="text" class="form-control" name="usuario_entrada" [(ngModel)]="experimento.nucleo">
-      </div>
-    </div>
-
     <div class="col-md-7">
       <div class="form-group">
         <label>Sondas: </label>
@@ -43,6 +36,13 @@
       <div class="form-group">
         <label>Muestra: </label>
         <input type="text" class="form-control" name="muestra" [(ngModel)]="experimento.muestra" required>
+      </div>
+    </div>
+
+    <div class="col-md-7" *ngIf="espectrometroSeleccionado == 'ESPECTRÓMETRO BRUKER AVANCE III / HD(Muestras sólidas)'">
+      <div class="form-group">
+        <label>Nucleo: </label>
+        <input type="text" class="form-control" name="usuario_entrada" [(ngModel)]="experimento.nucleo">
       </div>
     </div>
 
