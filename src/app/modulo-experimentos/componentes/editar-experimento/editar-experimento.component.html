@@ -8,6 +8,13 @@
     </div>
   </div>
 
+  <div class="col-md-7" *ngIf="espectrometroSeleccionado == 'ESPECTRÓMETRO BRUKER AVANCE III / HD(Muestras sólidas)'">
+    <div class="form-group">
+      <label>Nucleo: </label>
+      <input type="text" class="form-control" name="usuario_entrada" [(ngModel)]="experimento.nucleo">
+    </div>
+  </div>
+
   <div class="col-md-7">
     <div class="form-group">
       <label>Sondas: </label>
@@ -62,27 +69,27 @@
     <div class="form-group">
       <label>Fecha de salida: </label>
       <input type="date" class="form-control" [ngModel]="experimento.fecha_salida | date:'yyyy-MM-dd'" name="fecha_salida" (ngModelChange)="finDateFechaSalida = $event">
-      </div>
-    </div>
-
-    <div class="col-md-7" *ngIf="experimento.completo">
-      <div class="form-group">
-        <label>Usuario de salida: </label>
-        <input type="text" class="form-control" name="usuario_salida" [(ngModel)]="experimento.usuario_salida">
-      </div>
-    </div>
-
-    <div class="col-md-6 form-group">
-      <button (click)="editarExperimento()" class="btn btn-warning">
-        Guardar
-        <span class="glyphicon glyphicon-save"></span>
-      </button>
-    </div>
-
-    <div class="col-md-6 form-group">
-      <button class="btn btn-info" type="button" (click)="goBack()">
-        Volver
-        <span class="glyphicon glyphicon-share-alt"></span>
-      </button>
     </div>
   </div>
+
+  <div class="col-md-7" *ngIf="experimento.completo">
+    <div class="form-group">
+      <label>Usuario de salida: </label>
+      <input type="text" class="form-control" name="usuario_salida" [(ngModel)]="experimento.usuario_salida">
+    </div>
+  </div>
+
+  <div class="col-md-6 form-group">
+    <button (click)="editarExperimento()" class="btn btn-warning">
+      Guardar
+      <span class="glyphicon glyphicon-save"></span>
+    </button>
+  </div>
+
+  <div class="col-md-6 form-group">
+    <button class="btn btn-info" type="button" (click)="goBack()">
+      Volver
+      <span class="glyphicon glyphicon-share-alt"></span>
+    </button>
+  </div>
+</div>

@@ -31,6 +31,7 @@ exports.createExperimento = async function (experimento) {
     muestra: experimento.muestra,
     solicitud: experimento.solicitud,
     sonda: experimento.sonda,
+    nucleo: experimento.nucleo,
     completo: experimento.completo,
   })
 
@@ -63,6 +64,7 @@ exports.updateExperimento = async function (experimento) {
   oldExperimento.muestra = experimento.muestra;
   oldExperimento.solicitud = experimento.solicitud;
   oldExperimento.sonda = experimento.sonda;
+  oldExperimento.nucleo = experimento.nucleo;
   oldExperimento.completo = experimento.completo;
  
   try {

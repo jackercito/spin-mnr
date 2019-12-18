@@ -6,6 +6,13 @@
     </div>
   </div>
 
+  <div class="col-md-7" *ngIf="experimento.espectrometro == 'ESPECTRÓMETRO BRUKER AVANCE III / HD(Muestras sólidas)'">
+    <div class="form-group">
+      <label>Nucleo: </label>
+      <input type="text" class="form-control" name="usuario_entrada" [ngModel]="experimento.nucleo">
+    </div>
+  </div>
+
   <div class="col-md-7">
     <div class="form-group">
       <label>Sondas: </label>
@@ -69,7 +76,7 @@
   </div>
 
   <div class="col-md-6 form-group">
-    <button (click)="editarExperimento()" class="btn btn-warning" >
+    <button (click)="editarExperimento()" class="btn btn-warning">
       Editar
       <span class="glyphicon glyphicon-edit"></span>
     </button>

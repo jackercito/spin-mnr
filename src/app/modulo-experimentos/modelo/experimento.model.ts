@@ -4,6 +4,7 @@ export class Experimento {
   public sonda: string;
   public muestra: string;
   public solicitud: string;
+  public nucleo: string;
   public usuario_entrada: string;
   public usuario_salida: string;
   public fecha_entrada: Date;
