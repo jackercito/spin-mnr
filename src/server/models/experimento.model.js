@@ -11,7 +11,7 @@ var ExperimentoSchema = new Schema({
   solicitud: { type: String, required: true },
   sonda: { type: String },
   nucleo: { type: String },
-  completo: { type: Boolean }
+  completo: { type: Boolean },
   visible: { type: Boolean }
 });
 
