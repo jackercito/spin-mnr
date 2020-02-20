@@ -38,6 +38,7 @@ exports.postExperimento = async function (req, res, next) {
     sonda: req.body.sonda,
     nucleo: req.body.nucleo,
     completo: req.body.completo,
+    visible: req.body.visible,
   });
 
   try {
@@ -66,6 +67,7 @@ exports.putExperimento = async (req, res, next) => {
     sonda: req.body.sonda,
     nucleo: req.body.nucleo,
     completo: req.body.completo,
+    visible: req.body.visible,
   });
 
   try {

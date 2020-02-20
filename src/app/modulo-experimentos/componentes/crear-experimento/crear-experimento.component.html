@@ -53,7 +53,7 @@
       </div>
     </div>
 
-    <div class="col-md-7">
+    <div class="col-md-6">
       <label for="finalizado"> Finalizado </label>
       <div class="form-group input-group">
         <label for="finalizado" class="checkbox-inline">
@@ -62,11 +62,20 @@
       </div>
     </div>
 
+    <div class="col-md-6">
+      <label for="finalizado"> Recuperar datos:</label>
+      <div class="form-group input-group">
+        <label for="visible" class="checkbox-inline">
+          <input type="checkbox" class="form-control" [(ngModel)]="experimento.visible" name="visible"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+      </div>
+    </div>
+
     <div class="col-md-7">
       <br />
     </div>
 
-    <div class="col-md-7" *ngIf="experimento.completo">
+    <div class="col-md-7" *ngIf="experimento.completo && experimento.visible">
       <div class="form-group">
         <label>Fecha de salida: </label>
         <input type="date" class="form-control" [ngModel]="startDate | date:'yyyy-MM-dd'" (ngModelChange)="finDate2 = $event" name="fecha_salida">

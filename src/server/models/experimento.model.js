@@ -12,6 +12,7 @@ var ExperimentoSchema = new Schema({
   sonda: { type: String },
   nucleo: { type: String },
   completo: { type: Boolean }
+  visible: { type: Boolean }
 });
 
 module.exports = mongoose.model("Experimento", ExperimentoSchema);

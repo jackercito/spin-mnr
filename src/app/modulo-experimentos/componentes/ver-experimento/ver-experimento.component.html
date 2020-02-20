@@ -61,7 +61,7 @@
     <br />
   </div>
 
-  <div class="col-md-7" *ngIf="experimento.completo">
+  <div class="col-md-7" *ngIf="experimento.completo && experimento.visible">
     <div class="form-group">
       <label>Fecha de salida: </label>
       <input type="date" class="form-control" [ngModel]="experimento.fecha_salida | date:'yyyy-MM-dd'" name="fecha_salida" disabled>

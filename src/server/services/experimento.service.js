@@ -33,6 +33,7 @@ exports.createExperimento = async function (experimento) {
     sonda: experimento.sonda,
     nucleo: experimento.nucleo,
     completo: experimento.completo,
+    visible: experimento.visible,
   })
 
   try {
@@ -66,6 +67,7 @@ exports.updateExperimento = async function (experimento) {
   oldExperimento.sonda = experimento.sonda;
   oldExperimento.nucleo = experimento.nucleo;
   oldExperimento.completo = experimento.completo;
+  oldExperimento.visible = experimento.visible;
  
   try {
     var _savedExperimento = await oldExperimento.save();

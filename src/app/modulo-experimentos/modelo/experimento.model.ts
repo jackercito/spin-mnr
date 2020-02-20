@@ -10,6 +10,7 @@ export class Experimento {
   public fecha_entrada: Date;
   public fecha_salida: Date;
   public completo: boolean;
+  public visible: boolean;
 
   constructor() {
     this.fecha_entrada = new Date();
