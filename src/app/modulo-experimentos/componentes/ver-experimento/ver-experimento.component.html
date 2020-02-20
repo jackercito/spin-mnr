@@ -48,11 +48,20 @@
     </div>
   </div>
 
-  <div class="col-md-7">
+  <div class="col-md-6">
     <label for="finalizado"> Finalizado </label>
     <div class="form-group input-group">
       <label for="finalizado" class="checkbox-inline">
         <input type="checkbox" class="form-control" [ngModel]="experimento.completo" name="finalizado" disabled> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </label>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <label for="finalizado"> Recuperar muestra:</label>
+    <div class="form-group input-group">
+      <label for="visible" class="checkbox-inline">
+        <input type="checkbox" class="form-control" [ngModel]="experimento.visible" name="visible" disabled> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </label>
     </div>
   </div>
