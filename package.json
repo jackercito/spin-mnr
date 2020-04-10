@@ -26,7 +26,7 @@
     "@angular/router": "8.2.14",
     "ag-grid-angular": "22.1.1",
     "ag-grid-community": "22.1.1",
-    "auth0-js": "9.12.2",
+    "auth0-js": "9.13.2",
     "body-parser": "1.19.0",
     "core-js": "3.6.4",
     "cors": "2.8.5",
