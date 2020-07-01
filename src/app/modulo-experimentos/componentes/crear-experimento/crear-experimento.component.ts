@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 
 import { Experimento } from '../../modelo/experimento.model'
 
-import { SnotifyService, SnotifyPosition } from 'ng-snotify';
+//import { SnotifyService, SnotifyPosition } from 'ng-snotify';
 
 const ESPECTROMETROS = ['ESPECTROMETRO VARIAN MERCURY AS400', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras Líquidas)', 'ESPECTRÓMETRO BRUKER AVANCE III / HD(Muestras sólidas)'];
 const SONDA_A = ['4NUC (5mm)', 'ATB (5mm)']
@@ -34,7 +34,7 @@ export class CrearExperimentoComponent implements OnInit {
   authSubscription: Subscription;
   experimentosSubscription: Subscription;
 
-  constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service, private route: ActivatedRoute, private router: Router, private snotifyService: SnotifyService) {
+  constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service, private route: ActivatedRoute, private router: Router, /*private snotifyService: SnotifyService*/) {
     auth.handleLoginCallback();
   }
 
@@ -64,22 +64,22 @@ export class CrearExperimentoComponent implements OnInit {
     this._savedExperimento();
   }
 
-  onSuccess(msg) {
+  /*onSuccess(msg) {
     this.snotifyService.success(msg, { showProgressBar: false, timeout: 5000, position: SnotifyPosition.rightTop });
   }
 
   onError(err, titulo) {
     this.snotifyService.error(err, titulo, { showProgressBar: false, timeout: 5000, position: SnotifyPosition.rightTop });
-  }
+  }*/
 
   private _savedExperimento() {
     this.experimentosSubscription = this.apiExperimento.setExperimentos$(this.experimento).subscribe(
       data => {
-        this.onSuccess('Experimento creado con exito');
+        //this.onSuccess('Experimento creado con exito');
         this.router.navigate(['/experimentos/mostrar/' + data['_id']])
       },
       err => {
-          this.onError(err, 'Error al crear el experimento')
+          //this.onError(err, 'Error al crear el experimento')
       }
     );
   }

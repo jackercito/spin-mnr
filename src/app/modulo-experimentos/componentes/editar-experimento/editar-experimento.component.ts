@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Auth0Service } from '../../../services/auth0.service';
-import { SnotifyService, SnotifyPosition } from 'ng-snotify';
+//import { SnotifyService, SnotifyPosition } from 'ng-snotify';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Location } from '@angular/common';
@@ -38,7 +38,7 @@ export class EditarExperimentoComponent implements OnInit {
     private auth: Auth0Service,
     private route: ActivatedRoute,
     private router: Router,
-    private snotifyService: SnotifyService,
+    //private snotifyService: SnotifyService,
     private _location: Location,) {
     auth.handleLoginCallback();
   }
@@ -75,14 +75,14 @@ export class EditarExperimentoComponent implements OnInit {
     this._putExperimento();
   }
 
-  onSuccess(msg) {
+/*  onSuccess(msg) {
     this.snotifyService.success(msg, { showProgressBar: false, timeout: 5000, position: SnotifyPosition.rightTop });
   }
 
   onError(err, titulo) {
     this.snotifyService.error(err, titulo, { showProgressBar: false, timeout: 5000, position: SnotifyPosition.rightTop });
   }
-
+  */
   goBack() {
     this._location.back();
   }
@@ -98,7 +98,7 @@ export class EditarExperimentoComponent implements OnInit {
         this.finDateFechaSalida = this.experimento.fecha_salida;
       },
       err => {
-        this.onError(err, 'Error al cargar el experimento');
+        //this.onError(err, 'Error al cargar el experimento');
         this.router.navigate(['/experimentos/listar/'])
       }
     );
@@ -107,9 +107,9 @@ export class EditarExperimentoComponent implements OnInit {
   private _putExperimento() {
     this.experimentosSubscription = this.apiExperimento.putExperimento$(this.experimento).subscribe(
       data => {
-        this.onSuccess("Experimento editado con exito")
+        //this.onSuccess("Experimento editado con exito")
         this.router.navigate(['/experimentos/mostrar/', this.experimento._id])
-      }, err => this.onError(err, "Error al editar el experimento")
+      }, err => /*this.onError(err, "Error al editar el experimento")*/ console.log("")
     )
   }
 

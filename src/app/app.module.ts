@@ -21,13 +21,13 @@ import { Auth0Service } from './services/auth0.service';
 import { PerfilComponent } from './componentes/auth0/perfil/perfil.component';
 
 //ag-grid
-import { AgGridModule } from 'ag-grid-angular/main';
+import { AgGridModule } from 'ag-grid-angular';
 import { HeaderGroupComponent } from './componentes/ag-grid/header-group/header-group.component';
 import { HeaderComponent } from './componentes/ag-grid/header/header.component';
 import { BotonVerExperimentoComponent } from './componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component';
 
 //Tostadas
-import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+//import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 
 @NgModule({
   declarations: [
@@ -51,13 +51,13 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
       HeaderGroupComponent,
       BotonVerExperimentoComponent
     ]),
-    SnotifyModule,
+    //SnotifyModule,
   ],
   providers: [
     GuardScopesService,
     Auth0Service,
-    { provide: 'SnotifyToastConfig', useValue: ToastDefaults },
-    SnotifyService,
+    //{ provide: 'SnotifyToastConfig', useValue: ToastDefaults },
+    //SnotifyService,
   ],
   bootstrap: [AppComponent]
 })

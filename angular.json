@@ -29,7 +29,6 @@
               "node_modules/ag-grid-community/dist/styles/ag-theme-dark.css",
               "node_modules/ag-grid-community/dist/styles/ag-theme-blue.css",
               "node_modules/ag-grid-community/dist/styles/ag-theme-bootstrap.css",
-              "node_modules/ng-snotify/styles/dark.css"
             ],
             "scripts": []
           },
@@ -101,7 +100,6 @@
               "node_modules/ag-grid-community/dist/styles/ag-theme-dark.css",
               "node_modules/ag-grid-community/dist/styles/ag-theme-blue.css",
               "node_modules/ag-grid-community/dist/styles/ag-theme-bootstrap.css",
-              "node_modules/ng-snotify/styles/dark.css"
             ],
             "scripts": [],
             "assets": [

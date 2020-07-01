@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { IHeaderGroupParams } from "ag-grid-community";
-import { IHeaderGroupAngularComp } from "ag-grid-angular/main";
+import { IHeaderGroupAngularComp } from "ag-grid-angular";
 
 @Component({
   selector: 'app-header-group',

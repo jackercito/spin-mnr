@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //ag-grid
-import { AgGridModule } from "ag-grid-angular/main";
+import { AgGridModule } from "ag-grid-angular";
 import { HeaderComponent } from './../componentes/ag-grid/header/header.component';
 import { HeaderGroupComponent } from './../componentes/ag-grid/header-group/header-group.component';
 

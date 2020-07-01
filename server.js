@@ -17,7 +17,7 @@ const experimento = require('./src/server/routes/experimento.route');
 
 
 //const api = require('/server/routes/api');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 4200;
 
 const forceSSL = function () {
   return function (req, res, next) {

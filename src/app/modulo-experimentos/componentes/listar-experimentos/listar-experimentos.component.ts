@@ -33,7 +33,11 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
   empresas: any[];
   delegaciones: any[];
 
-  constructor(private apiExperimento: ExperimentosServiceService, private auth: Auth0Service) {
+  constructor(
+    private apiExperimento: ExperimentosServiceService,
+    private auth: Auth0Service
+  ) {
+    console.log("constructor");
     this._getExperimentos();
 
     this.gridOptions = <GridOptions>{};
@@ -49,7 +53,8 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
       },
       resizable: true,
       sortable: true,
-      minWidth: 135
+      minWidth: 135,
+      floatingFilter: true
     }
 
     this.columnDefs = [
