@@ -14,14 +14,6 @@ console.log(uri);
 mongoose.Promise = global.Promise;
 mongoose.connect(uri, { useNewUrlParser: true }, (err, db) => {
   if (err) console.log(err);
-  else {
-    var cursor = db.collection('experimentos').find();
-
-    cursor.each(function (err, doc) {
-      console.log(doc);
-    })
-  }
-}
-);
+});
 
 exports.mongoose = mongoose;
