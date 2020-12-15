@@ -11,7 +11,7 @@ exports.getExperimentos = async function (req, res, next) {
   }
 }
 
-exports.getOneExperimento = async function (req, res, next) {
+exports.getOneExperimento = async function (req, res, next) { 
   var id = req.params.id;
 
   try {
