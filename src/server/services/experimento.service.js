@@ -5,7 +5,7 @@ _this = this;
 
 exports.getExperimentos = async function(query) {
   try {
-    var experimentos = await Experimento.find(query)
+    var experimentos = await Experimento.find(query).sort("fecha_entrada" : -1)
     return experimentos;
   } catch (err) {
     throw Error("Error al paginar los experimenentos. Err(EXP01): " + err)

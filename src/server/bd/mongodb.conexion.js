@@ -8,8 +8,6 @@ const DB = process.env.MONGO_DB;
 
 var uri = "mongodb+srv://" + USER + ":" + PASSWORD + "@" + DB
 
-console.log(uri);
-
 //Conexion a la base de datos
 mongoose.Promise = global.Promise;
 mongoose.connect(uri, { useNewUrlParser: true }, (err, db) => {
