@@ -14,7 +14,7 @@
     "e2e": "ng e2e",
     "config": "",
     "heroku-prebuild": "npm install -f",
-    "postinstall": "npm --environment=prod && ng build --aot=true --prod"
+    "postinstall": "ng build --aot=true --configuration production"
   },
   "private": true,
   "dependencies": {
