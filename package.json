@@ -7,13 +7,13 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
-    "build": "npm run config -- --environment=dev && ng build",
+    "start": "npm i -f && node server.js",
+    "build": "npm i -f && npm run config -- --environment=dev && ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "config": "",
-    "postinstall": "npm run config -- --environment=prod && ng build --aot=true --prod"
+    "postinstall": "npm i -f && npm run config -- --environment=prod && ng build --aot=true --prod"
   },
   "private": true,
   "dependencies": {
