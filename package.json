@@ -12,8 +12,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "config": "",
-    "postinstall": "npm i -f && npm run config -- --environment=prod && ng build --aot=true --prod"
+    "config": "npm i -f",
+    "postinstall": "npm run config -- --environment=prod && ng build --aot=true --prod"
   },
   "private": true,
   "dependencies": {
