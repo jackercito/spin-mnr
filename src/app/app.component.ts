@@ -1,20 +1,34 @@
-import { Component } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { Component, HostListener } from '@angular/core';
 import { Auth0Service } from './services/auth0.service';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-  message;
+  title = 'spinV2';
+  isCollapsed: Boolean = false;
 
-  constructor(private http: HttpClient, public auth: Auth0Service) {
+  public innerWidth: any;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+  }
+
+  constructor(public auth: Auth0Service) {
     auth.handleLoginCallback();
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.innerWidth = window.innerWidth;
+  }
+
+  sidenav() {
+    if (this.innerWidth <= 1280) {
+      this.isCollapsed = true;
+    }
+  }
 }

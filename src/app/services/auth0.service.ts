@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Subscription, of, timer, Observable } from 'rxjs';
+import { BehaviorSubject, Subscription, of, timer } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 import * as auth0 from 'auth0-js';
 
 import { AUTH_CONFIG } from './auth0-variables'
-
-(window as any).global = window;
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +25,7 @@ export class Auth0Service {
   scopes: string;
 
   // Create a stream of logged in status to communicate throughout app
-  loggedIn: boolean;
+  loggedIn: boolean = false;
   loggingIn: boolean;
   loggedIn$ = new BehaviorSubject<boolean>(this.loggedIn);
 
@@ -149,7 +147,7 @@ export class Auth0Service {
     // Create and subscribe to expiration observable
     const expiresIn$ = of(this.expiresAt).pipe(
       mergeMap(
-        expires => {
+        (expires: number) => {
           const now = Date.now();
           // Use timer to track delay until expiration
           // to run the refresh at the proper time

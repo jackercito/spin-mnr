@@ -1,10 +1,9 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from "@angular/core";
-import { Http, RequestOptions } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -22,12 +21,11 @@ import { PerfilComponent } from './componentes/auth0/perfil/perfil.component';
 
 //ag-grid
 import { AgGridModule } from 'ag-grid-angular';
-import { HeaderGroupComponent } from './componentes/ag-grid/header-group/header-group.component';
-import { HeaderComponent } from './componentes/ag-grid/header/header.component';
+//import { HeaderGroupComponent } from './componentes/ag-grid/header-group/header-group.component';
+//import { HeaderComponent } from './componentes/ag-grid/header/header.component';
 import { BotonVerExperimentoComponent } from './componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component';
 
-//Tostadas
-//import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -47,17 +45,15 @@ import { BotonVerExperimentoComponent } from './componentes/ag-grid/boton-ver-ex
     ModuloExperimentosModule,
     HttpClientModule,
     AgGridModule.withComponents([
-      HeaderComponent,
-      HeaderGroupComponent,
+      //HeaderComponent,
+      //HeaderGroupComponent,
       BotonVerExperimentoComponent
     ]),
-    //SnotifyModule,
+    NgbModule
   ],
   providers: [
     GuardScopesService,
     Auth0Service,
-    //{ provide: 'SnotifyToastConfig', useValue: ToastDefaults },
-    //SnotifyService,
   ],
   bootstrap: [AppComponent]
 })

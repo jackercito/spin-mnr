@@ -1,10 +1,20 @@
-<div class="col-md-2 col-sm-1">
-  <app-menu></app-menu>
-</div>
+<div class="row container-fluid">
+  <div class="wrapper">
+    <div [ngbCollapse]="isCollapsed" [ngClass]="{ 'col-lg-2' : !isCollapsed, 'col-lg-0' : isCollapsed }">
+      <app-menu (sidenavClose)="sidenav()"></app-menu>
+    </div>
+    <!--<app-auth-menssage *ngIf="auth.authenticated"></app-auth-menssage>-->
 
-<div class="col-md-10 col-sm-9">
-  <br />
-  <router-outlet></router-outlet>
-</div>
+    <div id="content" [ngClass]="{ 'col-lg-10' : !isCollapsed, 'col-lg-12' : isCollapsed, 'margen_izquierdo': isCollapsed }">
+      <nav class="navbar navbar-expand-lg" *ngIf="innerWidth >= 1280 || isCollapsed">
+        <button (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+          <i class="fas fa-align-left"></i>
+        </button>
+      </nav>
 
-<!--<ng-snotify></ng-snotify>-->
+      <br />
+      <router-outlet></router-outlet>
+      <br />
+    </div>
+  </div>
+</div>

@@ -10,7 +10,7 @@ var uri = "mongodb+srv://" + USER + ":" + PASSWORD + "@" + DB
 
 //Conexion a la base de datos
 mongoose.Promise = global.Promise;
-mongoose.connect(uri, { useNewUrlParser: true }, (err, db) => {
+mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true }, (err, db) => {
   if (err) console.log(err);
 });
 

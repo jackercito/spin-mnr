@@ -15,7 +15,6 @@ const app = express();
 
 const experimento = require('./src/server/routes/experimento.route');
 
-
 //const api = require('/server/routes/api');
 const port = process.env.PORT || 4200;
 
@@ -44,7 +43,7 @@ const jwtCheck = jwt({
 });
 
 // Serve only the static files form the dist directory
-if(port != 8080)
+if (process.env.ENVIROMENT != 'DEV')
   app.use(forceSSL());
 
 //--- Set up app

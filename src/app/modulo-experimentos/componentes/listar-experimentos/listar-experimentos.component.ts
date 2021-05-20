@@ -1,11 +1,13 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import { GridOptions } from "ag-grid-community";
+import { GridOptions, Constants } from "ag-grid-community";
 import { Subscription } from 'rxjs';
 import { ExperimentosServiceService } from './../../services/experimentos-service.service';
 import { Auth0Service } from '../../../services/auth0.service';
 
 import { BotonVerExperimentoComponent } from './../../../componentes/ag-grid/boton-ver-experimento/boton-ver-experimento.component';
 import { locale } from '../../../componentes/ag-grid/localeText'
+
+const OPTIONDATE = { day: '2-digit', month: '2-digit', year: 'numeric' } as Constants;
 
 @Component({
   selector: 'app-listar-experimentos',
@@ -221,12 +223,10 @@ export class ListarExperimentosComponent implements OnInit, OnDestroy  {
         if (param.value) {
           switch (param.column.colDef.field) {
             case "fecha_entrada":
-              var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-              valor = new Date(param.value).toLocaleDateString('es-ES', options);
+              valor = new Date(param.value).toLocaleDateString('es-ES', OPTIONDATE);
               break;
             case "fecha_salida":
-              var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-              valor = new Date(param.value).toLocaleDateString('es-ES', options);
+              valor = new Date(param.value).toLocaleDateString('es-ES', OPTIONDATE);
               break;
             default:
               return param.value;
@@ -284,9 +284,8 @@ function compararFechas(filterLocalDateAtMidnight, cellValue) {
 }
 
 function dateFormat(params) {
-  var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
   if (params.value !== undefined && params.value != null)
-    return new Date(params.value).toLocaleDateString('es-ES', options);
+    return new Date(params.value).toLocaleDateString('es-ES', OPTIONDATE);
   else
     return '';
 }
