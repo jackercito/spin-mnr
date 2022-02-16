@@ -8,8 +8,8 @@ import { Experimento } from '../../modelo/experimento.model'
 
 //import { SnotifyService, SnotifyPosition } from 'ng-snotify';
 
-const ESPECTROMETROS = ['ESPECTROMETRO VARIAN MERCURY AS400', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras Líquidas)', 'ESPECTRÓMETRO BRUKER AVANCE III / HD(Muestras sólidas)'];
-const SONDA_A = ['4NUC (5mm)', 'ATB (5mm)']
+const ESPECTROMETROS = ['ESPECTRÓMETRO BRUKER AVANCE NEO', 'ESPECTRÓMETRO BRUKER AVANCE III / 500(Muestras Líquidas)', 'ESPECTRÓMETRO BRUKER AVANCE III / HD(Muestras sólidas)'];
+const SONDA_A = ['PI HR BB0400 (5mm)', 'PA BBI400 S1 (5mm)']
 const SONDA_B = ['PABBI (5mm)', 'PASEX (10mm)']
 const SONDA_C = ['SPRB400172_7164 (7,5mm)', 'SPRB400172_7423 (7,5mm)', 'H8906-20_007 (Triple Resonancia)', 'H13664_0016 (2,5mm)', 'H12138_0076 (Dobe Resonancia)', 'H13349_0014 (Baja frecuencia)']
 
