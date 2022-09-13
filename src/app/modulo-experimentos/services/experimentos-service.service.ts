@@ -6,6 +6,8 @@ import { Auth0Service } from '../../services/auth0.service';
 
 import { Experimento } from '../modelo/experimento.model'
 
+const URI = "https://localhost:4200"
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,31 +20,31 @@ export class ExperimentosServiceService {
 
   getExperimentos$(): Observable<Experimento[]> {
     return this.http
-      .get<Experimento[]>("/experimento", this.option)
+      .get<Experimento[]>(URI+ "/experimento", this.option)
       .pipe(catchError(this._handleError));
   }
 
   getOneExperimento$(id: string): Observable<Experimento> {
     return this.http
-      .get<Experimento>(`/experimento/${id}`, this.option)
+      .get<Experimento>(`${URI}/experimento/${id}`, this.option)
       .pipe(catchError(this._handleError));
   }
 
   setExperimentos$(experimento: Experimento): Observable<any> {
     return this.http
-      .post<Experimento>("/experimento", experimento, { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) })
+      .post<Experimento>(URI + "/experimento", experimento, { headers: new HttpHeaders().set('Authorization', `Bearer ${this.auth.accessToken}`) })
       .pipe(catchError(this._handleError));
   }
 
   putExperimento$(experimento: Experimento): Observable<Experimento> {
     return this.http
-      .put<Experimento>(`/experimento/${experimento._id}`, experimento, this.option)
+      .put<Experimento>(`${URI}/experimento/${experimento._id}`, experimento, this.option)
       .pipe(catchError(this._handleError));
   }
 
   deleteExperimento$(id: string): Observable<any> {
     return this.http
-      .delete<any>(`/experimento/${id}`, this.option)
+      .delete<any>(`${URI}/experimento/${id}`, this.option)
       .pipe(catchError(this._handleError));
   }
 
