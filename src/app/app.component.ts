@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'spinV2';
-  isCollapsed: Boolean = false;
+  isCollapsed: boolean = false;
 
   public innerWidth: any;
 

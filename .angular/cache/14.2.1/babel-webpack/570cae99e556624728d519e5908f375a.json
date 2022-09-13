@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Experimento {\n  constructor() {\n    this.fecha_entrada = new Date();\n    this.fecha_salida = new Date();\n    this.completo = false;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
