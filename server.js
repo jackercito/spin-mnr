@@ -43,8 +43,7 @@ const jwtCheck = jwt({
 });
 
 // Serve only the static files form the dist directory
-if (process.env.ENVIROMENT != 'DEV')
-  app.use(forceSSL());
+app.use(forceSSL());
 
 //--- Set up app
 app.use(bodyParser.json());

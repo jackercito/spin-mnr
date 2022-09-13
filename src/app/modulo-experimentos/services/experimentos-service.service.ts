@@ -6,7 +6,7 @@ import { Auth0Service } from '../../services/auth0.service';
 
 import { Experimento } from '../modelo/experimento.model'
 
-const URI = "https://localhost:4200"
+const URI = "https://spin-server-mnr.onrender.com"
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,8 @@ export class ExperimentosServiceService {
 
   getExperimentos$(): Observable<Experimento[]> {
     return this.http
-      .get<Experimento[]>(URI+ "/experimento", this.option)
+      .get<Experimento[]>(URI + "/experimento", this.option)
+
       .pipe(catchError(this._handleError));
   }
 

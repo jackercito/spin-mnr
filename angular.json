@@ -57,15 +57,9 @@
                   "with": "src/environments/environment.dev.ts"
                 }
               ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "optimization": false,
+              "aot": false,
+              "buildOptimizer": false
             }
           }
         },
@@ -77,6 +71,9 @@
           "configurations": {
             "production": {
               "browserTarget": "app-spin:build:production"
+            },
+            "dev": {
+              "browserTarget": "app-spin:build:dev"
             }
           }
         },
